@@ -3,6 +3,9 @@ Welcome!
 
 <img src="/img/WhitePom.png" width="200">   
 
+
+![Screenshot](/img/WhitePom.png)
+
 ## Class  
 Class IS 640 Section 2, Programming for Business Analytics Fall 2024.
 

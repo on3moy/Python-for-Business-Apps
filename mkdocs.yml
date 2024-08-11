@@ -1,0 +1,68 @@
+site_name: IS 640 Business Application Programming 
+repo_url: https://github.com/on3moy/Python-Business-Application-Programming
+repo_name: 'GitHub'
+
+theme:
+  logo: img/Brackets.ico
+  name: 'material'
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - toc.follow
+    - toc.integrate
+    - search.suggest
+    - search.highligtht
+    - content.tabs.link
+    - content.code.annotation
+    - content.code.copy
+  palette:
+    scheme: 'slate'
+    primary: 'black'
+    accent: 'light blue'
+  font:
+    text: 'calibri'
+    code: 'Consolas'
+
+nav:
+  - Home: index.md
+  - Lectures:
+    - Chatper 1 Preliminaries: book/CH1/Preliminaries.md
+    - Chapter 1 NB: book/Notebooks/Ch1.ipynb
+  - Python Crash Course: book/Notebooks/Python Crash Course.ipynb
+  - Reference Code: Reference.md
+  #     - Lecture 2: lecture2.md
+  # - page2: page2.md
+
+markdown_extensions:
+  # Table of Contents Stay
+  - toc:
+      permalink: true
+  # Ability to add notes in MD like !!! Some notes
+  - admonition
+  # Highlights code like functions, etc.
+  - codehilite
+  # Highlights additional features
+  - pymdownx.highlight:
+  # Add clickable code blocks
+      anchor_linenums: true
+  # Allows inline code highlights
+  - pymdownx.inlinehilite
+  # Adds expanded notes, hidden content
+  - pymdownx.details
+  # Add nice interface for tasks format
+  - pymdownx.tasklist
+  # HTML links become clickable
+  - pymdownx.magiclink
+  # Adds strike through
+  - pymdownx.tilde
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+
+plugins:
+  - search
+  - mknotebooks
+
+copyright: Copyright &copy; 2024 Moy Patel

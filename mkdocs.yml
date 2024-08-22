@@ -27,7 +27,7 @@ theme:
 nav:
   - Home: index.md
   - Lectures:
-    - Chatper 1 Preliminaries: book/CH1/Preliminaries.md
+    - Chatper 1: book/CH1/chapter1.md
     - Chapter 1 NB: book/Notebooks/Ch1.ipynb
   - Python Crash Course: book/Notebooks/Python Crash Course.ipynb
   - Reference Code: Reference.md

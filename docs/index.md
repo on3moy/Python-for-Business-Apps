@@ -1,10 +1,6 @@
 # Home
 Welcome!  
-
-<img src="/img/WhitePom.png" width="200">   
-
-
-![Screenshot](/img/WhitePom.png)
+![Screenshot](../img/WhitePom.png)  
 
 ## Class  
 Class IS 640 Section 2, Programming for Business Analytics Fall 2024.
@@ -19,3 +15,6 @@ This course delves into Python programming and its application in business data 
     zyBook ISBN: 979-8-203-12288-9  
     Zybook Code: 
     **CSULBIS640PatelFall2024**  
+
+## Lectures
+Lectures are a combination of Zybooks IS 640: Business Application Programming and my notes.

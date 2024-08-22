@@ -33,7 +33,7 @@ Program that executes code written in the python programming language.
     print('Hello World!')
     ```  
     
-    ![PythonInterpreter](/img/PythonInterpreter.png)
+    ![PythonInterpreter](../../img/PythonInterpreter.png)
 
 **Interactive Interpreter:**
 Program that allows to execute one line of code at a time.  

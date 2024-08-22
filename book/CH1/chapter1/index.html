@@ -20,7 +20,7 @@
     
     
       
-        <title>Chatper 1 Preliminaries - IS 640 Business Application Programming</title>
+        <title>Chatper 1 - IS 640 Business Application Programming</title>
       
     
     
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#chapter-1-zybooks-content" class="md-skip">
+        <a href="#chapter-1" class="md-skip">
           Skip to content
         </a>
       
@@ -109,7 +109,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Chatper 1 Preliminaries
+              Chatper 1
             
           </span>
         </div>
@@ -389,7 +389,7 @@
           
   
   <span class="md-ellipsis">
-    Chatper 1 Preliminaries
+    Chatper 1
   </span>
   
 
@@ -400,7 +400,7 @@
         
   
   <span class="md-ellipsis">
-    Chatper 1 Preliminaries
+    Chatper 1
   </span>
   
 
@@ -420,15 +420,6 @@
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-    </span>
-  </a>
-  
-</li>
       
         <li class="md-nav__item">
   <a href="#11-programming-general" class="md-nav__link">
@@ -454,6 +445,39 @@
       1.3 Basic input and output
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="1.3 Basic input and output">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#keeping-output-on-the-same-line" class="md-nav__link">
+    <span class="md-ellipsis">
+      Keeping output on the same line
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#moving-output-to-the-next-line" class="md-nav__link">
+    <span class="md-ellipsis">
+      Moving output to the next line
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#basic-input" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basic input
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -624,8 +648,8 @@
   
 
 
-<h1 id="chapter-1-zybooks-content">Chapter 1 (Zybooks Content)<a class="headerlink" href="#chapter-1-zybooks-content" title="Permanent link">&para;</a></h1>
-<h2 id="_1"><img src="https://media1.giphy.com/media/TrhpJt1hFqgCI/200w.gif?cid=6c09b952034xdcm0udz441w16o9jp0tkvhno8nsomvz8wqow&ep=v1_gifs_search&rid=200w.gif&ct=g><a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<h1 id="chapter-1">Chapter 1<a class="headerlink" href="#chapter-1" title="Permanent link">&para;</a></h1>
+<p><img src="https://media1.giphy.com/media/TrhpJt1hFqgCI/200w.gif?cid=6c09b952034xdcm0udz441w16o9jp0tkvhno8nsomvz8wqow&ep=v1_gifs_search&rid=200w.gif&ct=g" />  </p>
 <h2 id="11-programming-general">1.1 Programming (general)<a class="headerlink" href="#11-programming-general" title="Permanent link">&para;</a></h2>
 <p><strong>Input</strong>:
 Receives data<br />
@@ -634,7 +658,14 @@ Performs computations on that data<br />
 <strong>Output</strong>:
 Program puts that data somewhere. </p>
 <p>"Programs use variables to refer to data, like x, y, and z below. The name is due to a variable's value "varying" as a program assigns a variable like x with new values."  </p>
-<p>There are a sequence of steps and an order a program must follow. Like when reading a book, you open the book a certain way depending on your region and you start to read words from left to right ingest sentences as you read from top to bottom. You can say there is an order of operations here.  </p>
+<p>There are a sequence of steps and an order a program must follow. Ex. When reading a book, you open the book a certain way depending on your region and you start to read words from left to right ingest sentences as you read from top to bottom. You can say there is an order of operations here.  </p>
+<details class="tip">
+<summary>YouTube Video</summary>
+<p>Here is an example where a parent teaches their kids how to write a process in sequential logical steps.<br />
+Metaphorically, the father can be the computer, the document will be the program.  </p>
+<p>(Ctrl + Click to open in new tab)<br />
+<a href="https://www.youtube.com/watch?v=cDA3_5982h8">https://www.youtube.com/watch?v=cDA3_5982h8</a></p>
+</details>
 <h2 id="12-programming-using-python">1.2 Programming using Python<a class="headerlink" href="#12-programming-using-python" title="Permanent link">&para;</a></h2>
 <p><strong>Python Interpreter</strong>:
 Program that executes code written in the python programming language.  </p>
@@ -643,8 +674,8 @@ Program that executes code written in the python programming language.  </p>
 <p>I started my Python Interpreter using windows CMD/PowerShell with below snippit.<br />
 (Python should start up if PATH variables were setup on installation.)  </p>
 <p><code>python
-print('Hello World!')</code></p>
-<p><img src="/img/PythonInterpreter.png">  </p>
+print('Hello World!')</code>  </p>
+<p><img alt="PythonInterpreter" src="/img/PythonInterpreter.png" /></p>
 </details>
 <p><strong>Interactive Interpreter:</strong>
 Program that allows to execute one line of code at a time.  </p>
@@ -677,8 +708,77 @@ Characters such as "#" denote comments, which are optional but can be used to ex
 <span class="nv">butItKindOfDoes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;:)&#39;</span><span class="w">  </span>
 </code></pre></div>
 
+<div class="admonition warning">
+<p class="admonition-title">Formatting &amp; Standards</p>
+<p>There is a standard way of writing so we all can be in unison to understand each other's code.<br />
+<a href="https://peps.python.org/pep-0008/#:~:text=The%204%2Dspace%20rule%20is%20optional%20for%20continuation%20lines.&amp;text=(Also%20see%20the%20discussion%20of,or%20after%20binary%20operators%20below.)">PEP 8 Style Guide</a>  </p>
+</div>
 <h2 id="13-basic-input-and-output">1.3 Basic input and output<a class="headerlink" href="#13-basic-input-and-output" title="Permanent link">&para;</a></h2>
+<p>Python by itself comes with built in functions you can use. </p>
+<details class="tip">
+<summary>metaphore</summary>
+<p>Similar to excel, you use SUM(), COUNT(), etc to do aggregations. These are built in functions that come with Excel.  </p>
+</details>
+<div class="codehilite"><pre><span></span><code>print()
+</code></pre></div>
+
+<p>In python, we utilize print to ouput data in text or in a string format.</p>
+<details class="note">
+<summary>Why print()</summary>
+<ul>
+<li>We can display outputs of lines sequentially to better debug if needed</li>
+<li>To display any outputs, when you run code in automation, you don't need to see outputs for everything. Unless you want to be a rebel.</li>
+<li>Display warnings, notes, etc.  </li>
+</ul>
+</details>
+<h3 id="keeping-output-on-the-same-line">Keeping output on the same line<a class="headerlink" href="#keeping-output-on-the-same-line" title="Permanent link">&para;</a></h3>
+<p>Notice the "WOW" ending seperator.<br />
+end: adds on a string the the end of your print statement  </p>
+<div class="codehilite"><pre><span></span><code><span class="nv">print</span><span class="ss">(</span><span class="s1">&#39;This is one line.&#39;</span>,<span class="w"> </span><span class="k">end</span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;WOW&#39;</span><span class="ss">)</span>
+<span class="nv">print</span><span class="ss">(</span><span class="s1">&#39;This is a second line.&#39;</span>,<span class="w"> </span><span class="k">end</span><span class="o">=</span><span class="w"> </span><span class="s1">&#39; &#39;</span><span class="ss">)</span>
+<span class="nv">print</span><span class="ss">(</span><span class="s1">&#39;This is a third line.&#39;</span><span class="ss">)</span>
+</code></pre></div>
+
+<h3 id="moving-output-to-the-next-line">Moving output to the next line<a class="headerlink" href="#moving-output-to-the-next-line" title="Permanent link">&para;</a></h3>
+<p>newline character:
+\n  </p>
+<details class="note">
+<summary>Escape Sequence?</summary>
+<p>Note the backslash is an escape sequence.<br />
+An escape sequence is a string that has a special meaning, like the newline character "\n", that always starts with a backslash "\".<br />
+Other escape sequences exist, such as "\t" to insert a tab, or "\" to print an actual backslash character.</p>
+</details>
+<div class="codehilite"><pre><span></span><code><span class="nv">print</span><span class="ss">(</span><span class="s1">&#39;This is one line.&#39;</span>,<span class="w"> </span><span class="k">end</span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;\n&#39;</span><span class="ss">)</span>
+<span class="nv">print</span><span class="ss">(</span><span class="s1">&#39;This is a second line.&#39;</span>,<span class="w"> </span><span class="k">end</span><span class="o">=</span><span class="w"> </span><span class="s1">&#39; &#39;</span><span class="ss">)</span>
+<span class="nv">print</span><span class="ss">(</span><span class="s1">&#39;This is a third line.&#39;</span><span class="ss">)</span>
+</code></pre></div>
+
+<h3 id="basic-input">Basic input<a class="headerlink" href="#basic-input" title="Permanent link">&para;</a></h3>
+<p>The input() function:
+is used to read input from a user. The statement best_friend = input() will read text entered by the user, and assign the result as a new string to the best_friend variable.<br />
+The input() function causes the program to wait until the user has entered text and pushed the return key.  </p>
+<div class="codehilite"><pre><span></span><code><span class="nv">input</span><span class="ss">(</span><span class="s1">&#39;Write something here to show as a notification before a user puts input&#39;</span><span class="ss">)</span>
+
+#<span class="w"> </span><span class="nv">You</span><span class="w"> </span><span class="nv">don</span><span class="err">&#39;t need to have a string as a parameter like below, notice this is a comment because of #</span>
+
+<span class="err">input()</span>
+</code></pre></div>
+
+<details class="tip">
+<summary>input() Use Case</summary>
+<p>Have a user input a value and store it as a variable for later use.<br />
+Ex. Get users body weight, age, sex, and height to calculate BMI.</p>
+</details>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Just remember input() receives everything as a string.<br />
+If you want to store as an integer, you must convert.  </p>
+</div>
 <h2 id="14-errors">1.4 Errors<a class="headerlink" href="#14-errors" title="Permanent link">&para;</a></h2>
+<p>Syntax Errors:
+Violates the programming language rules. Basically Python does not understand what you want to do.  </p>
+<p>Runtime Errors:
+Syntax is correct, however the operation is impossible to run.  </p>
 <h2 id="15-development-environment">1.5 Development environment<a class="headerlink" href="#15-development-environment" title="Permanent link">&para;</a></h2>
 <h2 id="16-computers-and-programs-general">1.6 Computers and programs (general)<a class="headerlink" href="#16-computers-and-programs-general" title="Permanent link">&para;</a></h2>
 <h2 id="17-computer-tour">1.7 Computer tour<a class="headerlink" href="#17-computer-tour" title="Permanent link">&para;</a></h2>

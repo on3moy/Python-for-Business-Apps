@@ -52,7 +52,6 @@ nav:
   - Python Crash Course: 'book/Notebooks/Python Crash Course.ipynb'
   - Install Python: 'installation.md'
   - MKDocsReference: 'Reference.md'
-  - Slides: book/slides.md  
 
 extra_css:
   - stylesheets/extra.css  

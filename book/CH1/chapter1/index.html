@@ -31,6 +31,12 @@
       
       
 
+  
+  
+  
+  
+  <style>:root{--md-annotation-icon:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M22 12a10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2a10 10 0 0 1 10 10M6 13h8l-3.5 3.5 1.42 1.42L17.84 12l-5.92-5.92L10.5 7.5 14 11H6v2Z"/></svg>');}</style>
+
 
     
     
@@ -537,6 +543,21 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="1.4 Errors">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#common-error-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Error Types
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -705,8 +726,11 @@ Receives data<br />
 Performs computations on that data<br />
 <strong>Output</strong>:
 Program puts that data somewhere. </p>
-<p>"Programs use variables to refer to data, like x, y, and z below. The name is due to a variable's value "varying" as a program assigns a variable like x with new values."  </p>
-<p>There are a sequence of steps and an order a program must follow. Ex. When reading a book, you open the book a certain way depending on your region and you start to read words from left to right ingest sentences as you read from top to bottom. You can say there is an order of operations here.  </p>
+<p>There are a sequence of steps and an order a program must follow. </p>
+<div class="admonition info">
+<p class="admonition-title"> </p>
+<p>When reading a book, you open the book a certain way depending on your region and you start to read words from left to right to ingest sentences as you read from top to bottom. You can say there is an order of operations here.  </p>
+</div>
 <details class="tip">
 <summary>YouTube Video</summary>
 <p>Here is an example where a parent teaches their kids how to write a process in sequential logical steps.<br />
@@ -720,12 +744,22 @@ Metaphorically, the father can be the computer, the document will be the program
 Program that executes code written in the python programming language.  </p>
 <details class="example">
 <summary>🦖 Example</summary>
-<p>I started my Python Interpreter using windows CMD/PowerShell with below snippit.<br />
-(Python should start up if PATH variables were setup on installation.)  </p>
+<p class="annotate">I started my Python Interpreter using windows CMD/PowerShell with below snippet.<br />
+(Python should start up if PATH variables were setup on installation.)<br />
+Note - You can't start a "Python Application" just by installing Python, you 
+have to start Python from another software like an <strong>IDE</strong> (1) or from your <strong>CMD</strong> (2).<br /></p>
+<ol>
+<li><strong>Integrated Development Environment (IDE)</strong><br />
+Examples of IDE's are VSCode, Sublime, IDLE, Thonny, Spyder, and Python Interpreter using CMD. </li>
+<li><strong>Command Prompt</strong> (CMD)<br />
+Default command-line interpreter for the OS.<br />
+I strongly suggest learning how to use your command prompt.<br />
+Watch this to get started! 👉 <a href="https://www.youtube.com/watch?v=MBBWVgE0ewk&amp;list=PL6gx4Cwl9DGDV6SnbINlVUd0o2xT4JbMu">YouTube Tutorials</a> </li>
+</ol>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>python
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>print(&#39;Hello World!&#39;)
 </code></pre></div>
-<p><img alt="PythonInterpreter" src="../../../img/Chapter1/PythonInterpreter.png" /></p>
+<p><img alt="PythonInterpreter" src="../../../img/Chapter1/PythonInterpreter.png" title="This screenshot is using python interpreter within the CMD" /></p>
 </details>
 <p><strong>Interactive Interpreter:</strong>
 Program that allows to execute one line of code at a time.  </p>
@@ -738,20 +772,87 @@ Row of text.  </p>
 <p><strong>Statement</strong>:
 A statement is a program instruction.  </p>
 <p><strong>Expressions</strong>:
-Expressions are code that return a value when evaluated; for example, the code wage * hours * weeks is an expression that computes a number.<br />
+Expressions are code that return a value when evaluated; for example, the code wage * hours * weeks is an expression that computes a number.  </p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>wage = 20
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>hours = 8
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>print(wage * hours)
-</code></pre></div></p>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>hours = 40
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>weeks = 52
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>salary = wage * hours * weeks
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>print(salary)
+</code></pre></div>
 <p><strong>Variables</strong>:
 The names wage, hours, weeks, and salary are variables, which are named references to values stored by the interpreter.  </p>
 <p><strong>Assignment</strong>:
 A new variable is created by performing an assignment using the = symbol.  </p>
+<details class="question">
+<summary>Variables - Why is this is awesome!?</summary>
+<p>Now you can refer to your previous assignments 🤯.<br />
+1. If you put a paragraph in writing and assign that paragraph to a variable, you don't have to copy and paste that paragraph every single time to refer to it.<br />
+2. You can change and evolve the variable, refer to an old input to add something new.  </p>
+<div class="admonition info">
+<p class="admonition-title"> </p>
+<p class="annotate">below is <strong>pseudo code</strong> (1), not <strong>Pandas</strong> (2) Syntax.</p>
+<ol>
+<li>Informal notation of programming language. </li>
+<li>Python Library, think excel + sql for Python.  </li>
+</ol>
+</div>
+<p>df =  </p>
+<table>
+<thead>
+<tr>
+<th>person</th>
+<th>age</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Harry</td>
+<td>12</td>
+</tr>
+</tbody>
+</table>
+<p>Lets add one more row to df</p>
+<p>newRow =  </p>
+<table>
+<thead>
+<tr>
+<th>person</th>
+<th>age</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ron</td>
+<td>13</td>
+</tr>
+</tbody>
+</table>
+<p>df + newRow = </p>
+<table>
+<thead>
+<tr>
+<th>person</th>
+<th>age</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Harry</td>
+<td>12</td>
+</tr>
+<tr>
+<td>Ron</td>
+<td>13</td>
+</tr>
+</tbody>
+</table>
+<p>df = df + newRow  </p>
+</details>
 <p><strong>print()</strong>:
 Print() function displays variables or expression values.</p>
 <p><strong>Comments</strong>:
 Characters such as "#" denote comments, which are optional but can be used to explain portions of code to a human reader.  </p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a># See &lt;-- HashtagComment, subscribe and slam the bell icon, It means the interpreter will ignore this line of code. Write all the notes within the same line. If you make the person scroll to read, its already too long. Please create another comment line.
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a># See &lt;-- HashtagComment, subscribe, It means the interpreter will ignore this line of code. Write all the notes within the same line. If you make the person scroll to read, its already too long. Please create another comment line.
 <a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>storeThisValue = 13
 <a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>itDoesntMatterWhatYouCallMe = &#39;13&#39;
 <a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>butItKindOfDoes = &#39;:)&#39;  
@@ -770,17 +871,18 @@ Characters such as "#" denote comments, which are optional but can be used to ex
 </details>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>print()
 </code></pre></div>
-<p>In python, we utilize print to ouput data in text or in a string format.</p>
+<p>In python, we utilize print to output data in text or in a string format.  </p>
 <details class="question">
 <summary>Why print()?</summary>
+<p><img src='https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExYjd6aWV0bnZsMnFzdmJhc2hncHF1YXc1cWh0cHk0amh2cmpkbHg5aiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l0Iy1U0KU3rBaewjm/giphy.gif' width= 200/>  </p>
 <ul>
-<li>We can display outputs of lines sequentially to better debug if needed</li>
-<li>To display any outputs, when you run code in automation, you don't need to see outputs for everything. Unless you want to be a rebel.</li>
+<li>We can display outputs of lines sequentially to better debug if needed  </li>
+<li>To display any outputs, when you run code in automation, you don't need to see outputs for everything. Unless you want to be a rebel.  </li>
 <li>Display warnings, notes, etc.  </li>
 </ul>
 </details>
 <h3 id="keeping-output-on-the-same-line">Keeping output on the same line<a class="headerlink" href="#keeping-output-on-the-same-line" title="Permanent link">⬅️</a></h3>
-<p>Notice the "WOW" ending seperator.<br />
+<p>Notice the "WOW" ending separator.<br />
 end: adds on a string the the end of your print statement  </p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>print(&#39;This is one line.&#39;, end= &#39;WOW&#39;)
 <a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>print(&#39;This is a second line.&#39;, end= &#39; &#39;)
@@ -791,7 +893,8 @@ end: adds on a string the the end of your print statement  </p>
 \n  </p>
 <details class="question">
 <summary>What is an Escape Sequence?</summary>
-<p>Note the backslash is an escape sequence.<br />
+<p><img src='https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExcWU3ajNrcGM1NmdheTVmbzh2YmtqMGwxcm9nMGdlZHZ3cjAwdTk3diZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l0OWistc2HUjf6PKM/giphy.gif'/ width= 200 /><br />
+Note the backslash is an escape sequence.<br />
 An escape sequence is a string that has a special meaning, like the newline character "\n", that always starts with a backslash "\".<br />
 Other escape sequences exist, such as "\t" to insert a tab, or "\" to print an actual backslash character.</p>
 </details>
@@ -825,14 +928,67 @@ If you want to store as an integer, you must convert.  </p>
 <p>Syntax Errors:
 Violates the programming language rules. Basically Python does not understand what you want to do.  </p>
 <p>Runtime Errors:
-Syntax is correct, however the operation is impossible to run. </p>
+Syntax is correct, however the operation is impossible to run.  </p>
+<p>Crash:
+Abrupt termination of a program  </p>
 <details class="example">
 <summary>🦖 Example - Error</summary>
 <p>The error pinpoints to the line where the error occurred and labels the error accordingly.<br />
 <img alt="PythonInterpreter" src="../../../img/Chapter1/Errors.png" /></p>
 </details>
+<h3 id="common-error-types">Common Error Types<a class="headerlink" href="#common-error-types" title="Permanent link">⬅️</a></h3>
+<table>
+<thead>
+<tr>
+<th>Error type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SyntaxError</td>
+<td>The program contains invalid code that cannot be understood.</td>
+</tr>
+<tr>
+<td>IndentationError</td>
+<td>The lines of the program are not properly indented.</td>
+</tr>
+<tr>
+<td>ValueError</td>
+<td>An invalid value is used, which can occur if giving letters to int().</td>
+</tr>
+<tr>
+<td>NameError</td>
+<td>The program tries to use a variable that does not exist.</td>
+</tr>
+<tr>
+<td>TypeError</td>
+<td>An operation uses incorrect types, which can occur if adding an integer to a string.</td>
+</tr>
+</tbody>
+</table>
+<p>Logic Errors / Bugs:
+Errors that run correctly but not behave as intended.  </p>
+<details class="example">
+<summary>🦖 Example - Logic Error</summary>
+<p><img src='https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExOGRid3lxa3oxdTAwc2FqYWJ6MW9qa2Mwc2o5czBpcDUxb3hjODM4aiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/WiCO2uZK05Klc1d28q/giphy.gif' /><br />
+You fat fingered some numbers on a spreadsheet, therefore your numbers are off.<br />
+Everything ran correctly, however the output is not as intended.  </p>
+</details>
 <hr />
 <h2 id="15-development-environment">1.5 Development environment<a class="headerlink" href="#15-development-environment" title="Permanent link">⬅️</a></h2>
+<p>Integrated Development Environment (IDE)<br />
+Any development of code is usually conducted in an IDE.  </p>
+<p>Some Software you can download to code in Python:  </p>
+<ol>
+<li><a href="https://code.visualstudio.com/">VSCode</a></li>
+<li><a href="https://www.sublimetext.com/">Sublime Text</a></li>
+<li><a href="https://www.python.org/">IDLE, Python Interpreter</a></li>
+<li><a href="https://thonny.org/">Thonny</a></li>
+<li><a href="https://www.spyder-ide.org/">Spyder</a></li>
+<li><a href="https://jupyter.org/">Jupyter Notebooks</a>  </li>
+</ol>
+<hr />
 <h2 id="16-computers-and-programs-general">1.6 Computers and programs (general)<a class="headerlink" href="#16-computers-and-programs-general" title="Permanent link">⬅️</a></h2>
 <h2 id="17-computer-tour">1.7 Computer tour<a class="headerlink" href="#17-computer-tour" title="Permanent link">⬅️</a></h2>
 <h2 id="18-language-history">1.8 Language history<a class="headerlink" href="#18-language-history" title="Permanent link">⬅️</a></h2>
@@ -899,7 +1055,7 @@ Syntax is correct, however the operation is impossible to run. </p>
       <div class="md-progress" data-md-component="progress" role="progressbar"></div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.top", "navigation.instant", "navigation.instant.progress", "navigation.path", "toc.follow", "toc.integrate", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.top", "navigation.instant", "navigation.instant.progress", "navigation.path", "toc.follow", "toc.integrate", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy", "content.tooltips"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../../../assets/javascripts/bundle.471ce7a9.min.js"></script>

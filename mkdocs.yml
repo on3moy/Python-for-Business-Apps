@@ -4,6 +4,8 @@ repo_name: 'GitHub'
 
 # https://www.mkdocs.org/user-guide/choosing-your-theme/
 theme:
+  icon:
+     annotation: material/arrow-right-circle
   name: material
   logo: img/pythonBW.ico
   # Dark Theme
@@ -44,6 +46,7 @@ theme:
     - content.tabs.link
     - content.code.annotation
     - content.code.copy
+    - content.tooltips
     
 nav:
   - Home: 'index.md'

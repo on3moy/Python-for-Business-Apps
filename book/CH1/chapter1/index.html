@@ -66,6 +66,8 @@
   
     
     
+      
+    
     
     
     
@@ -121,7 +123,33 @@
     </div>
     
       
+        <form class="md-header__option" data-md-component="palette">
+  
     
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="light-blue"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="teal"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
     
@@ -233,6 +261,23 @@
     
   
   Python Crash Course
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../installation/" class="md-tabs__link">
+        
+  
+    
+  
+  Install Python
 
       </a>
     </li>
@@ -600,6 +645,26 @@
   
   
     <li class="md-nav__item">
+      <a href="../../../installation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Install Python
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../../Reference/" class="md-nav__link">
         
   
@@ -631,9 +696,9 @@
   
 
 
-<h1 id="chapter-1">Chapter 1<a class="headerlink" href="#chapter-1" title="Permanent link">&para;</a></h1>
+<h1 id="chapter-1">Chapter 1<a class="headerlink" href="#chapter-1" title="Permanent link">⬅️</a></h1>
 <p><img src="https://media1.giphy.com/media/TrhpJt1hFqgCI/200w.gif?cid=6c09b952034xdcm0udz441w16o9jp0tkvhno8nsomvz8wqow&ep=v1_gifs_search&rid=200w.gif&ct=g" />  </p>
-<h2 id="11-programming-general">1.1 Programming (general)<a class="headerlink" href="#11-programming-general" title="Permanent link">&para;</a></h2>
+<h2 id="11-programming-general">1.1 Programming (general)<a class="headerlink" href="#11-programming-general" title="Permanent link">⬅️</a></h2>
 <p><strong>Input</strong>:
 Receives data<br />
 <strong>Process</strong>:
@@ -649,11 +714,12 @@ Metaphorically, the father can be the computer, the document will be the program
 <p>(Ctrl + Click to open in new tab)<br />
 <a href="https://www.youtube.com/watch?v=cDA3_5982h8">https://www.youtube.com/watch?v=cDA3_5982h8</a></p>
 </details>
-<h2 id="12-programming-using-python">1.2 Programming using Python<a class="headerlink" href="#12-programming-using-python" title="Permanent link">&para;</a></h2>
+<hr />
+<h2 id="12-programming-using-python">1.2 Programming using Python<a class="headerlink" href="#12-programming-using-python" title="Permanent link">⬅️</a></h2>
 <p><strong>Python Interpreter</strong>:
 Program that executes code written in the python programming language.  </p>
 <details class="example">
-<summary>Example</summary>
+<summary>🦖 Example</summary>
 <p>I started my Python Interpreter using windows CMD/PowerShell with below snippit.<br />
 (Python should start up if PATH variables were setup on installation.)  </p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>python
@@ -695,7 +761,8 @@ Characters such as "#" denote comments, which are optional but can be used to ex
 <p>There is a standard way of writing so we all can be in unison to understand each other's code.<br />
 <a href="https://peps.python.org/pep-0008/#:~:text=The%204%2Dspace%20rule%20is%20optional%20for%20continuation%20lines.&amp;text=(Also%20see%20the%20discussion%20of,or%20after%20binary%20operators%20below.)">PEP 8 Style Guide</a>  </p>
 </div>
-<h2 id="13-basic-input-and-output">1.3 Basic input and output<a class="headerlink" href="#13-basic-input-and-output" title="Permanent link">&para;</a></h2>
+<hr />
+<h2 id="13-basic-input-and-output">1.3 Basic input and output<a class="headerlink" href="#13-basic-input-and-output" title="Permanent link">⬅️</a></h2>
 <p>Python by itself comes with built in functions you can use. </p>
 <details class="info">
 <summary>metaphor</summary>
@@ -712,14 +779,14 @@ Characters such as "#" denote comments, which are optional but can be used to ex
 <li>Display warnings, notes, etc.  </li>
 </ul>
 </details>
-<h3 id="keeping-output-on-the-same-line">Keeping output on the same line<a class="headerlink" href="#keeping-output-on-the-same-line" title="Permanent link">&para;</a></h3>
+<h3 id="keeping-output-on-the-same-line">Keeping output on the same line<a class="headerlink" href="#keeping-output-on-the-same-line" title="Permanent link">⬅️</a></h3>
 <p>Notice the "WOW" ending seperator.<br />
 end: adds on a string the the end of your print statement  </p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>print(&#39;This is one line.&#39;, end= &#39;WOW&#39;)
 <a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>print(&#39;This is a second line.&#39;, end= &#39; &#39;)
 <a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>print(&#39;This is a third line.&#39;)
 </code></pre></div>
-<h3 id="moving-output-to-the-next-line">Moving output to the next line<a class="headerlink" href="#moving-output-to-the-next-line" title="Permanent link">&para;</a></h3>
+<h3 id="moving-output-to-the-next-line">Moving output to the next line<a class="headerlink" href="#moving-output-to-the-next-line" title="Permanent link">⬅️</a></h3>
 <p>newline character:
 \n  </p>
 <details class="question">
@@ -732,7 +799,7 @@ Other escape sequences exist, such as "\t" to insert a tab, or "\" to print an a
 <a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>print(&#39;This is a second line.&#39;, end= &#39; &#39;)
 <a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>print(&#39;This is a third line.&#39;)
 </code></pre></div>
-<h3 id="basic-input">Basic input<a class="headerlink" href="#basic-input" title="Permanent link">&para;</a></h3>
+<h3 id="basic-input">Basic input<a class="headerlink" href="#basic-input" title="Permanent link">⬅️</a></h3>
 <p>The input() function:
 is used to read input from a user. The statement best_friend = input() will read text entered by the user, and assign the result as a new string to the best_friend variable.<br />
 The input() function causes the program to wait until the user has entered text and pushed the return key.  </p>
@@ -743,7 +810,7 @@ The input() function causes the program to wait until the user has entered text 
 <a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>input()
 </code></pre></div>
 <details class="example">
-<summary>input() Example</summary>
+<summary>🦖 Example - input()</summary>
 <p>Have a user input a value and store it as a variable for later use.<br />
 Ex. Get users body weight, age, sex, and height to calculate BMI.</p>
 </details>
@@ -752,24 +819,26 @@ Ex. Get users body weight, age, sex, and height to calculate BMI.</p>
 <p>Just remember input() receives everything as a string.<br />
 If you want to store as an integer, you must convert.  </p>
 </div>
-<h2 id="14-errors">1.4 Errors<a class="headerlink" href="#14-errors" title="Permanent link">&para;</a></h2>
+<hr />
+<h2 id="14-errors">1.4 Errors<a class="headerlink" href="#14-errors" title="Permanent link">⬅️</a></h2>
 <p><img src='https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExMTNxZm1ueHY0anc2bHRoYmZvY2VkajVxb3Bjcnlzbjl3N2FiYnh1YyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/r3xBH1FXWz0h55CVtj/giphy.gif' width=200 /></p>
 <p>Syntax Errors:
 Violates the programming language rules. Basically Python does not understand what you want to do.  </p>
 <p>Runtime Errors:
 Syntax is correct, however the operation is impossible to run. </p>
 <details class="example">
-<summary>Error Example</summary>
+<summary>🦖 Example - Error</summary>
 <p>The error pinpoints to the line where the error occurred and labels the error accordingly.<br />
 <img alt="PythonInterpreter" src="../../../img/Chapter1/Errors.png" /></p>
 </details>
-<h2 id="15-development-environment">1.5 Development environment<a class="headerlink" href="#15-development-environment" title="Permanent link">&para;</a></h2>
-<h2 id="16-computers-and-programs-general">1.6 Computers and programs (general)<a class="headerlink" href="#16-computers-and-programs-general" title="Permanent link">&para;</a></h2>
-<h2 id="17-computer-tour">1.7 Computer tour<a class="headerlink" href="#17-computer-tour" title="Permanent link">&para;</a></h2>
-<h2 id="18-language-history">1.8 Language history<a class="headerlink" href="#18-language-history" title="Permanent link">&para;</a></h2>
-<h2 id="19-why-whitespace-matters">1.9 Why whitespace matters<a class="headerlink" href="#19-why-whitespace-matters" title="Permanent link">&para;</a></h2>
-<h2 id="110-python-example-salary-calculation">1.10 Python example: Salary calculation<a class="headerlink" href="#110-python-example-salary-calculation" title="Permanent link">&para;</a></h2>
-<h2 id="111-additional-practice-output-art">1.11 Additional practice: Output art<a class="headerlink" href="#111-additional-practice-output-art" title="Permanent link">&para;</a></h2>
+<hr />
+<h2 id="15-development-environment">1.5 Development environment<a class="headerlink" href="#15-development-environment" title="Permanent link">⬅️</a></h2>
+<h2 id="16-computers-and-programs-general">1.6 Computers and programs (general)<a class="headerlink" href="#16-computers-and-programs-general" title="Permanent link">⬅️</a></h2>
+<h2 id="17-computer-tour">1.7 Computer tour<a class="headerlink" href="#17-computer-tour" title="Permanent link">⬅️</a></h2>
+<h2 id="18-language-history">1.8 Language history<a class="headerlink" href="#18-language-history" title="Permanent link">⬅️</a></h2>
+<h2 id="19-why-whitespace-matters">1.9 Why whitespace matters<a class="headerlink" href="#19-why-whitespace-matters" title="Permanent link">⬅️</a></h2>
+<h2 id="110-python-example-salary-calculation">1.10 Python example: Salary calculation<a class="headerlink" href="#110-python-example-salary-calculation" title="Permanent link">⬅️</a></h2>
+<h2 id="111-additional-practice-output-art">1.11 Additional practice: Output art<a class="headerlink" href="#111-additional-practice-output-art" title="Permanent link">⬅️</a></h2>
 
 
 
@@ -830,7 +899,7 @@ Syntax is correct, however the operation is impossible to run. </p>
       <div class="md-progress" data-md-component="progress" role="progressbar"></div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.top", "navigation.instant", "navigation.instant.progress", "navigation.path", "toc.follow", "toc.integrate", "search.suggest", "search.highligtht", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.top", "navigation.instant", "navigation.instant.progress", "navigation.path", "toc.follow", "toc.integrate", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../../../assets/javascripts/bundle.471ce7a9.min.js"></script>

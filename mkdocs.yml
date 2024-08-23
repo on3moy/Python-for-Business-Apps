@@ -2,20 +2,10 @@ site_name: IS 640 Business Application Programming
 repo_url: https://github.com/on3moy/Python-Business-Application-Programming
 repo_name: 'GitHub'
 
+# https://www.mkdocs.org/user-guide/choosing-your-theme/
 theme:
-  logo: img/Brackets.ico
-  name: 'material'
-  features:
-    - navigation.tabs
-    - navigation.sections
-    - navigation.top
-    - toc.follow
-    - toc.integrate
-    - search.suggest
-    - search.highligtht
-    - content.tabs.link
-    - content.code.annotation
-    - content.code.copy
+  name: material
+  logo: img/pythonBW.ico
   palette:
     scheme: 'slate'
     primary: 'black'
@@ -23,25 +13,48 @@ theme:
   font:
     text: 'calibri'
     code: 'Consolas'
+  shortcuts:
+    help: 191    # ?
+    next: 78     # n
+    previous: 80 # p
+    search: 83   # s
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.top
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.path
+    - toc.follow
+    - toc.integrate
+    - search.suggest
+    - search.highligtht
+    - content.tabs.link
+    - content.code.annotation
+    - content.code.copy
+
+extra_css:
+  - stylesheets/extra.css
 
 nav:
-  - Home: index.md
-  - Lectures:
-    - Chatper 1: book/CH1/chapter1.md
-    - Chapter 1 NB: book/Notebooks/Ch1.ipynb
-  - Python Crash Course: book/Notebooks/Python Crash Course.ipynb
-  - Reference Code: Reference.md
-  #     - Lecture 2: lecture2.md
-  # - page2: page2.md
+  - Home: 'index.md'
+  - Book:
+    - Chapter 1: 'book/CH1/chapter1.md'
+  - Python Crash Course: 'book/Notebooks/Python Crash Course.ipynb'
+  - MKDocsReference: 'Reference.md'
 
 markdown_extensions:
   # Table of Contents Stay
   - toc:
       permalink: true
   # Ability to add notes in MD like !!! Some notes
+  # - admonition
   - admonition
+  - pymdownx.superfences
   # Highlights code like functions, etc.
   - codehilite
+  - attr_list
   # Highlights additional features
   - pymdownx.highlight:
   # Add clickable code blocks
@@ -56,13 +69,9 @@ markdown_extensions:
   - pymdownx.magiclink
   # Adds strike through
   - pymdownx.tilde
-  - attr_list
-  - pymdownx.emoji:
-      emoji_index: !!python/name:material.extensions.emoji.twemoji
-      emoji_generator: !!python/name:materialx.emoji.to_svg
 
 plugins:
   - search
   - mknotebooks
-
+    
 copyright: Copyright &copy; 2024 Moy Patel

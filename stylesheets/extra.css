@@ -1,0 +1,163 @@
+h1 {
+  color: #569cd6;
+}
+
+/* Customize the overall background to be darker */
+body {
+  background-color: #1e1e1e !important;
+  color: #d4d4d4 !important;
+}
+
+/* Customize code blocks to match the Python notebook cell style */
+pre code {
+  background-color: #2d2d2d !important;
+  color: #d4d4d4 !important;
+  font-family: 'Consolas', monospace !important;
+  padding: 10px !important;
+  border-radius: 4px !important;
+  overflow: auto !important;
+}
+
+/* Customize the notebook-style output */
+div.output {
+  background-color: #2d2d2d !important;
+  color: #d4d4d4 !important;
+  padding: 10px !important;
+  border-left: 3px solid #569cd6 !important;
+  border-radius: 0 0 4px 4px !important;
+  margin-bottom: 20px !important;
+}
+
+/* Specific styling for Python code */
+pre code.language-python {
+  background-color: #2d2d2d !important;
+  color: #569cd6 !important;  /* Keyword color */
+}
+
+/* Customize headers to match the theme */
+h1, h2, h3, h4, h5, h6 {
+  color: #569cd6 !important;
+}
+
+/* Customize links */
+a {
+  color: #3794ff !important;
+}
+
+/* Customize table styling */
+table {
+  background-color: #252526 !important;
+  color: #d4d4d4 !important;
+}
+
+th {
+  background-color: #3c3c3c !important;
+  color: #d4d4d4 !important;
+}
+
+td {
+  background-color: #2d2d2d !important;
+  color: #d4d4d4 !important;
+}
+
+/* Customize blockquotes */
+blockquote {
+  background-color: #2d2d2d !important;
+  border-left: 5px solid #3794ff !important;
+  color: #d4d4d4 !important;
+  padding: 10px !important;
+}
+
+/* Customize inline code */
+code {
+  background-color: #2d2d2d !important;
+  color: #dcdcaa !important;
+  padding: 0.2em 0.4em !important;
+  border-radius: 4px !important;
+  font-family: 'Consolas', monospace !important;
+}
+
+/* Customize search bar */
+.md-search__input {
+  background-color: #3e3e42 !important;
+  color: #d4d4d4 !important;
+}
+
+/* Customize navigation sidebar */
+.md-sidebar--primary {
+  background-color: #1e1e1e !important;
+}
+
+.md-nav__link {
+  color: #d4d4d4 !important;
+}
+
+.md-nav__link--active {
+  color: #ffffff !important;
+  background-color: #3a3d41 !important;
+}
+
+/* Customize code highlighting */
+code[class*="language-"],
+pre[class*="language-"] {
+  background-color: #2d2d2d !important;
+  color: #d4d4d4 !important;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: #6a9955 !important;
+}
+
+.token.punctuation {
+  color: #d4d4d4 !important;
+}
+
+.token.property,
+.token.tag,
+.token.constant,
+.token.symbol,
+.token.deleted {
+  color: #d16969 !important;
+}
+
+.token.boolean,
+.token.number {
+  color: #b5cea8 !important;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+  color: #ce9178 !important;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+  color: #d4d4d4 !important;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+  color: #569cd6 !important;
+}
+
+.token.function,
+.token.class-name {
+  color: #dcdcaa !important;
+}
+
+.token.regex,
+.token.important,
+.token.variable {
+  color: #d16969 !important;
+}

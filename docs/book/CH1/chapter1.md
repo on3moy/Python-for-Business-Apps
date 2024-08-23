@@ -33,7 +33,7 @@ Program that executes code written in the python programming language.
     print('Hello World!')
     ```  
     
-    ![PythonInterpreter](../../img/PythonInterpreter.png)
+    ![PythonInterpreter](../../img/Chapter1/PythonInterpreter.png)
 
 **Interactive Interpreter:**
 Program that allows to execute one line of code at a time.  
@@ -77,14 +77,14 @@ itDoesntMatterWhatYouCallMe = '13'
 butItKindOfDoes = ':)'  
 ```  
 
-!!! warning "Formatting & Standards"
+!!! abstract "Formatting & Standards"
     There is a standard way of writing so we all can be in unison to understand each other's code.  
     [PEP 8 Style Guide](https://peps.python.org/pep-0008/#:~:text=The%204%2Dspace%20rule%20is%20optional%20for%20continuation%20lines.&text=(Also%20see%20the%20discussion%20of,or%20after%20binary%20operators%20below.))  
 
 ## 1.3 Basic input and output  
 Python by itself comes with built in functions you can use. 
 
-??? tip "metaphore"
+??? info "metaphor"
     Similar to excel, you use SUM(), COUNT(), etc to do aggregations. These are built in functions that come with Excel.  
 
 ```
@@ -92,7 +92,7 @@ print()
 ```
 
 In python, we utilize print to ouput data in text or in a string format.
-??? note "Why print()"
+??? question "Why print()?"
     - We can display outputs of lines sequentially to better debug if needed
     - To display any outputs, when you run code in automation, you don't need to see outputs for everything. Unless you want to be a rebel.
     - Display warnings, notes, etc.  
@@ -111,7 +111,7 @@ print('This is a third line.')
 newline character:
 \n  
 
-??? note "Escape Sequence?"
+??? question "What is an Escape Sequence?"
     Note the backslash is an escape sequence.  
     An escape sequence is a string that has a special meaning, like the newline character "\n", that always starts with a backslash "\".  
     Other escape sequences exist, such as "\t" to insert a tab, or "\\" to print an actual backslash character.
@@ -135,20 +135,26 @@ input('Write something here to show as a notification before a user puts input')
 input()
 ```
 
-??? tip "input() Use Case"
+??? example "input() Example"
     Have a user input a value and store it as a variable for later use.  
     Ex. Get users body weight, age, sex, and height to calculate BMI.
 
-!!! note "Note"
+!!! info "Note"
     Just remember input() receives everything as a string.  
     If you want to store as an integer, you must convert.  
 
 ## 1.4 Errors  
+<img src='https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExMTNxZm1ueHY0anc2bHRoYmZvY2VkajVxb3Bjcnlzbjl3N2FiYnh1YyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/r3xBH1FXWz0h55CVtj/giphy.gif' width=200 />
+
 Syntax Errors:
 Violates the programming language rules. Basically Python does not understand what you want to do.  
 
 Runtime Errors:
-Syntax is correct, however the operation is impossible to run.  
+Syntax is correct, however the operation is impossible to run. 
+
+??? example "Error Example"
+    The error pinpoints to the line where the error occurred and labels the error accordingly.  
+    ![PythonInterpreter](../../img/Chapter1/Errors.png)
 
 ## 1.5 Development environment  
 ## 1.6 Computers and programs (general)  

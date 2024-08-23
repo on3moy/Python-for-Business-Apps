@@ -1,4 +1,4 @@
-# Home
+# Reference
 
 ## Welcome to MkDocs
 
@@ -18,8 +18,9 @@ For full documentation visit [mkdocs.org](https://www.mkdocs.org).
         index.md  # The documentation homepage.
         ...       # Other markdown pages, images and other files.
 
+## Code blocks
 
-```
+```py
 import numpy as np
 ```
 
@@ -29,28 +30,58 @@ def foo():
     return 'hi'
 
 foo()
+```  
+## Emojis
+🦖🥚🦕
+
+## Blocks with [admonition](https://squidfunk.github.io/mkdocs-material/reference/admonitions/#supported-types)
+Classes:
+```['note', 'abstract', 'info', 'tip', 'success', 'question', 'warning', 'failure', 'danger', 'bug', 'example', 'quote']```
+
+Expadable
+```
+??? danger "This is expandable"
+	This is expandable, you can add note, example, and warning types
 ```
 
-😂
+??? danger "This is expandable"
+    This is expandable, you can add note, example, and warning types 
 
-## Blocks  
-??? HTML "This is expandable"
-    This is expandable, you can add note, example, and warning types
+!!! note Your Title Here if you want
+	 Hey! This is a note admonition type!
 
-!!! note "Note"
-    This is a note
+!!! abstract Your Title Here if you want
+	 Hey! This is a abstract admonition type!
 
-!!! example "Some Example"
-    This is a example
+!!! info Your Title Here if you want
+	 Hey! This is a info admonition type!
 
-!!! warning "warning"
-    Some warning
+!!! tip Your Title Here if you want
+	 Hey! This is a tip admonition type!
 
-!!! danger "danger"
-    danger example
+!!! success Your Title Here if you want
+	 Hey! This is a success admonition type!
 
-!!! tip "tip"
-    tip example
+!!! question Your Title Here if you want
+	 Hey! This is a question admonition type!
+
+!!! warning Your Title Here if you want
+	 Hey! This is a warning admonition type!
+
+!!! failure Your Title Here if you want
+	 Hey! This is a failure admonition type!
+
+!!! danger Your Title Here if you want
+	 Hey! This is a danger admonition type!
+
+!!! bug Your Title Here if you want
+	 Hey! This is a bug admonition type!
+
+!!! example Your Title Here if you want
+	 Hey! This is a example admonition type!
+
+!!! quote Your Title Here if you want
+	 Hey! This is a quote admonition type!
 
 ## Tasks  
 A Nice Task List  

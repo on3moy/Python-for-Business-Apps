@@ -1,0 +1,8 @@
+ipykernel
+pandas
+mkdocs
+mknotebooks
+pymdown-extensions
+pygments
+mkdocs-material
+mkdocs-material-extensions

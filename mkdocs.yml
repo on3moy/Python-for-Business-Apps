@@ -6,10 +6,21 @@ repo_name: 'GitHub'
 theme:
   name: material
   logo: img/pythonBW.ico
+  # Dark Theme
   palette:
-    scheme: 'slate'
+  - scheme: slate
     primary: 'black'
     accent: 'light blue'
+    toggle:
+      icon: material/brightness-4
+      name: Switch to light mode
+  # Light Theme
+  - scheme: default
+    primary: 'blue'
+    accent: 'teal'
+    toggle:
+      icon: material/brightness-7
+      name: Switch to dark mode
   font:
     text: 'calibri'
     code: 'Consolas'
@@ -33,17 +44,18 @@ theme:
     - content.tabs.link
     - content.code.annotation
     - content.code.copy
-
-# This is extra, still trying to edit the them 
-extra_css:
-  - stylesheets/extra.css
-
+    
 nav:
   - Home: 'index.md'
   - Book:
     - Chapter 1: 'book/CH1/chapter1.md'
   - Python Crash Course: 'book/Notebooks/Python Crash Course.ipynb'
+  - Install Python: 'installation.md'
   - MKDocsReference: 'Reference.md'
+  - Slides: book/slides.md  
+
+extra_css:
+  - stylesheets/extra.css  
 
 markdown_extensions:
   # Table of Contents Stay
@@ -58,7 +70,7 @@ markdown_extensions:
   - attr_list
   # Highlights additional features
   - pymdownx.highlight:
-  # Add clickable code blocks
+      # Add clickable code blocks
       anchor_linenums: true
   # Allows inline code highlights
   - pymdownx.inlinehilite
@@ -70,9 +82,10 @@ markdown_extensions:
   - pymdownx.magiclink
   # Adds strike through
   - pymdownx.tilde
+  - pymdownx.tabbed
 
 plugins:
   - search
   - mknotebooks
-    
+
 copyright: Copyright &copy; 2024 Moy Patel

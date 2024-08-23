@@ -24,7 +24,7 @@ There are a sequence of steps and an order a program must follow. Ex. When readi
 ## 1.2 Programming using Python  
 **Python Interpreter**:
 Program that executes code written in the python programming language.  
-??? Example
+??? example "🦖 Example"
     I started my Python Interpreter using windows CMD/PowerShell with below snippit.  
     (Python should start up if PATH variables were setup on installation.)  
 
@@ -135,7 +135,7 @@ input('Write something here to show as a notification before a user puts input')
 input()
 ```
 
-??? example "input() Example"
+??? example "🦖 Example - input()"
     Have a user input a value and store it as a variable for later use.  
     Ex. Get users body weight, age, sex, and height to calculate BMI.
 
@@ -152,7 +152,7 @@ Violates the programming language rules. Basically Python does not understand wh
 Runtime Errors:
 Syntax is correct, however the operation is impossible to run. 
 
-??? example "Error Example"
+??? example "🦖 Example - Error"
     The error pinpoints to the line where the error occurred and labels the error accordingly.  
     ![PythonInterpreter](../../img/Chapter1/Errors.png)
 

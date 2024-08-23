@@ -29,11 +29,12 @@ theme:
     - toc.follow
     - toc.integrate
     - search.suggest
-    - search.highligtht
+    - search.highlight
     - content.tabs.link
     - content.code.annotation
     - content.code.copy
 
+# This is extra, still trying to edit the them 
 extra_css:
   - stylesheets/extra.css
 

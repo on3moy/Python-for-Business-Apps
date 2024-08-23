@@ -59,7 +59,7 @@ extra_css:
 markdown_extensions:
   # Table of Contents Stay
   - toc:
-      permalink: true
+      permalink: "⬅️"
   # Ability to add notes in MD like !!! Some notes
   # - admonition
   - admonition

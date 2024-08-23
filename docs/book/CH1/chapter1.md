@@ -21,6 +21,8 @@ There are a sequence of steps and an order a program must follow. Ex. When readi
     (Ctrl + Click to open in new tab)  
     https://www.youtube.com/watch?v=cDA3_5982h8
 
+--- 
+
 ## 1.2 Programming using Python  
 **Python Interpreter**:
 Program that executes code written in the python programming language.  
@@ -80,6 +82,8 @@ butItKindOfDoes = ':)'
 !!! abstract "Formatting & Standards"
     There is a standard way of writing so we all can be in unison to understand each other's code.  
     [PEP 8 Style Guide](https://peps.python.org/pep-0008/#:~:text=The%204%2Dspace%20rule%20is%20optional%20for%20continuation%20lines.&text=(Also%20see%20the%20discussion%20of,or%20after%20binary%20operators%20below.))  
+
+---
 
 ## 1.3 Basic input and output  
 Python by itself comes with built in functions you can use. 
@@ -143,6 +147,8 @@ input()
     Just remember input() receives everything as a string.  
     If you want to store as an integer, you must convert.  
 
+---
+
 ## 1.4 Errors  
 <img src='https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExMTNxZm1ueHY0anc2bHRoYmZvY2VkajVxb3Bjcnlzbjl3N2FiYnh1YyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/r3xBH1FXWz0h55CVtj/giphy.gif' width=200 />
 
@@ -155,6 +161,8 @@ Syntax is correct, however the operation is impossible to run.
 ??? example "🦖 Example - Error"
     The error pinpoints to the line where the error occurred and labels the error accordingly.  
     ![PythonInterpreter](../../img/Chapter1/Errors.png)
+
+---
 
 ## 1.5 Development environment  
 ## 1.6 Computers and programs (general)  

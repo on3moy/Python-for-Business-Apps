@@ -606,18 +606,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#110-python-example-salary-calculation" class="md-nav__link">
+  <a href="#110-python-example-salary-after-taxes-calculation" class="md-nav__link">
     <span class="md-ellipsis">
-      1.10 Python example: Salary calculation
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#111-additional-practice-output-art" class="md-nav__link">
-    <span class="md-ellipsis">
-      1.11 Additional practice: Output art
+      1.10 Python example: Salary after taxes calculation 🫡
     </span>
   </a>
   
@@ -1137,10 +1128,87 @@ Doubling the capacity of IC roughly every 18 months. (The number of switches/tra
 <ul>
 <li>This is lately decreased (not doubling), however still making improvements.  </li>
 </ul>
+<hr />
 <h2 id="18-language-history">1.8 Language history<a class="headerlink" href="#18-language-history" title="Permanent link">⬅️</a></h2>
+<p>Guido van Rossum:
+The person who created Python in the late 1980s  </p>
+<ul>
+<li>Python was derived from an existing language ABC  </li>
+<li>Python came from the TV Show Monty Python's Flying Circus, which Guido liked.  </li>
+<li>The goal for the language is simplicity and readability.</li>
+<li>
+<p class="annotate">Python is an <strong>open-source</strong>(1)<br /></p>
+<ol>
+<li>The community (even you) can participate in defining the language and creating new interpreters.  </li>
+</ol>
+</li>
+</ul>
 <h2 id="19-why-whitespace-matters">1.9 Why whitespace matters<a class="headerlink" href="#19-why-whitespace-matters" title="Permanent link">⬅️</a></h2>
-<h2 id="110-python-example-salary-calculation">1.10 Python example: Salary calculation<a class="headerlink" href="#110-python-example-salary-calculation" title="Permanent link">⬅️</a></h2>
-<h2 id="111-additional-practice-output-art">1.11 Additional practice: Output art<a class="headerlink" href="#111-additional-practice-output-art" title="Permanent link">⬅️</a></h2>
+<details class="question">
+<summary>What is whitespace?</summary>
+<p>Any blank space or newline.
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>  ⬅️ White space (3 spaces)
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>    ⬅️ a Tab, also white space
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>⬆️ Above blank line is white space.  
+</code></pre></div></p>
+</details>
+<p>Programming requires precision and attention to detail.</p>
+<details class="example">
+<summary>🦖 Example</summary>
+<ul>
+<li>= and == have different meanings</li>
+<li>=! and != only one of these is recognized</li>
+</ul>
+</details>
+<p>The general idea is, get the foundational knowledge in syntax and spacing correct to avoid future grueling headaches.  </p>
+<details class="question">
+<summary>Do you struggle with attention to details at times?</summary>
+<p>YES! We all do and its okay. We do not have to be a perfectionist when we start typing.<br />
+There are best practices we can go through to ensure we have working code.  </p>
+<ol>
+<li>
+<p>Run small bits of code to test the outputs</p>
+<ul>
+<li>Testing is best and easier through Jupyter Notebooks. </li>
+</ul>
+</li>
+<li>
+<p>In development, use many print statements to show your output.  </p>
+<ul>
+<li>As you get better, you will use less print statements.</li>
+</ul>
+</li>
+</ol>
+<p>As you gain experience, your attention to detail will become better.<br />
+<img src='https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExanNndTZjMnF3ZzY3MGU4Y3c1empraXlncHJ6NWlhMXVsaGs3YzQ0MiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/tsgNNs93oIbwk/giphy.gif' width=300/>  </p>
+</details>
+<hr />
+<h2 id="110-python-example-salary-after-taxes-calculation">1.10 Python example: Salary after taxes calculation 🫡<a class="headerlink" href="#110-python-example-salary-after-taxes-calculation" title="Permanent link">⬅️</a></h2>
+<p><img src='https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExeGV5cGQ3YjJzbTg4cm92MnFsdjNrMWxzeGcwZ24wYzh1c3YzaWNxbSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/amPtY63aQRfviowDGx/giphy.gif' width=300/>  </p>
+<p>Lets get a rough estimate of our net income after taxes. How much are you actually taking home?</p>
+<p>Lets assume you are filing "Single", live in California, and earn $80,000 base salary.  </p>
+<details class="info">
+<summary>State and Federal Income Brackets</summary>
+<p>Links below for reference of where we got the screenshots.<br />
+<a href="https://www.irs.gov/pub/irs-pdf/p17.pdf">Federal Tax Bracket</a><br />
+<a href="https://www.ftb.ca.gov/forms/2023/2023-540-tax-rate-schedules.pdf">State Tax Bracket</a><br />
+Lets assume you are filing as single for this example.<br />
+<img alt="FederalTax" src="../../../img/Chapter1/federal_taxrate_2023.png" title="Federal Tax Rate image from IRS" /><br />
+<img alt="StateTax" src="../../../img/Chapter1/state_taxrate_2023.png" title="State Tax Rate image from FTB (Franchise Tax Board)" />  </p>
+</details>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>SALARY = 80000
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>californiaTax = 3009.40 + (SALARY - 68350) * .093
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>stateTax = 5147 + (SALARY - 44725) * .22
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>salaryAfterTax = SALARY - californiaTax - stateTax
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>
+<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>print(&#39;This is my Net Income after taxes 😓&#39;)
+<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a>print(salaryAfterTax)
+<a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a>print(&quot;Uncle Sam&#39;s cut&quot;)
+<a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a>print((californiaTax + stateTax) / SALARY * 100)
+<a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a>print(&#39;Which means I take home below every month, I still need to remove any insurance and benefit fees&#39;)
+<a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a>print(salaryAfterTax / 52 * 4)
+</code></pre></div>
 
 
 

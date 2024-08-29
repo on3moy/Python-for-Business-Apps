@@ -411,7 +411,83 @@ Doubling the capacity of IC roughly every 18 months. (The number of switches/tra
 
 - This is lately decreased (not doubling), however still making improvements.  
 
+---  
+
 ## 1.8 Language history  
+Guido van Rossum:
+The person who created Python in the late 1980s  
+
+- Python was derived from an existing language ABC  
+- Python came from the TV Show Monty Python's Flying Circus, which Guido liked.  
+- The goal for the language is simplicity and readability.
+- Python is an **open-source**(1)  
+    { .annotate }  
+
+    1. The community (even you) can participate in defining the language and creating new interpreters.  
+
 ## 1.9 Why whitespace matters  
-## 1.10 Python example: Salary calculation  
-## 1.11 Additional practice: Output art  
+
+??? question "What is whitespace?"  
+
+    Any blank space or newline.
+    ```
+      ⬅️ White space (3 spaces)
+        ⬅️ a Tab, also white space
+    
+    ⬆️ Above blank line is white space.  
+    ```   
+
+Programming requires precision and attention to detail.
+
+??? example "🦖 Example"  
+
+    - = and == have different meanings
+    - =! and != only one of these is recognized
+
+The general idea is, get the foundational knowledge in syntax and spacing correct to avoid future grueling headaches.  
+
+??? question "Do you struggle with attention to details at times?"  
+
+    YES! We all do and its okay. We do not have to be a perfectionist when we start typing.  
+    There are best practices we can go through to ensure we have working code.  
+
+    1. Run small bits of code to test the outputs
+        - Testing is best and easier through Jupyter Notebooks. 
+
+    2. In development, use many print statements to show your output.  
+        - As you get better, you will use less print statements.
+    
+    As you gain experience, your attention to detail will become better.  
+    <img src='https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExanNndTZjMnF3ZzY3MGU4Y3c1empraXlncHJ6NWlhMXVsaGs3YzQ0MiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/tsgNNs93oIbwk/giphy.gif' width=300/>  
+
+---  
+
+## 1.10 Python example: Salary after taxes calculation 🫡
+<img src='https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExeGV5cGQ3YjJzbTg4cm92MnFsdjNrMWxzeGcwZ24wYzh1c3YzaWNxbSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/amPtY63aQRfviowDGx/giphy.gif' width=300/>  
+
+Lets get a rough estimate of our net income after taxes. How much are you actually taking home?
+
+Lets assume you are filing "Single", live in California, and earn $80,000 base salary.  
+
+??? info "State and Federal Income Brackets"
+
+    Links below for reference of where we got the screenshots.  
+    [Federal Tax Bracket](https://www.irs.gov/pub/irs-pdf/p17.pdf)  
+    [State Tax Bracket](https://www.ftb.ca.gov/forms/2023/2023-540-tax-rate-schedules.pdf)  
+    Lets assume you are filing as single for this example.  
+    ![FederalTax](../../img/Chapter1/federal_taxrate_2023.png "Federal Tax Rate image from IRS")  
+    ![StateTax](../../img/Chapter1/state_taxrate_2023.png "State Tax Rate image from FTB (Franchise Tax Board)")  
+
+```
+SALARY = 80000
+californiaTax = 3009.40 + (SALARY - 68350) * .093
+stateTax = 5147 + (SALARY - 44725) * .22
+salaryAfterTax = SALARY - californiaTax - stateTax
+
+print('This is my Net Income after taxes 😓')
+print(salaryAfterTax)
+print("Uncle Sam's cut")
+print((californiaTax + stateTax) / SALARY * 100)
+print('Which means I take home below every month, I still need to remove any insurance and benefit fees')
+print(salaryAfterTax / 52 * 4)
+```

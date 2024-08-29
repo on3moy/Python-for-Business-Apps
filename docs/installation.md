@@ -13,13 +13,35 @@ Head over to python's website to download the latest version of python.
 2. Install for all users
 3. Install with PATH
 
+---
+
 ## 🍎 Mac OS & Linux
 !!! tip "Installation YouTube Video"
     You can use any video on YouTube if you like. Below is one for reference.  
-    [How to Install Python on Mac](https://www.youtube.com/watch?v=nhv82tvFfkM)
+    [How to Install Python on Mac](https://www.youtube.com/watch?v=nhv82tvFfkM)  
 
-## Preferred IDE (Integrated Development Environment)
+---
+
+## 🦖 Preferred IDE (Integrated Development Environment)
 [VSCode](https://code.visualstudio.com/download)  
 
 This class will use VSCode as the default IDE.  
 You may choose to use any IDE you want.
+
+---
+
+## 💻 Command Line Interface (CLI)
+We use CLI to communicate and interact with the OS without using any **GUI**(1).
+{ .annotate }  
+
+1. Graphical User Interface  
+
+For Windows, PowerShell is newer, meant to replace CMD, and offers more capabilities.  
+- You can use which ever you want.
+
+[Learn CMD - YouTube](https://www.youtube.com/watch?v=MBBWVgE0ewk&list=PL6gx4Cwl9DGDV6SnbINlVUd0o2xT4JbMu)  
+
+
+For Mac OS, Terminal, Zsh, or Bash would be your CLI.  
+
+[Linux Commands you NEED to know](https://www.youtube.com/watch?v=gd7BXuUQ91w)

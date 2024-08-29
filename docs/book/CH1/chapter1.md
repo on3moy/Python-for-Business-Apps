@@ -265,7 +265,152 @@ Some Software you can download to code in Python:
 ---  
 
 ## 1.6 Computers and programs (general)  
+First think of a light switch
+
+- [x] On 🌕 Or True Or 1
+- [ ] Off 🌑 or False or 0
+
+The oldest computers were built on large components with the general idea of using switches (on or off) to perform simple calculations.
+
+??? example "🦖 Example"
+
+    ![telephone](https://zytools.zybooks.com/zyAuthor/Python/69/IMAGES/a1db8098-2c2d-5369-c515-812080c40de8)  
+    Imagine people constantly switching a line to connect you to another person via telephone hard line.  
+    - The analogy here is when a person switches the connection, they connect you to another hard line. Meaning they turn on the switch manually  
+
+    - [x] I just connected you to another line to communicate to Mr. Columbus.  
+    - [ ] I just removed the connection to the line communicating with me, your friendly operator.
+
+Bits: 
+Binary digits consisting of 1 and 0s  
+
+Fast Track to a point where that room with the operator is scaled down to a tiny processor.  
+![Meet your new Operator](https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExM2M3ODlub3lkOHlnMWwxNjgxNmsyMDg5Mnk2cjA0ZzFxMWJ5bDhqdCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/QZtGcaMac2R4NDyK8u/giphy.gif)  
+
+- There many, many, and many switches occurring in the backend here.  
+- Modern processors contain billions of transistors, these transistors could be thought as switches.  
+
+These processors take in instructions or a list of desired calculations.  
+**Instruction**:
+Desired calculation  
+
+*Example of types of instructions that a processor might use.*  
+
+|Output|Result|  
+|--|--|  
+|Add X, #num, Y	|Adds data in memory location X to the number num, storing result in location Y|  
+|Sub X, #num, Y	|Subtracts num from data in location X, storing result in location Y|  
+|Mul X, #num, Y	|Multiplies data in location X by num, storing result in location Y|  
+|Div X, #num, Y	|Divides data in location X by num, storing result in location Y|  
+|Jmp Z	|Tells the processor that the next instruction to execute is in memory location Z|  
+
+
+**Memory**:
+A Circuit that stores 0s and 1s in each of a series of thousands.  
+![Memory](https://zytools.zybooks.com/zyAuthor/Python/69/IMAGES/44382dcd-d7fa-6eb5-44d3-b756a9e04690)  
+
+The processor interacts with memory or list of desired instructions.  
+
+??? example "Analogy" 
+
+    Like when you store macros in excel to reuse again later.
+    The macro are instructions stored in memory that can be accessed at a later time.  
+
+**Machine Instructions:**
+Instructions represented by 0s and 1s.  
+
+**Executable Program:**
+Sequence of instructions.  
+
+**Assembly**:
+Programs to translate machine instructions to a friendly readable hooman format.  
+
+!!! info "📖"  
+    
+    Back then, programmers coded in 0s and 1s 🥲. They soon realized this was a nightmare and created assemblers to translate
+    the machine instructions.  
+
+**High-level Languages:**
+Language that supported programming using formulas and algorithms.  
+
+- FORTRAN ("Formula Translator") is one of these languages.  
+- This formula was able to be understood thanks to High-level languages,  F = (9 / 5) * C + 32 
+
+**Compilers:**
+Programs to further support high level languages that automatically translate High-Level Languages to executable programs.  
+
+- Basically translate hooman code back to machine instructions in order to execute.  
+
+*High-Level Language*  
+```
+put "Enter wage: "
+hourlyWage = Get next input
+put "Salary is: "
+put (hourlyWage * 40 * 52)
+
+```  
+
+*Executable Program*  
+```
+011 1100001 001001 1100010
+100 1100010 000101 1100010
+011 1100010 100000 1100011
+011 1100001 001001 1100010
+```
+
+---  
+
 ## 1.7 Computer tour  
+**I/O (Input / Output):**
+Keyboards, headphones, monitor, peripheral, motherboard, etc.  
+
+<img src='https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExbXIzOW1lYjFxcWt6NzNmMnR5MGdvejduMjBxaXBudGF0YTJjejhrNiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/qeAVCeUwLavsP6JD61/giphy.gif' width=300/>
+
+**Storage:**
+Hard Drives (HD), Solid State Drives (SSD) that store data. These storage devices are non-volatile, which means they maintain their content even when powered off. 
+
+!!! quote "How Memory is Maintained?"  
+
+    Zybooks  
+    They do so by orienting magnetic particles in a 0 or 1 position. The disk spins under a head that pulses electricity at just the right times to orient specific particles (you can sometimes hear the disk spin and the head clicking as the head moves). New flash storage devices store 0s and 1s in a non-volatile memory rather than disk, by tunneling electrons into special circuits on the memory's chip, and removing them with a "flash" of electricity that draws the electrons back out.
+
+**Memory (RAM):**
+Random Access Memory (RAM) temporarily holds data from storage and designed for faster access. RAM is volatile, meaning when the computer shuts off, the memory is wiped.  
+
+-  Memory size is typically listed in bits/bytes where a byte is 8 bits.
+
+<img src='https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExZ2lzN2c3bnk4d3c5NmE0ejJpeGR3N29hMnZhZWp5b3pka2U3eHJjNiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/H7rgfu3CGdGTlhOMTj/giphy.gif' width=300/>  
+
+!!! quote "Random Access"  
+
+    Zybooks  
+    The "random access" term comes from accessing any memory location quickly and in arbitrary order, without spinning a disk to get a proper location under a head.  
+
+**Processor:**
+Runs computer programs which reads and executes instructions from memory. Can perform operations of reading and writing data from and into memory.  
+
+- Can have its own "RAM" memory built in called **cache memory**.
+
+!!! quote "What happens within a processor?"  
+
+    Zybooks  
+    When powered on, the processor starts executing the program. The first instruction is typically at memory location 0. That program is commonly called the BIOS (basic input/output system), which sets up the computer's basic peripherals. The processor executes a program called an operating system (OS). The operating system allows a user to run other programs and interfaces with the many other peripherals. Processors are also called CPUs (central processing unit) or microprocessors (a term introduced when processors began fitting on a single chip, the "micro" suggesting its small size). Because speed is so important, a processor may contain a small amount of RAM on its own chip, called cache memory, accessible in one clock tick rather than several, for maintaining a copy of the most-used instructions/data.
+
+**Clock:**
+A processor executes instructions at a rate governed by the processor's clock/frequency. 
+
+- They have clocks ranging from 3 GHz to say 5 GHz. (1 GHz is 1 billion ticks/second)  
+
+Computers can run multiple instructions/programs simultaneously.
+
+**Integrated Circuit (IC):**
+Many transistors/switches on a single chip.  
+
+**Moore's Law:**
+Doubling the capacity of IC roughly every 18 months. (The number of switches/transistors increases doubles within the same size)
+
+- This is lately decreased (not doubling), however still making improvements.  
+
 ## 1.8 Language history  
 ## 1.9 Why whitespace matters  
 ## 1.10 Python example: Salary calculation  

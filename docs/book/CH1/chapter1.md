@@ -480,14 +480,14 @@ Lets assume you are filing "Single", live in California, and earn $80,000 base s
 
 ```
 SALARY = 80000
-californiaTax = 3009.40 + (SALARY - 68350) * .093
-stateTax = 5147 + (SALARY - 44725) * .22
-salaryAfterTax = SALARY - californiaTax - stateTax
+CaliforniaTax = 3009.40 + (SALARY - 68350) * .093
+StateTax = 5147 + (SALARY - 44725) * .22
+SalaryAfterTax = SALARY - CaliforniaTax - StateTax
 
 print('This is my Net Income after taxes 😓')
-print(salaryAfterTax)
+print(SalaryAfterTax)
 print("Uncle Sam's cut")
-print((californiaTax + stateTax) / SALARY * 100)
+print((CaliforniaTax + StateTax) / SALARY * 100)
 print('Which means I take home below every month, I still need to remove any insurance and benefit fees')
-print(salaryAfterTax / 52 * 4)
+print(SalaryAfterTax / 52 * 4)
 ```

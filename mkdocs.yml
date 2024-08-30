@@ -52,6 +52,9 @@ nav:
   - Home: 'index.md'
   - Book:
     - Chapter 1: 'book/CH1/chapter1.md'
+    - Chapter 2: 
+      - 2.1 Variable Assignments: 'book/CH2/2.1_VariableAssignments.md'
+      - 2.2 Identifiers: 'book/CH2/2.2_Identifiers.md'
   - Python Crash Course: 'book/Notebooks/Python Crash Course.ipynb'
   - Install Python: 'installation.md'
   - MKDocsReference: 'Reference.md'

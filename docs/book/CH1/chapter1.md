@@ -253,7 +253,7 @@ Errors that run correctly but not behave as intended.
 Integrated Development Environment (IDE)  
 Any development of code is usually conducted in an IDE.  
 
-Some Software you can download to code in Python:  
+Some ~~Software~~ IDE you can download to code in Python:  
 
 1. [VSCode](https://code.visualstudio.com/)
 2. [Sublime Text](https://www.sublimetext.com/)
@@ -267,7 +267,7 @@ Some Software you can download to code in Python:
 ## 1.6 Computers and programs (general)  
 First think of a light switch
 
-- [x] On 🌕 Or True Or 1
+- [x] On 🌕 or True or 1
 - [ ] Off 🌑 or False or 0
 
 The oldest computers were built on large components with the general idea of using switches (on or off) to perform simple calculations.
@@ -313,8 +313,8 @@ The processor interacts with memory or list of desired instructions.
 
 ??? example "Analogy" 
 
-    Like when you store macros in excel to reuse again later.
-    The macro are instructions stored in memory that can be accessed at a later time.  
+    Creating macros in excel to reuse again later. These macros take in instructions and output something.   
+    The macro is similar to the instructions stored in memory that can be accessed at a later time.  
 
 **Machine Instructions:**
 Instructions represented by 0s and 1s.  
@@ -420,7 +420,7 @@ The person who created Python in the late 1980s
 - Python was derived from an existing language ABC  
 - Python came from the TV Show Monty Python's Flying Circus, which Guido liked.  
 - The goal for the language is simplicity and readability.
-- Python is an **open-source**(1)  
+- Python is **open-source**(1)  
     { .annotate }  
 
     1. The community (even you) can participate in defining the language and creating new interpreters.  

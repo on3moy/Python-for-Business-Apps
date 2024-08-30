@@ -462,7 +462,7 @@ The general idea is, get the foundational knowledge in syntax and spacing correc
 
 ---  
 
-## 1.10 Python example: Salary after taxes calculation 🫡
+## 1.10 Python example: Salary after taxes calculation  
 <img src='https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExeGV5cGQ3YjJzbTg4cm92MnFsdjNrMWxzeGcwZ24wYzh1c3YzaWNxbSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/amPtY63aQRfviowDGx/giphy.gif' width=300/>  
 
 Lets get a rough estimate of our net income after taxes. How much are you actually taking home?

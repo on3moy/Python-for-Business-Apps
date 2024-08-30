@@ -7,7 +7,7 @@ theme:
   icon:
      annotation: material/arrow-right-circle
   name: material
-  logo: img/pythonBW.ico
+  logo: img/Brackets.ico
   # Dark Theme
   palette:
   - scheme: slate
@@ -18,7 +18,7 @@ theme:
       name: Switch to light mode
   # Light Theme
   - scheme: default
-    primary: 'blue'
+    primary: 'white'
     accent: 'teal'
     toggle:
       icon: material/brightness-7
@@ -55,7 +55,12 @@ nav:
     - Chapter 2: 
       - 2.1 Variable Assignments: 'book/CH2/2.1_VariableAssignments.md'
       - 2.2 Identifiers: 'book/CH2/2.2_Identifiers.md' 
-      - 2.3 Objects: 'book/CH2/2.3_Objects.md'  
+      - 2.3 Objects: 'book/CH2/2.3_Objects.md'    
+      - 2.4 Numeric Types: 'book/CH2/2.4_NumericTypes.md'  
+      - 2.5 Arithmetic Expressions: 'book/CH2/2.5_ArithmeticExpressions.md'  
+      - 2.6 Python Expressions: 'book/CH2/2.6_PythonExpressions.md' 
+      - 2.7 Division & Modulo: 'book/CH2/2.7_DivisionModulo.md'
+      - 2.8 Module Basics: 'book/CH2/2.8_ModuleBasics.md'  
   - Python Crash Course: 'book/Notebooks/Python Crash Course.ipynb'
   - Install Python: 'installation.md'
   - MKDocsReference: 'Reference.md'

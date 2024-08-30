@@ -1,5 +1,5 @@
 # Home 
-<img src='https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExbm10dWM2bDdoZ3VpcWhtY3ZjdTE5MGtpNmVnYnpmcDQwa3hlNzFicCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ggtpYV17RP9lTbc542/giphy.gif' width=400/> 
+![Python Logo](img/pythonlogo.gif)  
 
 ## Class  
 Class IS 640 Section 2, Programming for Business Analytics Fall 2024.

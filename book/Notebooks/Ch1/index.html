@@ -516,6 +516,27 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CH2/2.3_Objects/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.3 Objects
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -867,6 +888,731 @@ Uncle Sam's cut
 21.2504375
 Which means I take home below every month, I still need to remove any insurance and benefit fees
 4846.126923076923
+</code>
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="c1"># Import some built in python libraries to get reserved words</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="kn">import</span> <span class="nn">keyword</span>
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="kn">import</span> <span class="nn">builtins</span>
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="c1"># Assign the list to a variable</span>
+<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="n">keyword_list</span> <span class="o">=</span> <span class="n">keyword</span><span class="o">.</span><span class="n">kwlist</span>
+<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="n">builtin_list</span> <span class="o">=</span> <span class="nb">dir</span><span class="p">(</span><span class="n">builtins</span><span class="p">)</span>
+<a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a>
+<a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a><span class="c1"># Add the two different lists together</span>
+<a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a><span class="n">reserved_words</span> <span class="o">=</span> <span class="n">keyword_list</span> <span class="o">+</span> <span class="n">builtin_list</span>
+<a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a>
+<a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a><span class="c1"># Show the output</span>
+<a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Number of words to avoid: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">reserved_words</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<a id="__codelineno-9-14" name="__codelineno-9-14" href="#__codelineno-9-14"></a><span class="nb">print</span><span class="p">(</span><span class="n">reserved_words</span><span class="p">)</span>
+</code></pre></div>
+
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>
+<code>Number of words to avoid: 196
+['False', 'None', 'True', 'and', 'as', 'assert', 'async', 'await', 'break', 'class', 'continue', 'def', 'del', 'elif', 'else', 'except', 'finally', 'for', 'from', 'global', 'if', 'import', 'in', 'is', 'lambda', 'nonlocal', 'not', 'or', 'pass', 'raise', 'return', 'try', 'while', 'with', 'yield', 'ArithmeticError', 'AssertionError', 'AttributeError', 'BaseException', 'BaseExceptionGroup', 'BlockingIOError', 'BrokenPipeError', 'BufferError', 'BytesWarning', 'ChildProcessError', 'ConnectionAbortedError', 'ConnectionError', 'ConnectionRefusedError', 'ConnectionResetError', 'DeprecationWarning', 'EOFError', 'Ellipsis', 'EncodingWarning', 'EnvironmentError', 'Exception', 'ExceptionGroup', 'False', 'FileExistsError', 'FileNotFoundError', 'FloatingPointError', 'FutureWarning', 'GeneratorExit', 'IOError', 'ImportError', 'ImportWarning', 'IndentationError', 'IndexError', 'InterruptedError', 'IsADirectoryError', 'KeyError', 'KeyboardInterrupt', 'LookupError', 'MemoryError', 'ModuleNotFoundError', 'NameError', 'None', 'NotADirectoryError', 'NotImplemented', 'NotImplementedError', 'OSError', 'OverflowError', 'PendingDeprecationWarning', 'PermissionError', 'ProcessLookupError', 'RecursionError', 'ReferenceError', 'ResourceWarning', 'RuntimeError', 'RuntimeWarning', 'StopAsyncIteration', 'StopIteration', 'SyntaxError', 'SyntaxWarning', 'SystemError', 'SystemExit', 'TabError', 'TimeoutError', 'True', 'TypeError', 'UnboundLocalError', 'UnicodeDecodeError', 'UnicodeEncodeError', 'UnicodeError', 'UnicodeTranslateError', 'UnicodeWarning', 'UserWarning', 'ValueError', 'Warning', 'WindowsError', 'ZeroDivisionError', '__IPYTHON__', '__build_class__', '__debug__', '__doc__', '__import__', '__loader__', '__name__', '__package__', '__spec__', 'abs', 'aiter', 'all', 'anext', 'any', 'ascii', 'bin', 'bool', 'breakpoint', 'bytearray', 'bytes', 'callable', 'chr', 'classmethod', 'compile', 'complex', 'copyright', 'credits', 'delattr', 'dict', 'dir', 'display', 'divmod', 'enumerate', 'eval', 'exec', 'execfile', 'filter', 'float', 'format', 'frozenset', 'get_ipython', 'getattr', 'globals', 'hasattr', 'hash', 'help', 'hex', 'id', 'input', 'int', 'isinstance', 'issubclass', 'iter', 'len', 'license', 'list', 'locals', 'map', 'max', 'memoryview', 'min', 'next', 'object', 'oct', 'open', 'ord', 'pow', 'print', 'property', 'range', 'repr', 'reversed', 'round', 'runfile', 'set', 'setattr', 'slice', 'sorted', 'staticmethod', 'str', 'sum', 'super', 'tuple', 'type', 'vars', 'zip']
+</code>
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="kn">import</span> <span class="nn">builtins</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="nb">print</span><span class="p">(</span><span class="nb">dir</span><span class="p">(</span><span class="n">builtins</span><span class="p">))</span>
+</code></pre></div>
+
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>
+<code>['ArithmeticError', 'AssertionError', 'AttributeError', 'BaseException', 'BaseExceptionGroup', 'BlockingIOError', 'BrokenPipeError', 'BufferError', 'BytesWarning', 'ChildProcessError', 'ConnectionAbortedError', 'ConnectionError', 'ConnectionRefusedError', 'ConnectionResetError', 'DeprecationWarning', 'EOFError', 'Ellipsis', 'EncodingWarning', 'EnvironmentError', 'Exception', 'ExceptionGroup', 'False', 'FileExistsError', 'FileNotFoundError', 'FloatingPointError', 'FutureWarning', 'GeneratorExit', 'IOError', 'ImportError', 'ImportWarning', 'IndentationError', 'IndexError', 'InterruptedError', 'IsADirectoryError', 'KeyError', 'KeyboardInterrupt', 'LookupError', 'MemoryError', 'ModuleNotFoundError', 'NameError', 'None', 'NotADirectoryError', 'NotImplemented', 'NotImplementedError', 'OSError', 'OverflowError', 'PendingDeprecationWarning', 'PermissionError', 'ProcessLookupError', 'RecursionError', 'ReferenceError', 'ResourceWarning', 'RuntimeError', 'RuntimeWarning', 'StopAsyncIteration', 'StopIteration', 'SyntaxError', 'SyntaxWarning', 'SystemError', 'SystemExit', 'TabError', 'TimeoutError', 'True', 'TypeError', 'UnboundLocalError', 'UnicodeDecodeError', 'UnicodeEncodeError', 'UnicodeError', 'UnicodeTranslateError', 'UnicodeWarning', 'UserWarning', 'ValueError', 'Warning', 'WindowsError', 'ZeroDivisionError', '__IPYTHON__', '__build_class__', '__debug__', '__doc__', '__import__', '__loader__', '__name__', '__package__', '__spec__', 'abs', 'aiter', 'all', 'anext', 'any', 'ascii', 'bin', 'bool', 'breakpoint', 'bytearray', 'bytes', 'callable', 'chr', 'classmethod', 'compile', 'complex', 'copyright', 'credits', 'delattr', 'dict', 'dir', 'display', 'divmod', 'enumerate', 'eval', 'exec', 'execfile', 'filter', 'float', 'format', 'frozenset', 'get_ipython', 'getattr', 'globals', 'hasattr', 'hash', 'help', 'hex', 'id', 'input', 'int', 'isinstance', 'issubclass', 'iter', 'len', 'license', 'list', 'locals', 'map', 'max', 'memoryview', 'min', 'next', 'object', 'oct', 'open', 'ord', 'pow', 'print', 'property', 'range', 'repr', 'reversed', 'round', 'runfile', 'set', 'setattr', 'slice', 'sorted', 'staticmethod', 'str', 'sum', 'super', 'tuple', 'type', 'vars', 'zip']
+</code>
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="n">federal_tax_bracket</span> <span class="o">=</span> <span class="p">(</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>    <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mf">.10</span><span class="p">))</span>
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>    <span class="p">,(</span><span class="mi">11000</span><span class="p">,</span> <span class="p">(</span><span class="mi">1100</span><span class="p">,</span> <span class="mf">.12</span><span class="p">))</span>
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>    <span class="p">,(</span><span class="mi">44725</span><span class="p">,</span> <span class="p">(</span><span class="mi">5147</span><span class="p">,</span> <span class="mf">.22</span><span class="p">))</span>
+<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>    <span class="p">,(</span><span class="mi">95375</span><span class="p">,</span> <span class="p">(</span><span class="mi">16290</span><span class="p">,</span> <span class="mf">.24</span><span class="p">))</span>
+<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a>    <span class="p">,(</span><span class="mi">182100</span><span class="p">,</span> <span class="p">(</span><span class="mi">37104</span><span class="p">,</span> <span class="mf">.32</span><span class="p">))</span>
+<a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a>    <span class="p">,(</span><span class="mi">231250</span><span class="p">,</span> <span class="p">(</span><span class="mi">52832</span><span class="p">,</span> <span class="mf">.35</span><span class="p">))</span>
+<a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a>    <span class="p">,(</span><span class="mi">578125</span><span class="p">,</span> <span class="p">(</span><span class="mf">174238.25</span><span class="p">,</span> <span class="mf">.37</span><span class="p">))</span>
+<a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a><span class="p">)</span>
+</code></pre></div>
+
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="n">income</span> <span class="o">=</span> <span class="mi">30000</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="n">new_range</span> <span class="o">=</span> <span class="kc">None</span>
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="k">for</span> <span class="n">inc</span><span class="p">,</span> <span class="n">rate</span> <span class="ow">in</span> <span class="n">federal_tax_bracket</span><span class="p">:</span>
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>    <span class="k">if</span> <span class="n">income</span> <span class="o">&amp;</span><span class="n">gt</span><span class="p">;</span><span class="o">=</span> <span class="n">inc</span><span class="p">:</span>
+<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>        <span class="n">new_range</span> <span class="o">=</span> <span class="p">(</span><span class="n">inc</span><span class="p">,</span> <span class="n">rate</span><span class="p">)</span>
+<a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a>
+<a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a><span class="nb">print</span><span class="p">(</span><span class="n">new_range</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">new_range</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span> <span class="o">*</span> <span class="p">(</span><span class="n">income</span> <span class="o">-</span> <span class="n">new_range</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+</code></pre></div>
+
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>
+<code>3380.0
+</code>
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="k">def</span> <span class="nf">get_taxable_income</span><span class="p">(</span><span class="n">income</span><span class="p">):</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>    <span class="c1"># Federal tax bracket ranges for single</span>
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>    <span class="c1"># (Base Range, (Base Pay, Rate Pay))</span>
+<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a>    <span class="n">federal_tax_bracket</span> <span class="o">=</span> <span class="p">(</span>
+<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a>        <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mf">.10</span><span class="p">))</span>
+<a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a>        <span class="p">,(</span><span class="mi">11000</span><span class="p">,</span> <span class="p">(</span><span class="mi">1100</span><span class="p">,</span> <span class="mf">.12</span><span class="p">))</span>
+<a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a>        <span class="p">,(</span><span class="mi">44725</span><span class="p">,</span> <span class="p">(</span><span class="mi">5147</span><span class="p">,</span> <span class="mf">.22</span><span class="p">))</span>
+<a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a>        <span class="p">,(</span><span class="mi">95375</span><span class="p">,</span> <span class="p">(</span><span class="mi">16290</span><span class="p">,</span> <span class="mf">.24</span><span class="p">))</span>
+<a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a>        <span class="p">,(</span><span class="mi">182100</span><span class="p">,</span> <span class="p">(</span><span class="mi">37104</span><span class="p">,</span> <span class="mf">.32</span><span class="p">))</span>
+<a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a>        <span class="p">,(</span><span class="mi">231250</span><span class="p">,</span> <span class="p">(</span><span class="mi">52832</span><span class="p">,</span> <span class="mf">.35</span><span class="p">))</span>
+<a id="__codelineno-13-11" name="__codelineno-13-11" href="#__codelineno-13-11"></a>        <span class="p">,(</span><span class="mi">578125</span><span class="p">,</span> <span class="p">(</span><span class="mf">174238.25</span><span class="p">,</span> <span class="mf">.37</span><span class="p">))</span>
+<a id="__codelineno-13-12" name="__codelineno-13-12" href="#__codelineno-13-12"></a>    <span class="p">)</span>
+<a id="__codelineno-13-13" name="__codelineno-13-13" href="#__codelineno-13-13"></a>
+<a id="__codelineno-13-14" name="__codelineno-13-14" href="#__codelineno-13-14"></a>    <span class="c1"># California State tax brackets for single</span>
+<a id="__codelineno-13-15" name="__codelineno-13-15" href="#__codelineno-13-15"></a>    <span class="n">state_tax_bracket</span> <span class="o">=</span> <span class="p">(</span> 
+<a id="__codelineno-13-16" name="__codelineno-13-16" href="#__codelineno-13-16"></a>        <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mf">.01</span><span class="p">))</span>
+<a id="__codelineno-13-17" name="__codelineno-13-17" href="#__codelineno-13-17"></a>        <span class="p">,(</span><span class="mi">10412</span><span class="p">,</span> <span class="p">(</span><span class="mf">104.12</span><span class="p">,</span> <span class="mf">.02</span><span class="p">))</span>
+<a id="__codelineno-13-18" name="__codelineno-13-18" href="#__codelineno-13-18"></a>        <span class="p">,(</span><span class="mi">24684</span><span class="p">,</span> <span class="p">(</span><span class="mf">389.56</span><span class="p">,</span> <span class="mf">.04</span><span class="p">))</span>
+<a id="__codelineno-13-19" name="__codelineno-13-19" href="#__codelineno-13-19"></a>        <span class="p">,(</span><span class="mi">38959</span><span class="p">,</span> <span class="p">(</span><span class="mf">960.56</span><span class="p">,</span> <span class="mf">.06</span><span class="p">))</span>
+<a id="__codelineno-13-20" name="__codelineno-13-20" href="#__codelineno-13-20"></a>        <span class="p">,(</span><span class="mi">54081</span><span class="p">,</span> <span class="p">(</span><span class="mf">1867.88</span><span class="p">,</span> <span class="mf">.08</span><span class="p">))</span>
+<a id="__codelineno-13-21" name="__codelineno-13-21" href="#__codelineno-13-21"></a>        <span class="p">,(</span><span class="mi">68350</span><span class="p">,</span> <span class="p">(</span><span class="mf">3009.4</span><span class="p">,</span> <span class="mf">.093</span><span class="p">))</span>
+<a id="__codelineno-13-22" name="__codelineno-13-22" href="#__codelineno-13-22"></a>        <span class="p">,(</span><span class="mi">349137</span><span class="p">,</span> <span class="p">(</span><span class="mf">29122.59</span><span class="p">,</span> <span class="mf">.103</span><span class="p">))</span>
+<a id="__codelineno-13-23" name="__codelineno-13-23" href="#__codelineno-13-23"></a>        <span class="p">,(</span><span class="mi">418961</span><span class="p">,</span> <span class="p">(</span><span class="mf">36314.46</span><span class="p">,</span> <span class="mf">.113</span><span class="p">))</span>
+<a id="__codelineno-13-24" name="__codelineno-13-24" href="#__codelineno-13-24"></a>        <span class="p">,(</span><span class="mi">698271</span><span class="p">,</span> <span class="p">(</span><span class="mf">67876.49</span><span class="p">,</span> <span class="mf">.123</span><span class="p">))</span>
+<a id="__codelineno-13-25" name="__codelineno-13-25" href="#__codelineno-13-25"></a>    <span class="p">)</span>
+<a id="__codelineno-13-26" name="__codelineno-13-26" href="#__codelineno-13-26"></a>
+<a id="__codelineno-13-27" name="__codelineno-13-27" href="#__codelineno-13-27"></a>    <span class="c1"># Calculate federal tax</span>
+<a id="__codelineno-13-28" name="__codelineno-13-28" href="#__codelineno-13-28"></a>    <span class="n">fed_range</span> <span class="o">=</span> <span class="kc">None</span>
+<a id="__codelineno-13-29" name="__codelineno-13-29" href="#__codelineno-13-29"></a>    <span class="k">for</span> <span class="n">inc</span><span class="p">,</span> <span class="n">rate</span> <span class="ow">in</span> <span class="n">federal_tax_bracket</span><span class="p">:</span>
+<a id="__codelineno-13-30" name="__codelineno-13-30" href="#__codelineno-13-30"></a>        <span class="k">if</span> <span class="n">income</span> <span class="o">&amp;</span><span class="n">gt</span><span class="p">;</span><span class="o">=</span> <span class="n">inc</span><span class="p">:</span>
+<a id="__codelineno-13-31" name="__codelineno-13-31" href="#__codelineno-13-31"></a>            <span class="n">fed_range</span> <span class="o">=</span> <span class="p">(</span><span class="n">inc</span><span class="p">,</span> <span class="n">rate</span><span class="p">)</span>
+<a id="__codelineno-13-32" name="__codelineno-13-32" href="#__codelineno-13-32"></a>
+<a id="__codelineno-13-33" name="__codelineno-13-33" href="#__codelineno-13-33"></a>    <span class="n">fed_base_range</span> <span class="o">=</span> <span class="n">fed_range</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<a id="__codelineno-13-34" name="__codelineno-13-34" href="#__codelineno-13-34"></a>    <span class="n">fed_base_pay</span> <span class="o">=</span> <span class="n">fed_range</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+<a id="__codelineno-13-35" name="__codelineno-13-35" href="#__codelineno-13-35"></a>    <span class="n">fed_rate_pay</span> <span class="o">=</span> <span class="n">fed_range</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
+<a id="__codelineno-13-36" name="__codelineno-13-36" href="#__codelineno-13-36"></a>    <span class="n">federal_tax</span> <span class="o">=</span> <span class="n">fed_base_pay</span> <span class="o">+</span> <span class="n">fed_rate_pay</span> <span class="o">*</span> <span class="p">(</span><span class="n">income</span> <span class="o">-</span> <span class="n">fed_base_range</span><span class="p">)</span>
+<a id="__codelineno-13-37" name="__codelineno-13-37" href="#__codelineno-13-37"></a>
+<a id="__codelineno-13-38" name="__codelineno-13-38" href="#__codelineno-13-38"></a>    <span class="c1"># Calculate state tax</span>
+<a id="__codelineno-13-39" name="__codelineno-13-39" href="#__codelineno-13-39"></a>    <span class="n">state_range</span> <span class="o">=</span> <span class="kc">None</span>
+<a id="__codelineno-13-40" name="__codelineno-13-40" href="#__codelineno-13-40"></a>    <span class="k">for</span> <span class="n">inc</span><span class="p">,</span> <span class="n">rate</span> <span class="ow">in</span> <span class="n">federal_tax_bracket</span><span class="p">:</span>
+<a id="__codelineno-13-41" name="__codelineno-13-41" href="#__codelineno-13-41"></a>        <span class="k">if</span> <span class="n">income</span> <span class="o">&amp;</span><span class="n">gt</span><span class="p">;</span><span class="o">=</span> <span class="n">inc</span><span class="p">:</span>
+<a id="__codelineno-13-42" name="__codelineno-13-42" href="#__codelineno-13-42"></a>            <span class="n">state_range</span> <span class="o">=</span> <span class="p">(</span><span class="n">inc</span><span class="p">,</span> <span class="n">rate</span><span class="p">)</span>
+<a id="__codelineno-13-43" name="__codelineno-13-43" href="#__codelineno-13-43"></a>
+<a id="__codelineno-13-44" name="__codelineno-13-44" href="#__codelineno-13-44"></a>    <span class="n">state_base_range</span> <span class="o">=</span> <span class="n">state_range</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<a id="__codelineno-13-45" name="__codelineno-13-45" href="#__codelineno-13-45"></a>    <span class="n">state_base_pay</span> <span class="o">=</span> <span class="n">state_range</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+<a id="__codelineno-13-46" name="__codelineno-13-46" href="#__codelineno-13-46"></a>    <span class="n">state_rate_pay</span> <span class="o">=</span> <span class="n">state_range</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
+<a id="__codelineno-13-47" name="__codelineno-13-47" href="#__codelineno-13-47"></a>    <span class="n">state_tax</span> <span class="o">=</span> <span class="n">state_base_pay</span> <span class="o">+</span> <span class="n">state_rate_pay</span> <span class="o">*</span> <span class="p">(</span><span class="n">income</span> <span class="o">-</span> <span class="n">state_base_range</span><span class="p">)</span>
+<a id="__codelineno-13-48" name="__codelineno-13-48" href="#__codelineno-13-48"></a>
+<a id="__codelineno-13-49" name="__codelineno-13-49" href="#__codelineno-13-49"></a>    <span class="n">total_taxed</span> <span class="o">=</span> <span class="n">federal_tax</span> <span class="o">+</span> <span class="n">state_tax</span>
+<a id="__codelineno-13-50" name="__codelineno-13-50" href="#__codelineno-13-50"></a>
+<a id="__codelineno-13-51" name="__codelineno-13-51" href="#__codelineno-13-51"></a>    <span class="k">if</span> <span class="n">total_taxed</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+<a id="__codelineno-13-52" name="__codelineno-13-52" href="#__codelineno-13-52"></a>        <span class="n">percent_taxed</span> <span class="o">=</span> <span class="mi">0</span>
+<a id="__codelineno-13-53" name="__codelineno-13-53" href="#__codelineno-13-53"></a>    <span class="k">else</span><span class="p">:</span>
+<a id="__codelineno-13-54" name="__codelineno-13-54" href="#__codelineno-13-54"></a>        <span class="n">percent_taxed</span> <span class="o">=</span> <span class="n">total_taxed</span> <span class="o">/</span> <span class="n">income</span>
+<a id="__codelineno-13-55" name="__codelineno-13-55" href="#__codelineno-13-55"></a>
+<a id="__codelineno-13-56" name="__codelineno-13-56" href="#__codelineno-13-56"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Income: </span><span class="si">{</span><span class="n">income</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<a id="__codelineno-13-57" name="__codelineno-13-57" href="#__codelineno-13-57"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;You get taxed $</span><span class="si">{</span><span class="n">total_taxed</span><span class="si">:</span><span class="s1">,.2f</span><span class="si">}</span><span class="s1">, which is </span><span class="si">{</span><span class="n">percent_taxed</span><span class="w"> </span><span class="si">:</span><span class="s1">.0%</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<a id="__codelineno-13-58" name="__codelineno-13-58" href="#__codelineno-13-58"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Which means you really earn $</span><span class="si">{</span><span class="n">income</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="p">(</span><span class="n">total_taxed</span><span class="p">)</span><span class="si">:</span><span class="s1">,.2f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<a id="__codelineno-13-59" name="__codelineno-13-59" href="#__codelineno-13-59"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Monthly: </span><span class="si">{</span><span class="p">(</span><span class="n">income</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="p">(</span><span class="n">total_taxed</span><span class="p">))</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">52</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">4</span><span class="si">:</span><span class="s1">,.2f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<a id="__codelineno-13-60" name="__codelineno-13-60" href="#__codelineno-13-60"></a>    <span class="k">return</span> <span class="n">total_taxed</span>
+</code></pre></div>
+
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">900000</span><span class="p">,</span> <span class="mi">10000</span><span class="p">):</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>    <span class="n">get_taxable_income</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+</code></pre></div>
+
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>
+<code>Income: 0
+You get taxed $0.00, which is 0%
+Which means you really earn $0.00
+Monthly: 0.00
+
+
+Income: 10000
+You get taxed $2,000.00, which is 20%
+Which means you really earn $8,000.00
+Monthly: 615.38
+
+
+Income: 20000
+You get taxed $4,360.00, which is 22%
+Which means you really earn $15,640.00
+Monthly: 1,203.08
+
+
+Income: 30000
+You get taxed $6,760.00, which is 23%
+Which means you really earn $23,240.00
+Monthly: 1,787.69
+
+
+Income: 40000
+You get taxed $9,160.00, which is 23%
+Which means you really earn $30,840.00
+Monthly: 2,372.31
+
+
+Income: 50000
+You get taxed $12,615.00, which is 25%
+Which means you really earn $37,385.00
+Monthly: 2,875.77
+
+
+Income: 60000
+You get taxed $17,015.00, which is 28%
+Which means you really earn $42,985.00
+Monthly: 3,306.54
+
+
+Income: 70000
+You get taxed $21,415.00, which is 31%
+Which means you really earn $48,585.00
+Monthly: 3,737.31
+
+
+Income: 80000
+You get taxed $25,815.00, which is 32%
+Which means you really earn $54,185.00
+Monthly: 4,168.08
+
+
+Income: 90000
+You get taxed $30,215.00, which is 34%
+Which means you really earn $59,785.00
+Monthly: 4,598.85
+
+
+Income: 100000
+You get taxed $34,800.00, which is 35%
+Which means you really earn $65,200.00
+Monthly: 5,015.38
+
+
+Income: 110000
+You get taxed $39,600.00, which is 36%
+Which means you really earn $70,400.00
+Monthly: 5,415.38
+
+
+Income: 120000
+You get taxed $44,400.00, which is 37%
+Which means you really earn $75,600.00
+Monthly: 5,815.38
+
+
+Income: 130000
+You get taxed $49,200.00, which is 38%
+Which means you really earn $80,800.00
+Monthly: 6,215.38
+
+
+Income: 140000
+You get taxed $54,000.00, which is 39%
+Which means you really earn $86,000.00
+Monthly: 6,615.38
+
+
+Income: 150000
+You get taxed $58,800.00, which is 39%
+Which means you really earn $91,200.00
+Monthly: 7,015.38
+
+
+Income: 160000
+You get taxed $63,600.00, which is 40%
+Which means you really earn $96,400.00
+Monthly: 7,415.38
+
+
+Income: 170000
+You get taxed $68,400.00, which is 40%
+Which means you really earn $101,600.00
+Monthly: 7,815.38
+
+
+Income: 180000
+You get taxed $73,200.00, which is 41%
+Which means you really earn $106,800.00
+Monthly: 8,215.38
+
+
+Income: 190000
+You get taxed $79,264.00, which is 42%
+Which means you really earn $110,736.00
+Monthly: 8,518.15
+
+
+Income: 200000
+You get taxed $85,664.00, which is 43%
+Which means you really earn $114,336.00
+Monthly: 8,795.08
+
+
+Income: 210000
+You get taxed $92,064.00, which is 44%
+Which means you really earn $117,936.00
+Monthly: 9,072.00
+
+
+Income: 220000
+You get taxed $98,464.00, which is 45%
+Which means you really earn $121,536.00
+Monthly: 9,348.92
+
+
+Income: 230000
+You get taxed $104,864.00, which is 46%
+Which means you really earn $125,136.00
+Monthly: 9,625.85
+
+
+Income: 240000
+You get taxed $111,789.00, which is 47%
+Which means you really earn $128,211.00
+Monthly: 9,862.38
+
+
+Income: 250000
+You get taxed $118,789.00, which is 48%
+Which means you really earn $131,211.00
+Monthly: 10,093.15
+
+
+Income: 260000
+You get taxed $125,789.00, which is 48%
+Which means you really earn $134,211.00
+Monthly: 10,323.92
+
+
+Income: 270000
+You get taxed $132,789.00, which is 49%
+Which means you really earn $137,211.00
+Monthly: 10,554.69
+
+
+Income: 280000
+You get taxed $139,789.00, which is 50%
+Which means you really earn $140,211.00
+Monthly: 10,785.46
+
+
+Income: 290000
+You get taxed $146,789.00, which is 51%
+Which means you really earn $143,211.00
+Monthly: 11,016.23
+
+
+Income: 300000
+You get taxed $153,789.00, which is 51%
+Which means you really earn $146,211.00
+Monthly: 11,247.00
+
+
+Income: 310000
+You get taxed $160,789.00, which is 52%
+Which means you really earn $149,211.00
+Monthly: 11,477.77
+
+
+Income: 320000
+You get taxed $167,789.00, which is 52%
+Which means you really earn $152,211.00
+Monthly: 11,708.54
+
+
+Income: 330000
+You get taxed $174,789.00, which is 53%
+Which means you really earn $155,211.00
+Monthly: 11,939.31
+
+
+Income: 340000
+You get taxed $181,789.00, which is 53%
+Which means you really earn $158,211.00
+Monthly: 12,170.08
+
+
+Income: 350000
+You get taxed $188,789.00, which is 54%
+Which means you really earn $161,211.00
+Monthly: 12,400.85
+
+
+Income: 360000
+You get taxed $195,789.00, which is 54%
+Which means you really earn $164,211.00
+Monthly: 12,631.62
+
+
+Income: 370000
+You get taxed $202,789.00, which is 55%
+Which means you really earn $167,211.00
+Monthly: 12,862.38
+
+
+Income: 380000
+You get taxed $209,789.00, which is 55%
+Which means you really earn $170,211.00
+Monthly: 13,093.15
+
+
+Income: 390000
+You get taxed $216,789.00, which is 56%
+Which means you really earn $173,211.00
+Monthly: 13,323.92
+
+
+Income: 400000
+You get taxed $223,789.00, which is 56%
+Which means you really earn $176,211.00
+Monthly: 13,554.69
+
+
+Income: 410000
+You get taxed $230,789.00, which is 56%
+Which means you really earn $179,211.00
+Monthly: 13,785.46
+
+
+Income: 420000
+You get taxed $237,789.00, which is 57%
+Which means you really earn $182,211.00
+Monthly: 14,016.23
+
+
+Income: 430000
+You get taxed $244,789.00, which is 57%
+Which means you really earn $185,211.00
+Monthly: 14,247.00
+
+
+Income: 440000
+You get taxed $251,789.00, which is 57%
+Which means you really earn $188,211.00
+Monthly: 14,477.77
+
+
+Income: 450000
+You get taxed $258,789.00, which is 58%
+Which means you really earn $191,211.00
+Monthly: 14,708.54
+
+
+Income: 460000
+You get taxed $265,789.00, which is 58%
+Which means you really earn $194,211.00
+Monthly: 14,939.31
+
+
+Income: 470000
+You get taxed $272,789.00, which is 58%
+Which means you really earn $197,211.00
+Monthly: 15,170.08
+
+
+Income: 480000
+You get taxed $279,789.00, which is 58%
+Which means you really earn $200,211.00
+Monthly: 15,400.85
+
+
+Income: 490000
+You get taxed $286,789.00, which is 59%
+Which means you really earn $203,211.00
+Monthly: 15,631.62
+
+
+Income: 500000
+You get taxed $293,789.00, which is 59%
+Which means you really earn $206,211.00
+Monthly: 15,862.38
+
+
+Income: 510000
+You get taxed $300,789.00, which is 59%
+Which means you really earn $209,211.00
+Monthly: 16,093.15
+
+
+Income: 520000
+You get taxed $307,789.00, which is 59%
+Which means you really earn $212,211.00
+Monthly: 16,323.92
+
+
+Income: 530000
+You get taxed $314,789.00, which is 59%
+Which means you really earn $215,211.00
+Monthly: 16,554.69
+
+
+Income: 540000
+You get taxed $321,789.00, which is 60%
+Which means you really earn $218,211.00
+Monthly: 16,785.46
+
+
+Income: 550000
+You get taxed $328,789.00, which is 60%
+Which means you really earn $221,211.00
+Monthly: 17,016.23
+
+
+Income: 560000
+You get taxed $335,789.00, which is 60%
+Which means you really earn $224,211.00
+Monthly: 17,247.00
+
+
+Income: 570000
+You get taxed $342,789.00, which is 60%
+Which means you really earn $227,211.00
+Monthly: 17,477.77
+
+
+Income: 580000
+You get taxed $349,864.00, which is 60%
+Which means you really earn $230,136.00
+Monthly: 17,702.77
+
+
+Income: 590000
+You get taxed $357,264.00, which is 61%
+Which means you really earn $232,736.00
+Monthly: 17,902.77
+
+
+Income: 600000
+You get taxed $364,664.00, which is 61%
+Which means you really earn $235,336.00
+Monthly: 18,102.77
+
+
+Income: 610000
+You get taxed $372,064.00, which is 61%
+Which means you really earn $237,936.00
+Monthly: 18,302.77
+
+
+Income: 620000
+You get taxed $379,464.00, which is 61%
+Which means you really earn $240,536.00
+Monthly: 18,502.77
+
+
+Income: 630000
+You get taxed $386,864.00, which is 61%
+Which means you really earn $243,136.00
+Monthly: 18,702.77
+
+
+Income: 640000
+You get taxed $394,264.00, which is 62%
+Which means you really earn $245,736.00
+Monthly: 18,902.77
+
+
+Income: 650000
+You get taxed $401,664.00, which is 62%
+Which means you really earn $248,336.00
+Monthly: 19,102.77
+
+
+Income: 660000
+You get taxed $409,064.00, which is 62%
+Which means you really earn $250,936.00
+Monthly: 19,302.77
+
+
+Income: 670000
+You get taxed $416,464.00, which is 62%
+Which means you really earn $253,536.00
+Monthly: 19,502.77
+
+
+Income: 680000
+You get taxed $423,864.00, which is 62%
+Which means you really earn $256,136.00
+Monthly: 19,702.77
+
+
+Income: 690000
+You get taxed $431,264.00, which is 63%
+Which means you really earn $258,736.00
+Monthly: 19,902.77
+
+
+Income: 700000
+You get taxed $438,664.00, which is 63%
+Which means you really earn $261,336.00
+Monthly: 20,102.77
+
+
+Income: 710000
+You get taxed $446,064.00, which is 63%
+Which means you really earn $263,936.00
+Monthly: 20,302.77
+
+
+Income: 720000
+You get taxed $453,464.00, which is 63%
+Which means you really earn $266,536.00
+Monthly: 20,502.77
+
+
+Income: 730000
+You get taxed $460,864.00, which is 63%
+Which means you really earn $269,136.00
+Monthly: 20,702.77
+
+
+Income: 740000
+You get taxed $468,264.00, which is 63%
+Which means you really earn $271,736.00
+Monthly: 20,902.77
+
+
+Income: 750000
+You get taxed $475,664.00, which is 63%
+Which means you really earn $274,336.00
+Monthly: 21,102.77
+
+
+Income: 760000
+You get taxed $483,064.00, which is 64%
+Which means you really earn $276,936.00
+Monthly: 21,302.77
+
+
+Income: 770000
+You get taxed $490,464.00, which is 64%
+Which means you really earn $279,536.00
+Monthly: 21,502.77
+
+
+Income: 780000
+You get taxed $497,864.00, which is 64%
+Which means you really earn $282,136.00
+Monthly: 21,702.77
+
+
+Income: 790000
+You get taxed $505,264.00, which is 64%
+Which means you really earn $284,736.00
+Monthly: 21,902.77
+
+
+Income: 800000
+You get taxed $512,664.00, which is 64%
+Which means you really earn $287,336.00
+Monthly: 22,102.77
+
+
+Income: 810000
+You get taxed $520,064.00, which is 64%
+Which means you really earn $289,936.00
+Monthly: 22,302.77
+
+
+Income: 820000
+You get taxed $527,464.00, which is 64%
+Which means you really earn $292,536.00
+Monthly: 22,502.77
+
+
+Income: 830000
+You get taxed $534,864.00, which is 64%
+Which means you really earn $295,136.00
+Monthly: 22,702.77
+
+
+Income: 840000
+You get taxed $542,264.00, which is 65%
+Which means you really earn $297,736.00
+Monthly: 22,902.77
+
+
+Income: 850000
+You get taxed $549,664.00, which is 65%
+Which means you really earn $300,336.00
+Monthly: 23,102.77
+
+
+Income: 860000
+You get taxed $557,064.00, which is 65%
+Which means you really earn $302,936.00
+Monthly: 23,302.77
+
+
+Income: 870000
+You get taxed $564,464.00, which is 65%
+Which means you really earn $305,536.00
+Monthly: 23,502.77
+
+
+Income: 880000
+You get taxed $571,864.00, which is 65%
+Which means you really earn $308,136.00
+Monthly: 23,702.77
+
+
+Income: 890000
+You get taxed $579,264.00, which is 65%
+Which means you really earn $310,736.00
+Monthly: 23,902.77
+
+
 </code>
 </pre>
 </div>

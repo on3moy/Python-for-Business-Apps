@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../2.2_Identifiers/">
+        <link rel="prev" href="../2.5_ArithmeticExpressions/">
       
       
-        <link rel="next" href="../2.4_NumericTypes/">
+        <link rel="next" href="../2.7_DivisionModulo/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>2.3 Objects - IS 640 Business Application Programming</title>
+        <title>2.6 Python Expressions - IS 640 Business Application Programming</title>
       
     
     
@@ -86,7 +86,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#objects" class="md-skip">
+        <a href="#26-python-expressions" class="md-skip">
           Skip to content
         </a>
       
@@ -121,7 +121,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              2.3 Objects
+              2.6 Python Expressions
             
           </span>
         </div>
@@ -536,30 +536,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    2.3 Objects
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../2.3_Objects/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -568,35 +548,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#object-properties" class="md-nav__link">
-    <span class="md-ellipsis">
-      Object Properties
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -648,10 +599,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../2.6_PythonExpressions/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    2.6 Python Expressions
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -660,6 +631,35 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#compound-operators" class="md-nav__link">
+    <span class="md-ellipsis">
+      Compound Operators
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -800,53 +800,86 @@
   
 
 
-<h1 id="objects">Objects<a class="headerlink" href="#objects" title="Permanent link">⬅️</a></h1>
-<div class="admonition quote">
-<p class="admonition-title">Zybooks Glossary</p>
-<p>object:
-An object represents a value and is automatically created by the interpreter when executing a line of code. For example, executing x = 4 creates a new object to represent the value 4.  </p>
-<p>garbage collection:
-Deleting unused objects is an automatic process called garbage collection that frees memory space.  </p>
-<p>Name binding:
-Name binding is the process of associating names with interpreter objects. An object can have more than one name bound to it, and every name is always bound to exactly one object. Name binding occurs whenever an assignment statement is executed, as demonstrated below.  </p>
-</div>
-<p><strong>Objects:</strong>
-Used to represent everything in a Python Program (Integers, strings, functions, lists, etc.)</p>
-<p>Below works as an example. We assign a emoji to a variable.  </p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a># Technically we are assigning a string!
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>x = &#39;🦖&#39;
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>print(x)
-</code></pre></div>
-<p><strong>Garbage Collection:</strong>
-Deleting unused objects is an automatic process.  </p>
-<p><strong>Name Binding:</strong>
-Process of associating names with interpreter objects. An object can have more than one name bound to it.</p>
-<div class="admonition info">
-<p class="admonition-title"> </p>
-<p>So when we assign a variable <code>ImBabyTRex = '🦖'</code>, we are essentially creating an object ImBabyTRex.<br />
-The name has been bound.  </p>
-</div>
-<h2 id="object-properties">Object Properties<a class="headerlink" href="#object-properties" title="Permanent link">⬅️</a></h2>
-<p>Objects has three defining properties.<br />
-- <strong>Value:</strong> such as 'Hi Im Baby', 13, '13', etc.<br />
-- <strong>Type:</strong> The type of the objects, what is the format? Integer, string, etc?<br />
-- <strong>Identity:</strong> Unique identifier that describes the object.  </p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>x = &#39;🦖&#39;
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a># Lets show the value
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>print(x)
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a># Lets show the type
-<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>print(type(x))
-<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>
-<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a># Lets show the identity
-<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>print(id(x))
+<h1 id="26-python-expressions">2.6 Python Expressions<a class="headerlink" href="#26-python-expressions" title="Permanent link">⬅️</a></h1>
+<p>Best shown by example...  </p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>&quot;&quot;&quot; Computes the total cost of leasing a car given the down payment,
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    monthly rate, and number of months &quot;&quot;&quot;
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>down_payment = int(input(&#39;Enter down payment: &#39;))
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>payment_per_month = int(input(&#39;Enter monthly payment: &#39;))
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>num_months = int(input(&#39;Enter number of months: &#39;))
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>total_cost = down_payment + (payment_per_month * num_months) # ⬅️ The expression
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>print (f&#39;Total cost: ${total_cost:.2f}&#39;)
 </code></pre></div>
 <div class="admonition note">
-<p class="admonition-title"> </p>
-<p>print(), type(), and id() are all python built in functions.<br />
-Meaning, these functions are always available and do not require you to import libraries.  </p>
+<p class="admonition-title">Operator Styling</p>
+<p>Put a single space between operators.<br />
+<code>5 + 5</code></p>
 </div>
+<details class="example">
+<summary>Good practices</summary>
+<p><a href="https://peps.python.org/pep-0008/#should-a-line-break-before-or-after-a-binary-operator">PEP 8 Styles</a>  </p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a># Correct:
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a># easy to match operators with operands
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>income = (gross_wages
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>    + taxable_interest
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>    + (dividends - qualified_dividends)
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>    - ira_deduction
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>    - student_loan_interest)
+</code></pre></div>
+<p><a href="https://peps.python.org/pep-0008/#other-recommendations">Other PEP 8 Recommendations</a>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a># Correct:
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>i = i + 1
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>submitted += 1
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>x = x*2 - 1
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>hypot2 = x*x + y*y
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>c = (a+b) * (a-b)
+</code></pre></div></p>
+</details>
+<h2 id="compound-operators">Compound Operators<a class="headerlink" href="#compound-operators" title="Permanent link">⬅️</a></h2>
+<p class="annotate">Just another way to short hand some code.<br />
+Look at the third column and see how its written.(1)<br /></p>
+<ol>
+<li>Normally you write in this format to understand the concept. Once you get comfortable, use compound operator version.   </li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Compound operator</th>
+<th>Expression with compound operator</th>
+<th>Equivalent expression</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Addition assignment</td>
+<td>age += 1</td>
+<td>age = age + 1</td>
+</tr>
+<tr>
+<td>Subtraction assignment</td>
+<td>age -= 1</td>
+<td>age = age - 1</td>
+</tr>
+<tr>
+<td>Multiplication assignment</td>
+<td>age *= 1</td>
+<td>age = age * 1</td>
+</tr>
+<tr>
+<td>Division assignment</td>
+<td>age /= 1</td>
+<td>age = age / 1</td>
+</tr>
+<tr>
+<td>Modulo (operator discussed elsewhere) assignment</td>
+<td>age %= 1</td>
+<td>age = age % 1</td>
+</tr>
+</tbody>
+</table>
 
 
 

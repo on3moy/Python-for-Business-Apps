@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../2.2_Identifiers/">
+        <link rel="prev" href="../2.6_PythonExpressions/">
       
       
-        <link rel="next" href="../2.4_NumericTypes/">
+        <link rel="next" href="../2.8_ModuleBasics/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>2.3 Objects - IS 640 Business Application Programming</title>
+        <title>2.7 Division & Modulo - IS 640 Business Application Programming</title>
       
     
     
@@ -86,7 +86,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#objects" class="md-skip">
+        <a href="#27-division-modulo" class="md-skip">
           Skip to content
         </a>
       
@@ -121,7 +121,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              2.3 Objects
+              2.7 Division & Modulo
             
           </span>
         </div>
@@ -536,30 +536,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    2.3 Objects
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../2.3_Objects/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -568,35 +548,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#object-properties" class="md-nav__link">
-    <span class="md-ellipsis">
-      Object Properties
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -669,10 +620,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../2.7_DivisionModulo/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    2.7 Division & Modulo
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -681,6 +652,53 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#division" class="md-nav__link">
+    <span class="md-ellipsis">
+      Division
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#floor-division" class="md-nav__link">
+    <span class="md-ellipsis">
+      Floor Division
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modulo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modulo
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -800,53 +818,36 @@
   
 
 
-<h1 id="objects">Objects<a class="headerlink" href="#objects" title="Permanent link">⬅️</a></h1>
-<div class="admonition quote">
-<p class="admonition-title">Zybooks Glossary</p>
-<p>object:
-An object represents a value and is automatically created by the interpreter when executing a line of code. For example, executing x = 4 creates a new object to represent the value 4.  </p>
-<p>garbage collection:
-Deleting unused objects is an automatic process called garbage collection that frees memory space.  </p>
-<p>Name binding:
-Name binding is the process of associating names with interpreter objects. An object can have more than one name bound to it, and every name is always bound to exactly one object. Name binding occurs whenever an assignment statement is executed, as demonstrated below.  </p>
-</div>
-<p><strong>Objects:</strong>
-Used to represent everything in a Python Program (Integers, strings, functions, lists, etc.)</p>
-<p>Below works as an example. We assign a emoji to a variable.  </p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a># Technically we are assigning a string!
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>x = &#39;🦖&#39;
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>print(x)
-</code></pre></div>
-<p><strong>Garbage Collection:</strong>
-Deleting unused objects is an automatic process.  </p>
-<p><strong>Name Binding:</strong>
-Process of associating names with interpreter objects. An object can have more than one name bound to it.</p>
-<div class="admonition info">
-<p class="admonition-title"> </p>
-<p>So when we assign a variable <code>ImBabyTRex = '🦖'</code>, we are essentially creating an object ImBabyTRex.<br />
-The name has been bound.  </p>
-</div>
-<h2 id="object-properties">Object Properties<a class="headerlink" href="#object-properties" title="Permanent link">⬅️</a></h2>
-<p>Objects has three defining properties.<br />
-- <strong>Value:</strong> such as 'Hi Im Baby', 13, '13', etc.<br />
-- <strong>Type:</strong> The type of the objects, what is the format? Integer, string, etc?<br />
-- <strong>Identity:</strong> Unique identifier that describes the object.  </p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>x = &#39;🦖&#39;
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a># Lets show the value
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>print(x)
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a># Lets show the type
-<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>print(type(x))
-<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>
-<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a># Lets show the identity
-<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>print(id(x))
-</code></pre></div>
-<div class="admonition note">
-<p class="admonition-title"> </p>
-<p>print(), type(), and id() are all python built in functions.<br />
-Meaning, these functions are always available and do not require you to import libraries.  </p>
-</div>
+<h1 id="27-division-modulo">2.7 Division &amp; Modulo<a class="headerlink" href="#27-division-modulo" title="Permanent link">⬅️</a></h1>
+<h2 id="division">Division<a class="headerlink" href="#division" title="Permanent link">⬅️</a></h2>
+<p>Division returns a float. Even if you divide two integers and there isn't a remainder, you still get a float returned.<br />
+Input:
+<code>4 / 2</code><br />
+Output:
+<code>2.0</code></p>
+<h2 id="floor-division">Floor Division<a class="headerlink" href="#floor-division" title="Permanent link">⬅️</a></h2>
+<p><strong>Floor division:</strong>
+Used to round down the result of a float to the smallest whole number value. (Returns an integer)<br />
+Noted as two back slashes <code>//</code>  </p>
+<p class="annotate">Input:
+<code>5 // 3</code>(1)<br />
+Output:
+<code>1</code><br /></p>
+<ol>
+<li>5 / 3 approximately is 1.6667, lowest integer is 1  </li>
+</ol>
+<h2 id="modulo">Modulo<a class="headerlink" href="#modulo" title="Permanent link">⬅️</a></h2>
+<p><img src='https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExYmJtY3RlbGRqeGx5Mnd6bnhkbm5tNG8yMjQwNWxsOGZta3Rma2hzMCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ghuvaCOI6GOoTX0RmH/giphy.gif' width=200/><br />
+<strong>The Modulo Operator:</strong>
+Evaluates the remainder of the division.<br />
+Noted as <code>%</code>  </p>
+<p class="annotate">Input:
+<code>5 % 3</code>(1)<br />
+Output:
+<code>2</code><br /></p>
+<ol>
+<li>5 / 3 approximately is 1 with a remainder of 2, so we get the remainder 2.  </li>
+</ol>
 
 
 

@@ -1,5 +1,5 @@
-# Home 
-![Python Logo](img/pythonlogo.gif)  
+# Welcome to IS 640 Business Application Programming!
+<img src='img/pythonlogo.gif' width=300/>  
 
 ## Class  
 Class IS 640 Section 2, Programming for Business Analytics Fall 2024.

@@ -35,9 +35,11 @@ theme:
     - navigation.tabs
     - navigation.tabs.sticky
     - navigation.sections
+    - navigation.expand
     - navigation.top
     - navigation.instant
     - navigation.instant.progress
+    - navigation.instant.preview  
     - navigation.path
     - toc.follow
     - toc.integrate
@@ -61,6 +63,7 @@ nav:
       - 2.6 Python Expressions: 'book/CH2/2.6_PythonExpressions.md' 
       - 2.7 Division & Modulo: 'book/CH2/2.7_DivisionModulo.md'
       - 2.8 Module Basics: 'book/CH2/2.8_ModuleBasics.md'  
+      - 2.9 Math Module: 'book/CH2/2.9_MathModule.md'  
   - Python Crash Course: 'book/Notebooks/Python Crash Course.ipynb'
   - Install Python: 'installation.md'
   - MKDocsReference: 'Reference.md'

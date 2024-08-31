@@ -9,23 +9,25 @@
       
       
       
+        <link rel="prev" href="../2.8_ModuleBasics/">
       
-        <link rel="next" href="book/CH1/chapter1/">
+      
+        <link rel="next" href="../../Notebooks/Python%20Crash%20Course/">
       
       
-      <link rel="icon" href="assets/images/favicon.png">
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.32">
     
     
       
-        <title>IS 640 Business Application Programming</title>
+        <title>2.9 Math Module - IS 640 Business Application Programming</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.3cba04c6.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.3cba04c6.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -50,15 +52,15 @@
       
     
     
-      <link rel="stylesheet" href="stylesheets/extra.css">
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
     
-      <link rel="stylesheet" href="css/ansi-colours.css">
+      <link rel="stylesheet" href="../../../css/ansi-colours.css">
     
-      <link rel="stylesheet" href="css/jupyter-cells.css">
+      <link rel="stylesheet" href="../../../css/jupyter-cells.css">
     
-      <link rel="stylesheet" href="css/pandas-dataframe.css">
+      <link rel="stylesheet" href="../../../css/pandas-dataframe.css">
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -84,7 +86,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#welcome-to-is-640-business-application-programming" class="md-skip">
+        <a href="#math-module" class="md-skip">
           Skip to content
         </a>
       
@@ -100,9 +102,9 @@
 
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="IS 640 Business Application Programming" class="md-header__button md-logo" aria-label="IS 640 Business Application Programming" data-md-component="logo">
+    <a href="../../.." title="IS 640 Business Application Programming" class="md-header__button md-logo" aria-label="IS 640 Business Application Programming" data-md-component="logo">
       
-  <img src="img/Brackets.ico" alt="logo">
+  <img src="../../../img/Brackets.ico" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -119,7 +121,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Home
+              2.9 Math Module
             
           </span>
         </div>
@@ -220,11 +222,9 @@
         
   
   
-    
   
-  
-    <li class="md-tabs__item md-tabs__item--active">
-      <a href="." class="md-tabs__link">
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
         
   
     
@@ -239,11 +239,13 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="book/CH1/chapter1/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../CH1/chapter1/" class="md-tabs__link">
           
   
   Book
@@ -259,7 +261,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="book/Notebooks/Python%20Crash%20Course/" class="md-tabs__link">
+      <a href="../../Notebooks/Python%20Crash%20Course/" class="md-tabs__link">
         
   
     
@@ -276,7 +278,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="installation/" class="md-tabs__link">
+      <a href="../../../installation/" class="md-tabs__link">
         
   
     
@@ -293,7 +295,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="Reference/" class="md-tabs__link">
+      <a href="../../../Reference/" class="md-tabs__link">
         
   
     
@@ -335,9 +337,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="IS 640 Business Application Programming" class="md-nav__button md-logo" aria-label="IS 640 Business Application Programming" data-md-component="logo">
+    <a href="../../.." title="IS 640 Business Application Programming" class="md-nav__button md-logo" aria-label="IS 640 Business Application Programming" data-md-component="logo">
       
-  <img src="img/Brackets.ico" alt="logo">
+  <img src="../../../img/Brackets.ico" alt="logo">
 
     </a>
     IS 640 Business Application Programming
@@ -361,6 +363,305 @@
       
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Book
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Book
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CH1/chapter1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 1
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Chapter 2
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Chapter 2
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2.1_VariableAssignments/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.1 Variable Assignments
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2.2_Identifiers/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.2 Identifiers
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2.3_Objects/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.3 Objects
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2.4_NumericTypes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.4 Numeric Types
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2.5_ArithmeticExpressions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.5 Arithmetic Expressions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2.6_PythonExpressions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.6 Python Expressions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2.7_DivisionModulo/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.7 Division & Modulo
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2.8_ModuleBasics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.8 Module Basics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -377,18 +678,18 @@
           
   
   <span class="md-ellipsis">
-    Home
+    2.9 Math Module
   </span>
   
 
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <a href="." class="md-nav__link md-nav__link--active">
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
-    Home
+    2.9 Math Module
   </span>
   
 
@@ -410,36 +711,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#class" class="md-nav__link">
+  <a href="#commonly-used-functions" class="md-nav__link">
     <span class="md-ellipsis">
-      Class
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#course-description" class="md-nav__link">
-    <span class="md-ellipsis">
-      Course Description
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#book" class="md-nav__link">
-    <span class="md-ellipsis">
-      Book
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#lectures" class="md-nav__link">
-    <span class="md-ellipsis">
-      Lectures
+      Commonly Used Functions
     </span>
   </a>
   
@@ -452,299 +726,6 @@
     </li>
   
 
-    
-      
-      
-  
-  
-  
-  
-    
-    
-    
-      
-      
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
-        
-          
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    Book
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2">
-            <span class="md-nav__icon md-icon"></span>
-            Book
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="book/CH1/chapter1/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Chapter 1
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-    
-      
-      
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_2" >
-        
-          
-          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    Chapter 2
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_2">
-            <span class="md-nav__icon md-icon"></span>
-            Chapter 2
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="book/CH2/2.1_VariableAssignments/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    2.1 Variable Assignments
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="book/CH2/2.2_Identifiers/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    2.2 Identifiers
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="book/CH2/2.3_Objects/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    2.3 Objects
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="book/CH2/2.4_NumericTypes/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    2.4 Numeric Types
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="book/CH2/2.5_ArithmeticExpressions/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    2.5 Arithmetic Expressions
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="book/CH2/2.6_PythonExpressions/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    2.6 Python Expressions
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="book/CH2/2.7_DivisionModulo/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    2.7 Division & Modulo
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="book/CH2/2.8_ModuleBasics/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    2.8 Module Basics
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="book/CH2/2.9_MathModule/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    2.9 Math Module
-  </span>
-  
-
-      </a>
-    </li>
-  
-
               
             
           </ul>
@@ -769,7 +750,7 @@
   
   
     <li class="md-nav__item">
-      <a href="book/Notebooks/Python%20Crash%20Course/" class="md-nav__link">
+      <a href="../../Notebooks/Python%20Crash%20Course/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -789,7 +770,7 @@
   
   
     <li class="md-nav__item">
-      <a href="installation/" class="md-nav__link">
+      <a href="../../../installation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -809,7 +790,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Reference/" class="md-nav__link">
+      <a href="../../../Reference/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -837,22 +818,132 @@
                   
 
 
-<h1 id="welcome-to-is-640-business-application-programming">Welcome to IS 640 Business Application Programming!<a class="headerlink" href="#welcome-to-is-640-business-application-programming" title="Permanent link">⬅️</a></h1>
-<p><img src='img/pythonlogo.gif' width=300/>  </p>
-<h2 id="class">Class<a class="headerlink" href="#class" title="Permanent link">⬅️</a></h2>
-<p>Class IS 640 Section 2, Programming for Business Analytics Fall 2024.</p>
-<h2 id="course-description">Course Description<a class="headerlink" href="#course-description" title="Permanent link">⬅️</a></h2>
-<p>This course delves into Python programming and its application in business data analysis. Students will design, analyze, and implement business applications that leverage advanced programming tools and techniques. The curriculum focuses on developing business applications of varying complexity, emphasizing efficient ETL (Extract, Transform, Load) data processing methods. By the end of the course, students will build a programming mindset and master best practices in business application development.  </p>
-<h2 id="book">Book<a class="headerlink" href="#book" title="Permanent link">⬅️</a></h2>
-<details class="abstract">
-<summary>Book Details</summary>
-<p>IS 640: Business Application Programming<br />
-zyBook ISBN: 979-8-203-12288-9<br />
-Zybook Code: 
-<strong>CSULBIS640PatelFall2024</strong>  </p>
+<h1 id="math-module">Math Module<a class="headerlink" href="#math-module" title="Permanent link">⬅️</a></h1>
+<p>Python has a built in <code>math</code> module for advanced math operations.  </p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>import math
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>num = 144
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>sqrt_num = math.sqrt(num)
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>print(sqrt_num)
+</code></pre></div>
+<div class="admonition abstract">
+<p class="admonition-title">functions</p>
+<p>sqrt(), print(), sum(), etc. are functions.<br />
+function:
+List of statements that can be executed by simply referring to the functions name.  </p>
+<ul>
+<li>The analogy would be similar to creating a script and assigning to a variable to reuse. </li>
+</ul>
+</div>
+<details class="question">
+<summary>How do you know if its a function?</summary>
+<p><img src='https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExOXptZHNlY3ZxcGR5ejVydTFhMGY5dW92bjB0bGtyMWdyenNxMms2biZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/c9Om5IKRPiB46Y5Mhy/giphy.gif' width=200/><br />
+If everyone is able to create functions and share, how do we get a list of all of these functions?<br />
+We don't. We can only get a list of python's built in functions with below script. </p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>import builtins
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>print(dir(builtins))
+</code></pre></div>
+<p>For all other functions, once we import the library, we can get the list of all functions like below.<br />
+dir() is a built in function that shows attributes of an object.  </p>
+<ul>
+<li>VSCode IntelliSense will be able to tell you if its a function with dot notation.<br />
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a># This will print all the available functions, classes, and variables within SomeModuleName
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>import SomeModuleName
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>print(dir(SomeModuleName))
+</code></pre></div></li>
+</ul>
 </details>
-<h2 id="lectures">Lectures<a class="headerlink" href="#lectures" title="Permanent link">⬅️</a></h2>
-<p>Lectures are a combination of Zybooks IS 640: Business Application Programming and my notes.</p>
+<h2 id="commonly-used-functions">Commonly Used Functions<a class="headerlink" href="#commonly-used-functions" title="Permanent link">⬅️</a></h2>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>Description</th>
+<th>Function</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ceil(x)</td>
+<td>Round-up value</td>
+<td>fabs(x)</td>
+<td>Absolute value</td>
+</tr>
+<tr>
+<td>factorial(x)</td>
+<td>factorial (3! = 3 * 2 * 1)</td>
+<td>floor(x)</td>
+<td>Round-down value</td>
+</tr>
+<tr>
+<td>fmod(x, y)</td>
+<td>Remainder of division</td>
+<td>fsum(x)</td>
+<td>Floating-point sum of a range, list, or array.</td>
+</tr>
+<tr>
+<td>exp(x)</td>
+<td>Exponential function ex</td>
+<td>log(x, (base))</td>
+<td>Natural logarithm; base is optional</td>
+</tr>
+<tr>
+<td>pow(x, y)</td>
+<td>Raise x to power y</td>
+<td>sqrt(x)</td>
+<td>Square root</td>
+</tr>
+<tr>
+<td>acos(x)</td>
+<td>Arc cosine</td>
+<td>asin(x)</td>
+<td>Arc sine</td>
+</tr>
+<tr>
+<td>atan(x)</td>
+<td>Arc tangent</td>
+<td>atan2(y, x)</td>
+<td>Arc tangent with two parameters</td>
+</tr>
+<tr>
+<td>cos(x)</td>
+<td>Cosine</td>
+<td>sin(x)</td>
+<td>Sine</td>
+</tr>
+<tr>
+<td>hypot(x1, x2, x3, ..., xn)</td>
+<td>Length of vector from origin</td>
+<td>degrees(x)</td>
+<td>Convert from radians to degrees</td>
+</tr>
+<tr>
+<td>radians(x)</td>
+<td>Convert degrees to radians</td>
+<td>tan(x)</td>
+<td>Tangent</td>
+</tr>
+<tr>
+<td>cosh(x)</td>
+<td>Hyperbolic cosine</td>
+<td>sinh(x)</td>
+<td>Hyperbolic sine</td>
+</tr>
+<tr>
+<td>gamma(x)</td>
+<td>Gamma function</td>
+<td>erf(x)</td>
+<td>Error function</td>
+</tr>
+<tr>
+<td>pi (constant)</td>
+<td>Mathematical constant 3.141592...</td>
+<td>e (constant)</td>
+<td>Mathematical constant 2.718281...</td>
+</tr>
+</tbody>
+</table>
 
 
 
@@ -913,10 +1004,10 @@ Zybook Code:
       <div class="md-progress" data-md-component="progress" role="progressbar"></div>
     
     
-    <script id="__config" type="application/json">{"base": ".", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.expand", "navigation.top", "navigation.instant", "navigation.instant.progress", "navigation.instant.preview", "navigation.path", "toc.follow", "toc.integrate", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy", "content.tooltips"], "search": "assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.expand", "navigation.top", "navigation.instant", "navigation.instant.progress", "navigation.instant.preview", "navigation.path", "toc.follow", "toc.integrate", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy", "content.tooltips"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="assets/javascripts/bundle.471ce7a9.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.471ce7a9.min.js"></script>
       
     
   </body>

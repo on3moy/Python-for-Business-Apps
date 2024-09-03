@@ -28,6 +28,11 @@ Head over to python's website to download the latest version of python.
 This class will use VSCode as the default IDE.  
 You may choose to use any IDE you want.
 
+### Once VSCode is installed, you need to install 2 Extensions within VS Code
+
+- Python (Allows you to code using Python Syntax)
+- Jupyter (Allows you to code in notebook formats)
+
 ---
 
 ## 💻 Command Line Interface (CLI)

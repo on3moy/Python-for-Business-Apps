@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../2.3_Objects/">
+        <link rel="prev" href="../2.10_RandomNumbers/">
       
       
-        <link rel="next" href="../2.5_ArithmeticExpressions/">
+        <link rel="next" href="../../Notebooks/Python%20Crash%20Course/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>2.4 Numeric Types - IS 640 Business Application Programming</title>
+        <title>2.11 Representing Text - IS 640 Business Application Programming</title>
       
     
     
@@ -86,7 +86,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#numeric-types-floating-point" class="md-skip">
+        <a href="#211-representing-text" class="md-skip">
           Skip to content
         </a>
       
@@ -121,7 +121,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              2.4 Numeric Types
+              2.11 Representing Text
             
           </span>
         </div>
@@ -557,30 +557,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    2.4 Numeric Types
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../2.4_NumericTypes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -589,62 +569,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#float" class="md-nav__link">
-    <span class="md-ellipsis">
-      Float
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#integer" class="md-nav__link">
-    <span class="md-ellipsis">
-      Integer
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#overflow" class="md-nav__link">
-    <span class="md-ellipsis">
-      Overflow
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#formatting-floats" class="md-nav__link">
-    <span class="md-ellipsis">
-      Formatting Floats
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -780,10 +704,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../2.11_RepresentingText/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    2.11 Representing Text
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -792,6 +736,44 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#unicode" class="md-nav__link">
+    <span class="md-ellipsis">
+      Unicode
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#escape-sequences" class="md-nav__link">
+    <span class="md-ellipsis">
+      Escape Sequences
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -887,58 +869,91 @@
                   
 
 
-<h1 id="numeric-types-floating-point">Numeric Types: Floating-point<a class="headerlink" href="#numeric-types-floating-point" title="Permanent link">⬅️</a></h1>
-<h2 id="float">Float<a class="headerlink" href="#float" title="Permanent link">⬅️</a></h2>
-<p><strong>Floating-point Number:</strong>
-A real number like 13.01, -55.23, or 0.00001  </p>
-<ul>
-<li>The term floating-point refers to the decimal point appearing anywhere ('floating') in the number. </li>
-</ul>
-<p><strong>float:</strong>
-A data type for floating-point numbers.  </p>
-<p><strong>A floating-point literal:</strong>
-Written with the fractional part even if that fraction is 0, as in 1.0, 0.0, or 99.0.  </p>
-<div class="admonition info">
-<p class="admonition-title"> </p>
-<p class="annotate">Scientific Notation is another way to write a float. It uses the "e" to let you know how far you move the "." over.<br />
-0.003 is the same as <strong>3.0e-3</strong>(1)<br /></p>
-<ol>
-<li><em>The -3 tells you to move the decimal to the left ⬅️, while a positive number moves the decimal point to the right ➡️</em></li>
-</ol>
-</div>
-<div class="admonition abstract">
-<p class="admonition-title">float()</p>
-<p>You can use the <strong>float()</strong> function to convert your value into a float if possible.<br />
-- You can't convert 'Hi' into a decimal.  </p>
-</div>
-<h2 id="integer">Integer<a class="headerlink" href="#integer" title="Permanent link">⬅️</a></h2>
-<p>We also have whole numbers or integer formats. (A number without a decimal)  </p>
-<div class="admonition abstract">
-<p class="admonition-title">int()</p>
-<p>You can use the <strong>int()</strong> function to convert your value into an integer if possible.<br />
-- You can't convert 'Hi' into an integer. </p>
-</div>
-<h2 id="overflow">Overflow<a class="headerlink" href="#overflow" title="Permanent link">⬅️</a></h2>
-<p>Float-types have a limit to how "long" your decimal can be.  </p>
-<ul>
-<li>For Python 32 bit installations, the longest float is 1.0e308 or 1.0e-308 (You have 307 zeros, that's a lot)</li>
-</ul>
-<div class="admonition question">
-<p class="admonition-title">What happens when your float is too long?</p>
-<p><strong>Overflow Error:</strong>
-When a value is too large to be stored in the memory allocated by the interpreter.</p>
-</div>
-<h2 id="formatting-floats">Formatting Floats<a class="headerlink" href="#formatting-floats" title="Permanent link">⬅️</a></h2>
-<p>It's not ideal to work with long float formats. You are hurting the eyes of your veteran peers.  </p>
-<p>Lets format the floats for readability. We do this with string formats, which we will talk more about this later.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a># Essentially we convert the float to a string and format it to make it look pretty.
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>print(f&#39;{13.12345: .2f}&#39;)
+<h1 id="211-representing-text">2.11 Representing Text<a class="headerlink" href="#211-representing-text" title="Permanent link">⬅️</a></h1>
+<p><strong>Unicode:</strong>
+String variables to represent text.  </p>
+<p><strong>Code Point:</strong>
+Character with a unique number</p>
+<h2 id="unicode">Unicode<a class="headerlink" href="#unicode" title="Permanent link">⬅️</a></h2>
+<p>We can get the textual representation of a number by using Python's built-in function <strong>chr()</strong>.<br />
+chr() will convert the number to a string character. You can copy and past below to get all characters from numbers 32-127.  </p>
+<details class="example">
+<summary>🦖 Unicode Conversation Example</summary>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>for num in range(32,127):
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    char_converted = chr(num)
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    print(f&#39;{num}: {char_converted}&#39;)
 </code></pre></div>
-<div class="admonition warning">
-<p class="admonition-title"> </p>
-<p>Notice you don't see any commas in floats or integers.<br />
-This is because they are not allowed in integer/float format. Once you add commas, it will no longer be recognized as a number.  </p>
-</div>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a># Sample Output
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>32:  
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>33: !
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>34: &quot;
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>35: #
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>36: $
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>37: %
+</code></pre></div>
+Convert these character back to numbers using ord()!!!  </p>
+</details>
+<h2 id="escape-sequences">Escape Sequences<a class="headerlink" href="#escape-sequences" title="Permanent link">⬅️</a></h2>
+<p>Special characters exist to do some sort of operation</p>
+<p>The <code>\</code> backslash tells python, don't read the next character as a string, instead do some operation.  </p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a># Using a n in combination with the escape sequence creates a new line  
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>print(&#39;Hello, this is the first line\nThis is the second line&#39;)
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Escape Sequence</th>
+<th>Explanation</th>
+<th>Example code</th>
+<th>Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>\\</td>
+<td>Backslash (\)</td>
+<td>print('\\home\\users\\')</td>
+<td>print('\home\users\')</td>
+</tr>
+<tr>
+<td>\</td>
+<td>Single quote (')</td>
+<td>print('Name: John O\'Donald')</td>
+<td>Name: John O'Donald</td>
+</tr>
+<tr>
+<td>\</td>
+<td>Double quote (")</td>
+<td>print("He said, \"Hello friend!\"")</td>
+<td>He said, "Hello friend!"</td>
+</tr>
+<tr>
+<td>\n</td>
+<td>Newline</td>
+<td>print('My name...\nIs John...')</td>
+<td>My name...</td>
+</tr>
+<tr>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>Is John...</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a># Tab example
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>print(&#39;hola&#39;)
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>print(&#39;/tHi I am corgi&#39;)
+</code></pre></div>
+<p>Output:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>hola
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>    Hi I am corgi
+</code></pre></div></p>
+<h1 id="raw-strings">Raw Strings<a class="headerlink" href="#raw-strings" title="Permanent link">⬅️</a></h1>
+<p>Ignore backslashes or escape sequence by starting the string with an "r". </p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>my_string = &#39;This is a \n \&#39;normal\&#39; string\n&#39;
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>my_raw_string = r&#39;This is a \n \&#39;raw\&#39; string&#39;
+</code></pre></div>
 
 
 

@@ -66,6 +66,11 @@ nav:
       - 2.9 Math Module: 'book/CH2/2.9_MathModule.md'  
       - 2.10 Random Numbers: 'book/CH2/2.10_RandomNumbers.md' 
       - 2.11 Representing Text: 'book/CH2/2.11_RepresentingText.md' 
+    - Chapter 3:
+      - 3.1 String Basics: 'book/CH3/3.1_StringBasics.md'
+      - 3.2 List Basics: 'book/CH3/3.2_ListBasics.md'
+      - 3.3 Tuple Basics: 'book/CH3/3.3_TupleBasics.md'
+      # - 3.4 Dictionary Basics: 'book/CH3/3.4_DictionaryBasics.md'
   - Python Crash Course: 'book/Notebooks/Python Crash Course.ipynb'
   - Install Python: 'installation.md'
   - MKDocsReference: 'Reference.md'

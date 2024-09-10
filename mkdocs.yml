@@ -71,6 +71,7 @@ nav:
       - 3.2 List Basics: 'book/CH3/3.2_ListBasics.md'
       - 3.3 Tuple Basics: 'book/CH3/3.3_TupleBasics.md'
       - 3.4 Dictionary Basics: 'book/CH3/3.4_DictionaryBasics.md'
+      - 3.10 String Formatting: 'book/CH3/3.10_StringFormatting.md'
   - Python Crash Course: 'book/Notebooks/Python Crash Course.ipynb'
   - Install Python: 'installation.md'
   - MKDocsReference: 'Reference.md'

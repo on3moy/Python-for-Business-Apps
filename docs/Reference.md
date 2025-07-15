@@ -31,15 +31,19 @@ def foo():
 
 foo()
 ```  
+
 ## Emojis
+
 🦖🥚🦕
 
 ## Blocks with [admonition](https://squidfunk.github.io/mkdocs-material/reference/admonitions/#supported-types)
+
 Classes:
 ```['note', 'abstract', 'info', 'tip', 'success', 'question', 'warning', 'failure', 'danger', 'bug', 'example', 'quote']```
 
-Expadable
-```
+Expandable
+
+```markdown
 ??? danger "This is expandable"
 	This is expandable, you can add note, example, and warning types
 ```
@@ -84,6 +88,7 @@ Expadable
 	 Hey! This is a quote admonition type!
 
 ## Tasks  
+
 A Nice Task List  
 
 - [x] Complete  

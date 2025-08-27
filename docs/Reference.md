@@ -9,6 +9,7 @@ For full documentation visit [mkdocs.org](https://www.mkdocs.org).
 * `mkdocs new [dir-name]` - Create a new project.
 * `mkdocs serve` - Start the live-reloading docs server.
 * `mkdocs build` - Build the documentation site folder with all other assets automatically.
+* `mkdocs gh-deploy` - Optional method to publish to gh-pages branch to update page.
 * `mkdocs -h` - Print help message and exit.
 
 ## Project layout

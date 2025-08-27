@@ -50,3 +50,9 @@ For Windows, PowerShell is newer, meant to replace CMD, and offers more capabili
 For Mac OS, Terminal, Zsh, or Bash would be your CLI.  
 
 [Linux Commands you NEED to know](https://www.youtube.com/watch?v=gd7BXuUQ91w)
+
+---
+
+## 🐍 Install Anaconda
+
+<iframe src="/slides/Anaconda Installation.html" width="100%" height="700" style="border:0;"></iframe>

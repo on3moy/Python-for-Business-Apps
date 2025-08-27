@@ -11,9 +11,8 @@ This course delves into Python programming and its application in business data 
 ## Book
 ??? abstract "Book Details"
     IS 640: Business Application Programming  
-    zyBook ISBN: 979-8-203-12288-9  
     Zybook Code: 
-    **CSULBIS640PatelFall2024**  
+    **CSULBIS640PatelFall2025**  
 
 ## Lectures
 Lectures are a combination of Zybooks IS 640: Business Application Programming and my notes.

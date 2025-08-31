@@ -55,4 +55,4 @@ For Mac OS, Terminal, Zsh, or Bash would be your CLI.
 
 ## 🐍 Install Anaconda
 
-<iframe src="slides/anaconda_installation.html" width="100%" height="700" style="border:0;"></iframe>
+<iframe src="{{ base_url }}/slides/anaconda_installation.html" width="100%" height="700" style="border:0;"></iframe>

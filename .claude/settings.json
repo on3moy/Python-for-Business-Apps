@@ -1,0 +1,17 @@
+{
+  "hooks": {
+    "SubagentStop": [
+      {
+        "matcher": "Sonnet-Make-Slides|Sonnet-Write-Notes",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "LOG=$(mktemp)\nuv run mkdocs build --strict > \"$LOG\" 2>&1\ncode=$?\nif [ $code -ne 0 ]; then\n  tail -c 4000 \"$LOG\" | python3 -c \"\nimport json, sys\nout = sys.stdin.read()\nreason = 'mkdocs build --strict failed. Fix the reported errors before finishing.\\n\\n' + out\nprint(json.dumps({'decision': 'block', 'reason': reason}))\n\"\nelse\n  echo '{}'\nfi\nrm -f \"$LOG\"\n",
+            "timeout": 180,
+            "statusMessage": "Verifying deck build with mkdocs build --strict..."
+          }
+        ]
+      }
+    ]
+  }
+}

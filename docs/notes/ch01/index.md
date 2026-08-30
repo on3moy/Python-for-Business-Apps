@@ -1,5 +1,5 @@
 # Chapter 1  
-<img src="https://media1.giphy.com/media/TrhpJt1hFqgCI/200w.gif?cid=6c09b952034xdcm0udz441w16o9jp0tkvhno8nsomvz8wqow&ep=v1_gifs_search&rid=200w.gif&ct=g" />  
+<img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExNzh5eXVtcHM4cW9rbG9qcW1iMDVhM28weGRzdGhrbHQwbWdneXJiayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/CzbiCJTYOzHTW/giphy.gif" />  
 
 Lets kick things off with the fundamentals - what programming even is, how Python fits in, and the hardware humming underneath it all before we start writing real code.
 

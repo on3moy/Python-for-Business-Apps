@@ -136,6 +136,11 @@ markdown_extensions:
   - pymdownx.highlight:
       # Add clickable code blocks
       anchor_linenums: true
+      # Notes use bare, untagged code fences (house style) — every one is
+      # Python, so lex as Python instead of leaving fences unhighlighted.
+      # (guess_lang is unreliable on short snippets: it mis-detected
+      # `print('x', end=' ')` as SCSS.)
+      default_lang: python
   # Allows inline code highlights
   - pymdownx.inlinehilite
   # Adds expanded notes, hidden content

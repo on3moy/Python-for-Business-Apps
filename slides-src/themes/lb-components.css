@@ -1,0 +1,180 @@
+/* @theme lb-components */
+
+/*
+ * Discrete pieces of slide furniture: the code block "window chrome" and its
+ * syntax colors, callout boxes, the corner logo watermark, and the title-slide
+ * treatment.
+ */
+
+/* === Nicer code blocks === */
+pre {
+  position: relative;
+  background: var(--lb-charcoal-2);
+  color: var(--lb-white);
+  padding: 1rem 1.2rem 1.2rem;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow:
+    0 6px 16px rgba(0,0,0,0.3),
+    inset 0 0 0 1px rgba(255,255,255,0.03);
+  overflow: auto;
+}
+
+/* Top “window chrome” bar + traffic-light dots */
+pre::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 28px;
+  border-radius: 12px 12px 0 0;
+  background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
+  pointer-events: none;
+}
+pre::after {
+  content: "";
+  position: absolute;
+  top: 9px; left: 12px;
+  width: 42px; height: 10px;
+  background:
+    radial-gradient(#ff5f56 5px, transparent 6px),
+    radial-gradient(#ffbd2e 5px, transparent 6px),
+    radial-gradient(#27c93f 5px, transparent 6px);
+  background-size: 10px 10px, 10px 10px, 10px 10px;
+  background-position: 0 0, 16px 0, 32px 0;
+  background-repeat: no-repeat;
+  opacity: .9;
+  pointer-events: none;
+}
+
+/* The `uncover` base theme gives `pre > code` its own light background, which
+   shows up as a white slab inside our dark window chrome. Clear it so the
+   chrome's background is what you actually see, and left-align the text --
+   uncover centers everything, which is wrong for code. */
+pre code,
+pre code.hljs {
+  background: transparent;
+  /* Marp's own rule sets color here too, so it has to be restated or the
+     code renders near-invisible dark-on-dark. */
+  color: var(--lb-code-fg);
+  border: 0;
+  padding: 0;
+  /* Marp centers the code box with `margin: 0 auto` and a min-width; both
+     have to be undone for code to sit flush left in the window chrome. */
+  margin: 0;
+  min-width: 0;
+  display: block;
+  text-align: left;
+  font-size: 0.85em;
+  line-height: 1.5;
+}
+
+/* Leave room for the window chrome bar above the first line of code, and
+   left-align: Marp wraps code in an inline-block auto-scaling element, so the
+   surrounding text-align is what actually positions it. `uncover` centers. */
+pre {
+  padding-top: 2.4rem;
+  text-align: left;
+}
+
+/* Inline code. The `:not(:is(pre, marp-pre)) > code` form matches how Marp
+   targets inline code, so this override actually wins -- a bare `code`
+   selector loses and the chip renders light-on-dark. */
+:not(:is(pre, marp-pre)) > code {
+  background: var(--lb-charcoal-2);
+  color: var(--lb-gold);
+  padding: 0.08em 0.35em;
+  border-radius: 6px;
+  border: 1px solid rgba(255,255,255,0.06);
+}
+
+/* Syntax highlighting -- Monokai (Marp uses highlight.js classes).
+   !important is load-bearing here: marp-cli inlines its own default
+   highlight.js palette with a `div#id > svg > foreignObject > section
+   :where(.hljs-*)` selector. :where() carries no specificity itself, but the
+   generated id it's chained off of does, and it outweighs a plain class
+   selector regardless of CSS source order. */
+pre code.hljs { color: #F8F8F2 !important; }
+.hljs-comment, .hljs-quote { color: #75715E !important; font-style: italic; }
+.hljs-keyword, .hljs-selector-tag, .hljs-subst, .hljs-tag { color: #F92672 !important; font-weight: 600; }
+.hljs-string, .hljs-attr, .hljs-template-tag { color: #E6DB74 !important; }
+.hljs-number, .hljs-literal, .hljs-type { color: #AE81FF !important; }
+.hljs-title, .hljs-section, .hljs-selector-id, .hljs-function .hljs-title { color: #A6E22E !important; }
+.hljs-name, .hljs-attribute, .hljs-built_in { color: #66D9EF !important; }
+.hljs-params { color: #F8F8F2 !important; }
+.hljs-addition { color: #A6E22E !important; }
+.hljs-deletion { color: #F92672 !important; }
+
+/* Admonitions (Marp + MkDocs-style callouts) -- each type gets its own
+   accent so !!! warning and !!! danger read apart from !!! tip at a glance,
+   instead of every callout sharing the same gold bar. */
+.note, .tip, .warning, .info, .danger, .success {
+  background: var(--lb-charcoal-2);
+  border-left: 4px solid var(--lb-gold);
+  padding: 0.75rem 1rem;
+  border-radius: 10px;
+  margin: 0.6rem 0;
+}
+.note     { border-left-color: var(--lb-note); }
+.tip      { border-left-color: var(--lb-tip); }
+.info     { border-left-color: var(--lb-info); }
+.warning  { border-left-color: var(--lb-warning); }
+.danger   { border-left-color: var(--lb-danger); }
+.success  { border-left-color: var(--lb-success); }
+
+/* Pagination dots / progress (optional) */
+section::after {
+  color: rgba(255,255,255,0.35);
+}
+
+/* === Always-on corner logo ===
+   Appears on every slide, unobtrusive bottom-right.
+   Swap to top-left by changing 'bottom/right' to 'top/left'. */
+section::before {
+  content: "";
+  position: absolute;
+  right: 60px;
+  bottom: 12px;
+
+  /* Give it a real box + fallbacks */
+  width: var(--lb-logo-size, 64px);
+  height: var(--lb-logo-size, 64px);
+  opacity: var(--lb-logo-opacity, 0.1);
+
+  /* Use either your variable... */
+  /* background-image: var(--lb-logo); */
+
+  /* ...or the explicit file (make sure path is correct from THIS CSS file) */
+  background-image: var(--lb-logo);
+
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  pointer-events: none;
+
+  /* Make sure it sits above the slide background */
+  z-index: 1;
+}
+
+/* Optional: title slide = larger heading & faint watermark */
+section.lead h1 {
+  font-size: 2.3em;
+}
+section.lead::before {
+  opacity: 0.12;                /* slightly larger & fainter logo on title */
+  height: 44px;
+}
+
+/* === Two-column slide body ===
+   Used by the `.columns` pattern in _layouts.md, for right/wrong pairs and
+   before/after comparisons. */
+.columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  align-items: start;
+  text-align: left;
+}
+
+.columns > div {
+  min-width: 0;   /* let long code lines shrink instead of overflowing */
+}

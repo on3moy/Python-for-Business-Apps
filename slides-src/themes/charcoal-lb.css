@@ -1,0 +1,24 @@
+/* @theme charcoal-lb */
+/*
+ * `uncover` turns on Marp's auto-scaling for code as well as headings, which
+ * wraps each code block in a shrink-to-fit shadow-DOM element -- the code then
+ * sits centered in the middle of our window chrome instead of flush left, and
+ * no amount of CSS on the <code> element moves it. Limiting auto-scaling to
+ * headings keeps the fitting-header behaviour and leaves code blocks alone.
+ */
+/* @auto-scaling headings */
+
+@charset "UTF-8";
+
+/*
+ * Entry point for the deck theme. Marp resolves these @import names against
+ * the theme set passed with --theme-set (see scripts/build_slides.py), so each
+ * partial carries its own `@theme` header and lives in this directory.
+ *
+ * Order matters: tokens define the custom properties the other two read.
+ */
+
+@import "uncover";
+@import "lb-tokens";
+@import "lb-base";
+@import "lb-components";

@@ -16,3 +16,9 @@ This course delves into Python programming and its application in business data 
 
 ## Lectures
 Lectures are a combination of Zybooks IS 640: Business Application Programming and my notes.
+
+- [Chapter 1](notes/ch01/index.md) — getting our hands on Python  
+- [Chapter 2](notes/ch02/index.md) — variables, types and expressions  
+- [Chapter 3](notes/ch03/index.md) — strings, lists, tuples and dictionaries  
+
+New here? Start with [how to use this site](course/how-to-use-this-site.md) — search and the chapter hubs will save you a lot of scrolling.  

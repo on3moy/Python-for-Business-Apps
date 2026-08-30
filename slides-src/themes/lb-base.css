@@ -1,0 +1,91 @@
+/* @theme lb-base */
+
+/*
+ * Typography and flow: the slide surface, headings, text, lists, links,
+ * blockquotes, tables and images. Everything here reads from the tokens in
+ * lb-tokens.css.
+ */
+
+/* === Base slide === */
+section {
+  background: var(--lb-charcoal);
+  color: var(--lb-white);
+  font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  letter-spacing: 0.1px;
+  line-height: 1.35;
+}
+
+/* Headings */
+section h1, section h2, section h3, section h4 {
+  color: var(--lb-gold);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin-bottom: 0.35em;
+}
+section h1 { font-size: 1.9em; }
+section h2 { font-size: 1.5em; }
+section h3 { font-size: 1.25em; }
+
+/* Text accents */
+strong { color: var(--lb-white); }
+em { color: var(--lb-gray); }
+
+/* Lists */
+section ul, section ol {
+  margin-left: 1.1em;
+}
+section li { margin: 0.25em 0; }
+
+/* Links */
+a, a:visited { color: var(--lb-link); text-decoration: none; border-bottom: 1px solid rgba(255,184,28,0.4); }
+a:hover { color: var(--lb-link-hover); border-bottom-color: rgba(255,184,28,0.8); }
+
+/* === Blockquotes: cleaner inline look === */
+blockquote {
+  margin: 0.8em 0;
+  padding: 0.6em 1em;
+  background: var(--lb-charcoal-2);
+  border-left: 4px solid var(--lb-gold);
+  border-radius: 6px;
+
+  color: var(--lb-gray);
+  font-style: italic;
+  font-size: 0.95em;
+
+  /* reset the wide open quote styling from uncover */
+  quotes: none;
+}
+
+blockquote::before,
+blockquote::after {
+  content: none !important;
+}
+
+/* === Tables: cleaner, light rows, only borders === */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1em 0;
+}
+
+th, td {
+  border: 1px solid rgba(255, 255, 255, 0.15); /* thin white borders */
+  padding: 0.5em 0.8em;
+  text-align: left;
+}
+
+/* Header row */
+th {
+  background: #1e2026;     /* keep your strong dark header */
+  color: var(--lb-white);
+  font-weight: 700;
+}
+
+/* Body rows */
+td {
+  background: var(--lb-charcoal); /* same as slide background */
+  color: var(--lb-white);
+}
+
+/* Images */
+img { border-radius: 8px; }

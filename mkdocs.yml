@@ -1,5 +1,7 @@
-site_name: IS 640 Business Application Programming 
-repo_url: https://https://github.com/on3moy/Python-for-Business-Apps
+site_name: IS 640 Business Application Programming
+# Used for canonical URLs and the sitemap, and matches the GitHub Pages path.
+site_url: https://on3moy.github.io/Python-for-Business-Apps/
+repo_url: https://github.com/on3moy/Python-for-Business-Apps
 repo_name: 'GitHub'
 
 # https://www.mkdocs.org/user-guide/choosing-your-theme/
@@ -35,57 +37,96 @@ theme:
   features:
     - navigation.tabs
     - navigation.tabs.sticky
-    - navigation.sections
-    - navigation.expand
     - navigation.top
     - navigation.instant
     - navigation.instant.progress
-    - navigation.instant.preview  
+    - navigation.instant.preview
     - navigation.path
+    # Makes each chapter's index.md the clickable landing page for its section
+    - navigation.indexes
     - toc.follow
     - toc.integrate
     - search.suggest
     - search.highlight
     - content.tabs.link
-    - content.code.annotation
+    - content.code.annotate
     - content.code.copy
     - content.tooltips
-    
+
 nav:
   - Home: 'index.md'
-  - Book:
-    - Chapter 1: 'book/CH1/chapter1.md'
-    - Chapter 2: 
-      - 2.1 Variable Assignments: 'book/CH2/2.1_VariableAssignments.md'
-      - 2.2 Identifiers: 'book/CH2/2.2_Identifiers.md' 
-      - 2.3 Objects: 'book/CH2/2.3_Objects.md'    
-      - 2.4 Numeric Types: 'book/CH2/2.4_NumericTypes.md'  
-      - 2.5 Arithmetic Expressions: 'book/CH2/2.5_ArithmeticExpressions.md'  
-      - 2.6 Python Expressions: 'book/CH2/2.6_PythonExpressions.md' 
-      - 2.7 Division & Modulo: 'book/CH2/2.7_DivisionModulo.md'
-      - 2.8 Module Basics: 'book/CH2/2.8_ModuleBasics.md'  
-      - 2.9 Math Module: 'book/CH2/2.9_MathModule.md'  
-      - 2.10 Random Numbers: 'book/CH2/2.10_RandomNumbers.md' 
-      - 2.11 Representing Text: 'book/CH2/2.11_RepresentingText.md' 
+  - Notes:
+    - Chapter 1:
+      - 'notes/ch01/index.md'
+      - 1.1 Programming (general): 'notes/ch01/1.1-programming-general.md'
+      - 1.2 Programming using Python: 'notes/ch01/1.2-programming-using-python.md'
+      - 1.3 Basic input and output: 'notes/ch01/1.3-basic-input-and-output.md'
+      - 1.4 Errors: 'notes/ch01/1.4-errors.md'
+      - 1.5 Development environment: 'notes/ch01/1.5-development-environment.md'
+      - 1.6 Computers and programs: 'notes/ch01/1.6-computers-and-programs-general.md'
+      - 1.7 Computer tour: 'notes/ch01/1.7-computer-tour.md'
+      - 1.8 Language history: 'notes/ch01/1.8-language-history.md'
+      - 1.9 Why whitespace matters: 'notes/ch01/1.9-why-whitespace-matters.md'
+      - 1.10 Salary after taxes: 'notes/ch01/1.10-salary-after-taxes-example.md'
+    - Chapter 2:
+      - 'notes/ch02/index.md'
+      - 2.1 Variable Assignments: 'notes/ch02/2.1-variable-assignments.md'
+      - 2.2 Identifiers: 'notes/ch02/2.2-identifiers.md'
+      - 2.3 Objects: 'notes/ch02/2.3-objects.md'
+      - 2.4 Numeric Types: 'notes/ch02/2.4-numeric-types.md'
+      - 2.5 Arithmetic Expressions: 'notes/ch02/2.5-arithmetic-expressions.md'
+      - 2.6 Python Expressions: 'notes/ch02/2.6-python-expressions.md'
+      - 2.7 Division & Modulo: 'notes/ch02/2.7-division-modulo.md'
+      - 2.8 Module Basics: 'notes/ch02/2.8-module-basics.md'
+      - 2.9 Math Module: 'notes/ch02/2.9-math-module.md'
+      - 2.10 Random Numbers: 'notes/ch02/2.10-random-numbers.md'
+      - 2.11 Representing Text: 'notes/ch02/2.11-representing-text.md'
     - Chapter 3:
-      - 3.1 String Basics: 'book/CH3/3.1_StringBasics.md'
-      - 3.2 List Basics: 'book/CH3/3.2_ListBasics.md'
-      - 3.3 Tuple Basics: 'book/CH3/3.3_TupleBasics.md'
-      - 3.4 Dictionary Basics: 'book/CH3/3.4_DictionaryBasics.md'
-      - 3.10 String Formatting: 'book/CH3/3.10_StringFormatting.md'
-  - Python Crash Course: 'book/Notebooks/Python Crash Course.ipynb'
-  - Install Python: 'installation.md'
-  - MKDocsReference: 'Reference.md'
+      - 'notes/ch03/index.md'
+      - 3.1 String Basics: 'notes/ch03/3.1-string-basics.md'
+      - 3.2 List Basics: 'notes/ch03/3.2-list-basics.md'
+      - 3.3 Tuple Basics: 'notes/ch03/3.3-tuple-basics.md'
+      - 3.4 Dictionary Basics: 'notes/ch03/3.4-dictionary-basics.md'
+      - 3.10 String Formatting: 'notes/ch03/3.10-string-formatting.md'
+    - Chapter 4:
+      - 'notes/ch04/index.md'
+      - 4.1 If-else Branches: 'notes/ch04/4.1-if-else-branches.md'
+      - 4.2 Detecting Equal Values: 'notes/ch04/4.2-detecting-equal-values.md'
+      - 4.3 Detecting Ranges: 'notes/ch04/4.3-detecting-ranges-general.md'
+      - 4.4 Relational Operators: 'notes/ch04/4.4-detecting-ranges.md'
+      - 4.5 Logical Operators: 'notes/ch04/4.5-logical-operators.md'
+      - 4.6 Ranges with Gaps: 'notes/ch04/4.6-detecting-ranges-with-gaps.md'
+      - 4.7 Multiple Features: 'notes/ch04/4.7-multiple-features.md'
+      - 4.8 Comparing Data Types: 'notes/ch04/4.8-comparing-data-types.md'
+      - 4.9 Membership & Identity: 'notes/ch04/4.9-membership-identity-operators.md'
+      - 4.10 Order of Evaluation: 'notes/ch04/4.10-order-of-evaluation.md'
+      - 4.11 Code Blocks & Indentation: 'notes/ch04/4.11-code-blocks-indentation.md'
+      - 4.12 Conditional Expressions: 'notes/ch04/4.12-conditional-expressions.md'
+  - Slides: 'slides/index.md'
+  - Notebooks:
+    - Python Crash Course: 'notebooks/python-crash-course.ipynb'
+    - Chapter 1 Notebook: 'notebooks/ch1.ipynb'
+    - Chapter 2 Notebook: 'notebooks/ch2.ipynb'
+    - Chapter 3 Notebook: 'notebooks/ch3.ipynb'
+    - Class Use Case: 'notebooks/python-class-use-case.ipynb'
+  - Course:
+    - Install Python: 'course/installation.md'
+    - How to Use This Site: 'course/how-to-use-this-site.md'
+    - MkDocs Reference: 'course/mkdocs-reference.md'
+
+# Marp decks are built into docs/assets/slides/ and linked explicitly.
+not_in_nav: |
+  assets/slides/*
+  notebooks/SomeSmartName.py
 
 extra_css:
-  - stylesheets/extra.css  
+  - stylesheets/extra.css
 
 markdown_extensions:
   # Table of Contents Stay
   - toc:
       permalink: "⬅️"
   # Ability to add notes in MD like !!! Some notes
-  # - admonition
   - admonition
   - pymdownx.superfences
   # Highlights code like functions, etc.

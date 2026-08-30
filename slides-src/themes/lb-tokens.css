@@ -1,0 +1,36 @@
+/* @theme lb-tokens */
+
+/*
+ * Design tokens only -- colors, sizes, logo. This is the file to edit when
+ * changing the look of the decks; nothing here depends on layout, so a change
+ * propagates to every slide without touching the rules in lb-base or
+ * lb-components.
+ */
+
+/* === Color tokens (tweak freely) === */
+:root {
+  --lb-charcoal: #141518;      /* slide background */
+  --lb-charcoal-2: #1b1d22;    /* panels / code bg */
+  --lb-gold: #FFB81C;          /* Long Beach gold accent */
+  --lb-white: #FFFFFF;
+  --lb-gray: #C8CCD4;
+  --lb-link: #FFB81C;          /* link color = gold */
+  --lb-link-hover: #ffd052;
+  --lb-code-fg: #EAEAEA;
+
+  /* Callout accents -- distinct per type so !!! tip vs !!! warning vs
+     !!! danger read apart at a glance instead of all sharing the gold bar. */
+  --lb-note: #7AA2F7;
+  --lb-tip: #FFB81C;
+  --lb-info: #56C9E8;
+  --lb-warning: #F5A623;
+  --lb-danger: #F94848;
+  --lb-success: #63D28C;
+
+  /* Resolved relative to the BUILT deck, not this file: Marp inlines this
+     CSS into the output HTML. build_slides.py copies slides-src/assets/
+     alongside the decks so this path holds. */
+  --lb-logo: url("assets/lb_logo.png");
+  --lb-logo-size: 100px;        /* logo height */
+  --lb-logo-opacity: 0.05;
+}

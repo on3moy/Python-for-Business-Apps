@@ -1,0 +1,8 @@
+# Keep text files LF in the repo. The lesson notes rely on two trailing spaces
+# per line as hard line breaks, and mixed endings make those diffs unreadable.
+* text=auto eol=lf
+*.png binary
+*.gif binary
+*.jpg binary
+*.ico binary
+*.ipynb text eol=lf

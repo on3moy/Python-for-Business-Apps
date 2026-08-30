@@ -1,0 +1,17 @@
+/* Site-wide tweaks. Referenced by extra_css in mkdocs.yml. */
+
+/* The backlinks section is supporting material, not part of the lesson --
+   set it back visually so it never competes with the note itself. */
+.md-typeset h2#backlinks {
+  font-size: 1.1rem;
+  opacity: 0.75;
+  margin-top: 2.5em;
+  border-top: 1px solid var(--md-default-fg-color--lightest);
+  padding-top: 1em;
+}
+
+/* Same idea for the "See also" footer each note ends with. */
+.md-typeset h2#see-also {
+  font-size: 1.1rem;
+  opacity: 0.75;
+}

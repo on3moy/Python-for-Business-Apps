@@ -21,9 +21,10 @@ docs/               the MkDocs site
   stylesheets/      extra.css
   assets/slides/    BUILT decks (gitignored, regenerate with build_slides.py)
 slides-src/         Marp deck sources + modular theme (outside docs/ by design)
-scripts/            build_slides.py
+notebook-src/       notebook sources, built into docs/notebooks/
+scripts/            deck + notebook builders, link and density checks
 instructor/         gitignored: zyBooks ingests, labs, derived problems
-.claude/            STYLE_GUIDE.md, SLIDE_STYLE_GUIDE.md, commands/
+.claude/            the three STYLE_GUIDEs, skills/, agents/
 ```
 
 ## Working on it
@@ -44,18 +45,23 @@ and `--pdf` / `--pptx` to export those formats alongside the HTML.
 
 ## Authoring
 
-`.claude/STYLE_GUIDE.md` is the contract for notes; `.claude/SLIDE_STYLE_GUIDE.md`
-for decks. Read them before adding a chapter — the site's consistency is the
-point.
+`.claude/STYLE_GUIDE.md` is the contract for notes, `.claude/SLIDE_STYLE_GUIDE.md`
+for decks, and `.claude/NOTEBOOK_STYLE_GUIDE.md` for notebooks. Read them
+before adding a chapter — the site's consistency is the point.
 
-The Claude Code commands in `.claude/commands/` run the chapter pipeline:
+The Claude Code skills in `.claude/skills/` run the chapter pipeline. Each one
+dispatches to a matching agent in `.claude/agents/`, and the build and link
+checks are enforced by `SubagentStop` hooks rather than by remembering to run
+them:
 
-| Command | Does |
+| Skill | Does |
 |-|-|
 | `/ingest-chapter N` | zyBooks chapter → `instructor/zybooks-raw/` |
 | `/write-notes N` | ingest → notes in the author's voice |
 | `/make-slides N` | notes → Marp deck, built and linked |
-| `/make-lab N` | labs → original in-class problems (instructor-only) |
+| `/clean-slides N` | split slides that drifted past one idea each |
+| `/make-notebook N` | notes → fill-in-the-blank practice notebook |
+| `/solve-notebook N` | practice notebook → solved instructor copy |
 
 Rules that are easy to trip over:
 

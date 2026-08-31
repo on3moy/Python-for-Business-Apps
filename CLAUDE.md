@@ -10,10 +10,12 @@ zyBooks chapter
   -> /ingest-chapter N  -> instructor/zybooks-raw/chNN.md   (raw, gitignored)
   -> /write-notes N     -> docs/notes/chNN/*.md             (published notes)
   -> /make-slides N     -> slides-src/chNN.md -> docs/assets/slides/chNN.html
-  -> /make-lab N        -> instructor/problems/chNN/        (gitignored)
+  -> /make-notebook N   -> notebook-src/chN.md -> docs/notebooks/chN.ipynb
+  -> /solve-notebook N  -> instructor/solutions/chN.ipynb   (gitignored)
 ```
 
-Slash commands live in `.claude/commands/`.
+Skills live in `.claude/skills/`; each dispatches to an agent in
+`.claude/agents/`. Build and link checks run from `SubagentStop` hooks.
 
 ## Commands
 
@@ -22,6 +24,7 @@ uv run mkdocs serve                    # preview site at localhost:8000
 uv run mkdocs build                    # build site/
 python scripts/build_slides.py         # build all Marp decks -> docs/assets/slides/
 python scripts/build_slides.py ch01    # just one deck
+python scripts/build_notebooks.py      # build notebook-src/ -> docs/notebooks/
 ```
 
 **Build the slides before building the site.** `docs/assets/slides/` is

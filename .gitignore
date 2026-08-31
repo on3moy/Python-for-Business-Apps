@@ -167,3 +167,6 @@ cython_debug/
 
 # Marp build output. Regenerate with: python scripts/build_slides.py
 /docs/assets/slides
+
+# Claude Code scratch worktrees
+/.claude/worktrees

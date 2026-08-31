@@ -2,13 +2,52 @@
   "hooks": {
     "SubagentStop": [
       {
-        "matcher": "Sonnet-Make-Slides|Sonnet-Write-Notes",
+        "matcher": "Sonnet-Make-Slides|Sonnet-Write-Notes|Sonnet-Clean-Slides|Sonnet-Make-Notebook",
         "hooks": [
           {
             "type": "command",
             "command": "LOG=$(mktemp)\nuv run mkdocs build --strict > \"$LOG\" 2>&1\ncode=$?\nif [ $code -ne 0 ]; then\n  tail -c 4000 \"$LOG\" | python3 -c \"\nimport json, sys\nout = sys.stdin.read()\nreason = 'mkdocs build --strict failed. Fix the reported errors before finishing.\\n\\n' + out\nprint(json.dumps({'decision': 'block', 'reason': reason}))\n\"\nelse\n  echo '{}'\nfi\nrm -f \"$LOG\"\n",
             "timeout": 180,
             "statusMessage": "Verifying deck build with mkdocs build --strict..."
+          }
+        ]
+      },
+      {
+        "matcher": "Sonnet-Make-Slides|Sonnet-Clean-Slides",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "LOG=$(mktemp)\n# Only lint decks this run actually touched (working tree + untracked), so a\n# cleanup pass on one chapter doesn't get blocked by pre-existing issues in\n# other, unrelated decks. Falls back to every deck if nothing is dirty (e.g.\n# re-running the check after everything is already committed).\nCHANGED=$(git status --porcelain -- 'slides-src/*.md' | awk '{print $NF}')\nif [ -z \"$CHANGED\" ]; then\n  CHANGED=$(ls slides-src/*.md)\nfi\nuv run python scripts/check_slide_density.py $CHANGED > \"$LOG\" 2>&1\ncode=$?\nif [ $code -ne 0 ]; then\n  tail -c 4000 \"$LOG\" | python3 -c \"\nimport json, sys\nout = sys.stdin.read()\nreason = 'Slide density check failed -- split the flagged slides (do not regenerate the whole deck), then rebuild.\\n\\n' + out\nprint(json.dumps({'decision': 'block', 'reason': reason}))\n\"\nelse\n  echo '{}'\nfi\nrm -f \"$LOG\"\n",
+            "timeout": 60,
+            "statusMessage": "Checking slide density against the style guide..."
+          },
+          {
+            "type": "command",
+            "command": "LOG=$(mktemp)\nuv run python scripts/check_slides_linked.py > \"$LOG\" 2>&1\ncode=$?\nif [ $code -ne 0 ]; then\n  tail -c 4000 \"$LOG\" | python3 -c \"\nimport json, sys\nout = sys.stdin.read()\nreason = 'A built deck is missing from docs/slides/index.md. Add a link (target=\\\"_blank\\\") before finishing.\\n\\n' + out\nprint(json.dumps({'decision': 'block', 'reason': reason}))\n\"\nelse\n  echo '{}'\nfi\nrm -f \"$LOG\"\n",
+            "timeout": 30,
+            "statusMessage": "Checking every deck is linked from the Slides index..."
+          }
+        ]
+      },
+      {
+        "matcher": "Sonnet-Make-Notebook",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "LOG=$(mktemp)\nuv run python scripts/check_notebooks_linked.py > \"$LOG\" 2>&1\ncode=$?\nif [ $code -ne 0 ]; then\n  tail -c 4000 \"$LOG\" | python3 -c \"\nimport json, sys\nout = sys.stdin.read()\nreason = 'A built notebook is missing from mkdocs.yml nav. Add a Notebooks: entry before finishing.\\n\\n' + out\nprint(json.dumps({'decision': 'block', 'reason': reason}))\n\"\nelse\n  echo '{}'\nfi\nrm -f \"$LOG\"\n",
+            "timeout": 30,
+            "statusMessage": "Checking every notebook is registered in mkdocs.yml nav..."
+          }
+        ]
+      },
+      {
+        "matcher": "Sonnet-Solve-Notebook",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "LOG=$(mktemp)\nuv run python scripts/build_solution_notebooks.py > \"$LOG\" 2>&1\ncode=$?\nif [ $code -ne 0 ]; then\n  tail -c 4000 \"$LOG\" | python3 -c \"\nimport json, sys\nout = sys.stdin.read()\nreason = 'Solution notebook failed to execute cleanly -- fix the erroring cell, then rebuild.\\n\\n' + out\nprint(json.dumps({'decision': 'block', 'reason': reason}))\n\"\nelse\n  echo '{}'\nfi\nrm -f \"$LOG\"\n",
+            "timeout": 120,
+            "statusMessage": "Executing solution notebook(s) to verify every cell runs..."
           }
         ]
       }

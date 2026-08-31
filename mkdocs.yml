@@ -9,6 +9,7 @@ theme:
   icon:
      annotation: material/arrow-right-circle
   name: material
+  custom_dir: overrides
   favicon: img/pythonlogo.gif
   logo: img/Brackets.ico
   # Dark Theme
@@ -155,6 +156,7 @@ markdown_extensions:
 
 plugins:
   - search
-  - mkdocs-jupyter
+  - mkdocs-jupyter:
+      include_source: true
 
 copyright: Copyright &copy; 2024 Moy Patel

@@ -28,6 +28,33 @@ should be able to open presenter view and read the narration straight through.
   itself.
 - Closing `_class: lead` slide.
 
+### Avoid these leakage patterns
+
+A companion agent, `Sonnet-Clean-Slides`, exists purely to find and split slides that violate
+"one idea per slide" after the fact. Writing clean the first time means the deck needs fewer
+passes through it. These are the concrete shapes that keep showing up — write around them instead
+of relying on cleanup to catch them:
+
+- **A table sharing a slide with an intro sentence and/or a code example.** A reference table
+  (operators, escape sequences, functions) is its own slide. If you also need a sentence framing
+  what the table is, or a runnable example using it, that's two or three slides, not one.
+- **More than one `**Label:**`-style bold definition on a slide.** Two labeled terms defined side
+  by side (e.g. floor division *and* modulo, each with its own example) are two ideas — split them
+  even if they're closely related and even if the split feels like it interrupts a natural pairing.
+- **A code block doing more than one demonstration.** Three `# Lets show X` / `print(...)` pairs
+  back to back in one fence is three ideas wearing one code block. One fence, one thing shown.
+- **A worked demo followed by a generalization about a *different* concept than what the demo
+  shows.** The trap case: a slide runs `import math; math.sqrt(...)` and then adds "`sqrt()` is a
+  **function** — a named, reusable block of statements." The demo teaches "the math module"; the
+  closing line teaches "what a function is." No table, no second code block, no repeated bold
+  label — nothing mechanical flags this, so watch for it yourself. If a sentence is introducing a
+  concept the slide isn't actually about, it belongs on its own slide (or in the next section, if
+  the notes already cover it there).
+- **An enumeration that's several unrelated facts, not one idea in parallel parts.** "Input /
+  Process / Output" as three facets of *one* concept (what every program does) is fine as one
+  slide. Three genuinely separate facts stacked with bold labels is not — that's the same problem
+  as the two-label case above, just with three.
+
 ## Narration — every slide gets speaker notes
 
 This is the one place this agent goes beyond the base style guide: **every single slide**,
@@ -65,9 +92,20 @@ python scripts/build_slides.py ch<NN>
 
 Add the deck to `docs/slides/index.md` as a `{ target="_blank" }` link — never an iframe.
 
-A `SubagentStop` hook runs `uv run mkdocs build --strict` automatically when you finish and will
-block you from stopping — feeding back the build errors — until it passes. You don't need to run
-it yourself, but be aware it will loop you back here on failure.
+Three `SubagentStop` hooks run automatically when you finish, and will block you from stopping —
+feeding back what failed — until all three pass. You don't need to run any of them yourself, but
+be aware they will loop you back here on failure:
+
+- `uv run mkdocs build --strict` — link/build integrity.
+- `scripts/check_slide_density.py` — flags any slide that violates the style guide's density
+  rules (over-length code fences, more than one code block, more than one `**Label:**` definition,
+  too many bullets, too many body lines, a table sharing a slide with other content). On a block,
+  **split only the flagged slides** along their natural idea boundary — do not regenerate the
+  whole deck — then rebuild.
+- `scripts/check_slides_linked.py` — catches a built deck with no link on the Slides index page
+  (this has happened before: a deck built and passed everything else, but nobody could find it on
+  the site). If this blocks, add the missing link to `docs/slides/index.md` — don't skip it because
+  the deck itself already builds fine.
 
 ## Report back
 

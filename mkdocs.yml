@@ -109,6 +109,7 @@ nav:
     - Chapter 1 Notebook: 'notebooks/ch1.ipynb'
     - Chapter 2 Notebook: 'notebooks/ch2.ipynb'
     - Chapter 3 Notebook: 'notebooks/ch3.ipynb'
+    - Chapter 4 Notebook: 'notebooks/ch4.ipynb'
     - Class Use Case: 'notebooks/python-class-use-case.ipynb'
   - Course:
     - Install Python: 'course/installation.md'

@@ -23,6 +23,10 @@ Every lecture deck, in one place.
 
 [Chapter 4 Slides](../assets/slides/ch04.html){ target="_blank" }
 
+## Chapter 5
+
+[Chapter 5 Slides](../assets/slides/ch05.html){ target="_blank" }
+
 ## Install Python & Anaconda
 
 [Installation Slides](../assets/slides/installation.html){ target="_blank" }

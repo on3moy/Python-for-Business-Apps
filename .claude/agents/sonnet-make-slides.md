@@ -22,11 +22,38 @@ should be able to open presenter view and read the narration straight through.
 
 - Standard front matter (`marp: true`, `theme: charcoal-lb`, `paginate: true`).
 - Title slide with `_class: lead` and `_paginate: false`.
-- A `_class: lead` section-break slide per chapter section, numbered to match the notes.
+- `_class: lead` section-break slides numbered to match the notes — **bundling related sections
+  under one break** rather than one break per note section. A 17-section chapter that takes a
+  break for each one spends 17 slides before teaching anything; `6.10 Scope` and `6.11 Namespaces`
+  share a break as `6.10–6.11 Scope and namespaces`.
 - One idea per content slide, compressed from the notes — never pasted verbatim.
 - Code fences tagged with the language, 3–8 lines, `# Lets …` narration comments in the code
   itself.
 - Closing `_class: lead` slide.
+
+### The budget — write tight the first time
+
+`scripts/check_slide_density.py` enforces **max 4 content slides per section** (blocking) against a
+target average of ~3.5. This is the rule most likely to fail your first draft: ch02–ch06 were all
+written at roughly double ch01's rate, because every other rule pushes toward *more* slides and
+nothing pushed back.
+
+Budget before you write. A section is not an outline to transcribe — decide what has to be said
+out loud, and leave the rest to the notes:
+
+- **Not every note section needs slides.** Pure reference material (an exhaustive table, a full
+  error list) earns a pointer to the notes, not a slide.
+- **One worked example per concept — the business one.** A toy (`x > 10`) followed by the real
+  case (insurance pricing by age band) teaches the concept once across two slides. Write the
+  business example only. If a toy is genuinely needed to isolate the mechanic, it *replaces* the
+  business example rather than preceding it.
+- **No announcement slides.** A slide whose body only previews the next slide ("Four relational
+  operators cover every range comparison") is throat-clearing. That line is a speaker note.
+- **At most one warm-up slide** before the first real idea in a section.
+- **Don't re-teach.** If an earlier section covered the idea, reference it; don't rebuild it.
+
+A table may carry one short caveat line (≤70 chars) underneath it — that is a footnote, not a
+second idea, and it does not need its own slide.
 
 ### Avoid these leakage patterns
 

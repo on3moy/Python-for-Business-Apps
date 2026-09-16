@@ -3,9 +3,20 @@
 Usage: uv run python scripts/check_slide_density.py slides-src/ch01.md [more.md ...]
 
 Exits 0 and prints nothing when every deck is clean. Exits 1 and prints a report
-naming the offending slides when any slide violates a hard density rule. A deck
-whose content-slide count falls outside the style guide's 25-40 "rough budget" is
-reported as a warning only -- it does not affect the exit code.
+naming the offending slides when any slide violates a hard density rule.
+
+Two kinds of rule live here, and the distinction matters:
+
+  * Per-slide caps (code blocks, bold labels, bullets, body lines) push *toward*
+    splitting a slide in two.
+  * The per-section cap pushes *back*. Without it every rule in this file pointed
+    the same direction, decks ratcheted upward with nothing to stop them, and the
+    old fixed 25-40 deck budget -- a warning that never affected the exit code --
+    was routinely waved off. The per-section cap is blocking precisely because it
+    is the only counterweight.
+
+The deck-level budget scales with the chapter's section count and stays a warning;
+the per-section cap is what actually enforces concision.
 """
 
 import os
@@ -18,7 +29,9 @@ MAX_CODE_BLOCKS_PER_SLIDE = 1
 MAX_BOLD_LABELS_PER_SLIDE = 1
 MAX_BULLET_ITEMS_PER_SLIDE = 5
 MAX_BODY_LINES_PER_SLIDE = 8
-DECK_SLIDE_BUDGET = (25, 40)
+MAX_CONTENT_SLIDES_PER_SECTION = 4
+MAX_TABLE_CAVEAT_LINES = 1   # one short footnote may share a table slide
+MAX_TABLE_CAVEAT_CHARS = 70  # ...as long as it is genuinely a footnote
 
 CODE_FENCE_RE = re.compile(r"```.*?```", re.DOTALL)
 BOLD_LABEL_RE = re.compile(r"^\*\*[^*]+:\*\*", re.MULTILINE)
@@ -27,6 +40,8 @@ TABLE_ROW_RE = re.compile(r"^\s*\|.*\|\s*$", re.MULTILINE)
 TABLE_SEPARATOR_RE = re.compile(r"^\s*\|[\s:|-]+\|\s*$")
 DIRECTIVE_COMMENT_RE = re.compile(r"<!--\s*_.*?-->", re.DOTALL)
 NOTE_COMMENT_RE = re.compile(r"<!--.*?-->", re.DOTALL)
+LEAD_DIRECTIVE_RE = re.compile(r"<!--\s*_class:\s*lead\s*-->")
+H1_RE = re.compile(r"^#\s+(.+)$", re.MULTILINE)
 
 
 def split_slides(text):
@@ -49,6 +64,11 @@ def strip_notes_and_directives(slide):
 def slide_title(visible):
     match = re.search(r"^#{1,3}\s+(.+)$", visible, re.MULTILINE)
     return match.group(1).strip() if match else "(untitled)"
+
+
+def is_section_break(slide, visible):
+    """A lead-class slide carrying an H1 -- title, section break, or closing."""
+    return bool(LEAD_DIRECTIVE_RE.search(slide)) and bool(H1_RE.search(visible))
 
 
 def check_slide(visible):
@@ -88,11 +108,19 @@ def check_slide(visible):
     ]
     if len(table_rows) >= 2:  # header + at least one data row
         non_table_lines = [
-            line for line in body_without_code.splitlines()
+            line.strip() for line in body_without_code.splitlines()
             if line.strip() and not line.strip().startswith("#") and not TABLE_ROW_RE.match(line)
         ]
+        # A single short line beside a table is a footnote-style caveat (e.g.
+        # "the = always goes second"), not a second idea. Forbidding it outright
+        # just exiled those caveats onto slides of their own, which is exactly
+        # the bloat this linter exists to prevent.
+        caveat = (
+            len(non_table_lines) <= MAX_TABLE_CAVEAT_LINES
+            and all(len(line) <= MAX_TABLE_CAVEAT_CHARS for line in non_table_lines)
+        )
         extras = []
-        if non_table_lines:
+        if non_table_lines and not caveat:
             extras.append("intro/explanatory text")
         if code_fences:
             extras.append("a code block")
@@ -102,6 +130,62 @@ def check_slide(visible):
             )
 
     return problems
+
+
+def check_sections(slides):
+    """Group content slides under the section break that precedes them.
+
+    Returns (failures, section_count). Any content slides before the first
+    section break are attributed to a pseudo-section so they are still counted.
+    """
+    sections = []  # (name, [slide_numbers])
+    current = ("(before first section break)", [])
+
+    for i, slide in enumerate(slides, start=1):
+        visible = strip_notes_and_directives(slide)
+        if is_section_break(slide, visible):
+            if current[1]:
+                sections.append(current)
+            current = (slide_title(visible), [])
+        else:
+            current[1].append(i)
+
+    if current[1]:
+        sections.append(current)
+
+    failures = []
+    for name, slide_numbers in sections:
+        if len(slide_numbers) > MAX_CONTENT_SLIDES_PER_SECTION:
+            nums = ", ".join(str(n) for n in slide_numbers)
+            failures.append(
+                (name, f"{len(slide_numbers)} content slides "
+                       f"(max {MAX_CONTENT_SLIDES_PER_SECTION}) -- slides {nums}")
+            )
+
+    return failures, len(sections)
+
+
+def deck_budget(section_count):
+    """Slide budget scaled to the chapter's shape, not a fixed 25-40.
+
+    A 6-section chapter and an 18-section chapter cannot share one budget; the
+    fixed range left large chapters permanently non-compliant, so the warning
+    stopped carrying any information and was ignored.
+
+    The upper bound targets an *average* of 3.5 content slides per section,
+    deliberately tighter than the per-section hard cap of 4: some sections earn
+    the fourth slide, but a deck where most of them do has drifted. The figure is
+    calibrated against ch01, the deck written before the counts started climbing.
+
+    Each section also costs its own section-break slide, so the per-section
+    allowance is 3.5 content + 1 break. Leaving the break out made the warning
+    fire on decks that were legally under the content cap -- and a warning that
+    fires on compliant decks is one nobody reads, which is how the old fixed
+    25-40 budget stopped working.
+    """
+    lo = section_count * 2
+    hi = section_count * 9 // 2 + 2  # (3.5 content + 1 break)/section; +2: title, closing
+    return lo, hi
 
 
 def check_deck(path):
@@ -117,12 +201,17 @@ def check_deck(path):
         if problems:
             failures.append((i, slide_title(visible), problems))
 
-    warning = None
-    lo, hi = DECK_SLIDE_BUDGET
-    if not (lo <= len(slides) <= hi):
-        warning = f"{path}: {len(slides)} slides (style guide budget is {lo}-{hi})"
+    section_failures, section_count = check_sections(slides)
 
-    return failures, warning
+    warning = None
+    lo, hi = deck_budget(section_count)
+    if section_count and not (lo <= len(slides) <= hi):
+        warning = (
+            f"{path}: {len(slides)} slides across {section_count} sections "
+            f"(budget {lo}-{hi} at this section count)"
+        )
+
+    return failures, section_failures, warning
 
 
 def main(argv):
@@ -140,7 +229,7 @@ def main(argv):
         # '---' slide splitter here.
         if os.path.basename(path).startswith("_"):
             continue
-        failures, warning = check_deck(path)
+        failures, section_failures, warning = check_deck(path)
         if warning:
             warnings.append(warning)
         if failures:
@@ -150,6 +239,12 @@ def main(argv):
                 print(f"  slide {slide_num} \"{title}\":")
                 for problem in problems:
                     print(f"    - {problem}")
+        if section_failures:
+            any_failures = True
+            print(f"\n{path}: {len(section_failures)} section(s) exceed the slide cap")
+            for name, problem in section_failures:
+                print(f"  section \"{name}\":")
+                print(f"    - {problem}")
 
     for warning in warnings:
         print(f"warning: {warning}")

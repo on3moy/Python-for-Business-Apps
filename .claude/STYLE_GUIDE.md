@@ -215,7 +215,7 @@ Then an admonition that translates it into practice or a joke, then optionally a
     - `mkdocs build --strict` fails on a broken link, so the build is the check.
     - **Link a target at most once per page, on first mention.** Repeat links just clutter the prose.
     - 2–4 inline links per page is the working range. Short pages may warrant one, or none. Don't force them.
-    - Never place a wikilink inside a code fence, inside inline backticks, or in a heading.
+    - Never place a link inside a code fence, inside inline backticks, or in a heading.
     - Voice comes first. If a link can't be worked in without breaking the conversational tone, leave it out.
 - **External links are frequent** and almost always PEP 8 or official docs.
 - **"Why this matters" boxes** tie a topic to a real job — e.g. `??? info "Use cases"` in 3.4 lists JSON/API/IoT/legacy scenarios and closes with "All this to say, dictionaries are your go to for working with pandas, spark tables, and anything database related."
@@ -224,7 +224,7 @@ Then an admonition that translates it into practice or a joke, then optionally a
 
 - **No front matter.** The file starts at the H1, which supplies the page title. There is no `title:`, no `tags:`, no dates or status fields — see §1.
 - Filename: `<chapter>.<section>-kebab-case-title.md` — `2.1-variable-assignments.md`, `3.10-string-formatting.md`. Chapter dirs are `docs/notes/ch01`, `ch02`, `ch03` (lowercase, zero-padded so they sort). Each chapter dir has an `index.md` hub.
-- **Every chapter has an `index.md` Map of Content** — a sentence or two of intro in voice, then one bullet per section in order, each a wikilink plus one short clause. No summary at the end. This is the chapter's landing page under `navigation.indexes`.
+- **Every chapter has an `index.md` Map of Content** — a sentence or two of intro in voice, then one bullet per section in order, each a relative markdown link plus one short clause. No summary at the end. This is the chapter's landing page under `navigation.indexes`.
 - **H1 vs filename is inconsistent** and both are acceptable — about half carry the section number (`# 2.1 Variables and assignments`), half don't (`# Objects`, `# String Basics`). The H1 text also need not match the filename exactly.
 - H1 lines usually carry trailing whitespace.
 - **Every new page must be registered manually** in `nav:` in `mkdocs.yml`. The nav label always carries the number: `- 3.10 String Formatting: 'notes/ch03/3.10-string-formatting.md'`.

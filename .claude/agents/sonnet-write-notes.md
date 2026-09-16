@@ -18,10 +18,23 @@ existing ones.
 
 Chapter **<chapter number>** (passed as your argument) from `instructor/zybooks-raw/ch<NN>.md`.
 
+### Never publish lab sections
+
+Raw ingests contain sections titled **`LAB:`** (e.g. `8.5 LAB: Name format`) and, occasionally,
+graded-assignment or solution content. These are copyrighted zyBooks assignment prompts. They stay
+in `instructor/`, which is gitignored and outside `docs/`.
+
+**Write no note page for a `LAB:` section.** Do not paraphrase it, do not summarize the assignment,
+and do not register it in `nav:`. Skip it entirely and carry on numbering the real sections as they
+appear — a chapter whose teaching sections are 8.1–8.4 produces four note pages, not seven.
+
+If a lab teaches a technique the chapter never covers outside the lab, teach that technique from
+first principles with your own business example. Never with the lab's scenario, data, or wording.
+
 ## Produce
 
-One file per section at `docs/notes/ch<NN>/<n>.<s>-kebab-case-title.md`, plus the chapter hub
-`docs/notes/ch<NN>/index.md`.
+One file per **teaching** section at `docs/notes/ch<NN>/<n>.<s>-kebab-case-title.md`, plus the
+chapter hub `docs/notes/ch<NN>/index.md`.
 
 Each note needs:
 
@@ -29,9 +42,15 @@ Each note needs:
 2. The content, in the author's voice: `**term:**` / definition pairs, admonitions per the table
    below, bare code fences with `# Lets …` comments, `(1)` + `{ .annotate }` footnotes, ✅/❌
    marks.
-3. 2–4 inline `[[basename|display text]]` wikilinks, each target linked once, on first mention.
-   Never inside code fences, backticks, headings, or **pipe tables** — a `|` in a wikilink breaks
-   the table.
+3. 2–4 inline **relative markdown links**, each target linked once, on first mention.
+   Syntax is `[display text](relative/path.md)` — `[module basics](2.8-module-basics.md)` within a
+   chapter, `[objects](../ch02/2.3-objects.md)` across chapters. The display text wraps prose that
+   is already in the sentence; you do not rewrite the sentence to accommodate a link.
+   Never inside code fences, backticks, or headings.
+
+   **Not `[[wikilinks]]`.** This site has no wikilink plugin — `mkdocs.yml` loads only `search`
+   and `mkdocs-jupyter` — so `[[...]]` renders literally as broken text. `mkdocs build --strict`
+   fails on a broken relative link, so the build is your check.
 
 ### Admonitions — pick by purpose, not habit
 
@@ -56,7 +75,7 @@ purpose rather than defaulting everything to `??? example`. Full shape examples 
 data are in `.claude/STYLE_GUIDE.md` §4 — consult it if a case doesn't map cleanly to this table.
 
 The hub `index.md` gets a sentence or two of intro, and one bullet per section in order — each a
-wikilink plus one short clause.
+relative markdown link plus one short clause.
 
 ## Rules
 

@@ -31,16 +31,24 @@ longer the default answer.** When a slide is flagged, ask first whether it shoul
 uv run python scripts/check_slide_density.py slides-src/ch<NN>.md
 ```
 
-It reports two distinct kinds of failure, and they want opposite repairs:
+It reports distinct kinds of failure, and they want opposite repairs:
 
 | Failure | Meaning | Repair |
 |-|-|-|
 | Per-slide (code blocks, bold labels, bullets, body lines, table + text) | one slide, two ideas | **split** |
+| `deck exceeds the slide cap: N slides (max 30)` | whole deck is over length | **merge section breaks and cut — never split** |
 | `section "X": N content slides (max 4)` | section is over budget | **cut or merge — never split** |
 | `warning: ... slides across N sections` | deck-level drift | advisory; fix via the cuts above |
 
 A section over cap means the material is being transcribed rather than taught. Splitting one of
 its slides makes it worse and will re-trip the stop hook — that is a loop, not progress.
+
+**The 30-slide deck cap constrains this agent's default move.** Splitting a leaking slide adds a
+slide; on a deck at or near 30, every split has to be paid for with a cut or a merge elsewhere in
+the same pass. Check the deck's total before you start splitting, and if the deck is already over
+30, fix that first — bundle adjacent section breaks into one (`6.10–6.12 Scope and arguments`) and
+delete slides whose content can simply be said. Material cut for length is not lost: move it into
+the speaker notes of the slide that survives.
 
 ## Step 2 — read the deck yourself
 

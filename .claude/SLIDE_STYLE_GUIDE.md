@@ -23,13 +23,22 @@ earns a pointer to the notes, not a slide.
 
 ### The budget
 
-Two rules, both enforced by `scripts/check_slide_density.py`:
+Three rules, all enforced by `scripts/check_slide_density.py`:
 
+- **Hard cap: 30 slides per deck.** Blocking, and flat — it does not scale with
+  the chapter's section count, because a chapter does not get more class time for
+  having more sections. This is the ceiling everything else has to fit under.
 - **Hard cap: 4 content slides per section.** Blocking. More than that means the
   section is being transcribed rather than taught.
 - **Deck target: ~3.5 content slides per section**, scaled to the chapter's
-  section count. A warning — some sections earn the fourth slide, but a deck
-  where most of them do has drifted.
+  section count. A warning, and never higher than the 30-slide cap — some
+  sections earn the fourth slide, but a deck where most of them do has drifted.
+
+A 17-section chapter does not fit 17 breaks plus four slides each under 30. That
+is the point. **Bundling is the lever**: ch06 has 17 note sections and 7 section
+breaks, and went from 57 slides to 30 without dropping a concept — what left the
+slides moved into the notes and, more often, into the speaker notes. When you are
+over, cut or merge and say the difference out loud; never split further.
 
 This cap exists as a counterweight. Every other rule in the linter (one code
 block, one bold label, five bullets, eight body lines) pushes *toward* splitting
@@ -200,8 +209,9 @@ keyboard handlers, and an iframe breaks fullscreen and arrow keys.
 2. Title slide with `_class: lead` and `_paginate: false`.
 3. Section-break slides, numbered to match the notes — bundling related sections
    under one break rather than one break per note section.
-4. One idea per content slide; **max 4 content slides per section**; 3–8 line
-   language-tagged code fences (` ```python `) with `# Lets …` comments.
+4. One idea per content slide; **max 30 slides in the deck** and **max 4 content
+   slides per section**; 3–8 line language-tagged code fences (` ```python `)
+   with `# Lets …` comments.
 5. One worked example per concept — the business one. No announcement slides.
 6. Speaker notes in HTML comments for anything you will say, not show.
 7. Closing `_class: lead` slide.

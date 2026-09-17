@@ -33,10 +33,24 @@ should be able to open presenter view and read the narration straight through.
 
 ### The budget — write tight the first time
 
-`scripts/check_slide_density.py` enforces **max 4 content slides per section** (blocking) against a
-target average of ~3.5. This is the rule most likely to fail your first draft: ch02–ch06 were all
-written at roughly double ch01's rate, because every other rule pushes toward *more* slides and
-nothing pushed back.
+`scripts/check_slide_density.py` enforces two blocking caps:
+
+- **Max 30 slides in the deck.** Flat, not scaled — a chapter does not get more class time for
+  having more sections. Count the deck before you write it, not after.
+- **Max 4 content slides per section**, against a target average of ~3.5.
+
+These are the rules most likely to fail your first draft: ch02–ch05 were all written at roughly
+double ch01's rate, because every other rule pushes toward *more* slides and nothing pushed back.
+
+**Plan the slide count first.** Decide the section breaks, multiply, and confirm you are under 30
+before writing a single slide. A 17-section chapter cannot afford a break per section — bundle
+aggressively. ch06 is the worked example: 17 note sections, **7** section breaks, 21 content
+slides, title, recap, closing = 30 exactly. It lost no concepts going from 57 slides to 30; the
+material that left the slides moved into the speaker notes, where it is spoken rather than shown.
+
+When you are over the cap, **cut or merge, and narrate the difference** — never split further, and
+never drop a concept silently. A point worth making that does not deserve a slide is a speaker
+note. That is what speaker notes are for.
 
 Budget before you write. A section is not an outline to transcribe — decide what has to be said
 out loud, and leave the rest to the notes:
@@ -124,11 +138,13 @@ feeding back what failed — until all three pass. You don't need to run any of 
 be aware they will loop you back here on failure:
 
 - `uv run mkdocs build --strict` — link/build integrity.
-- `scripts/check_slide_density.py` — flags any slide that violates the style guide's density
-  rules (over-length code fences, more than one code block, more than one `**Label:**` definition,
-  too many bullets, too many body lines, a table sharing a slide with other content). On a block,
-  **split only the flagged slides** along their natural idea boundary — do not regenerate the
-  whole deck — then rebuild.
+- `scripts/check_slide_density.py` — flags a deck over 30 slides, a section over 4 content slides,
+  and any slide that violates the style guide's density rules (over-length code fences, more than
+  one code block, more than one `**Label:**` definition, too many bullets, too many body lines, a
+  table sharing a slide with other content). On a per-slide block, **split only the flagged
+  slides** along their natural idea boundary — do not regenerate the whole deck — then rebuild.
+  On a **deck-over-30 block the fix is the opposite**: merge section breaks and delete slides
+  whose content can be spoken instead, then rebuild. Splitting is what caused the block.
 - `scripts/check_slides_linked.py` — catches a built deck with no link on the Slides index page
   (this has happened before: a deck built and passed everything else, but nobody could find it on
   the site). If this blocks, add the missing link to `docs/slides/index.md` — don't skip it because
@@ -136,5 +152,5 @@ be aware they will loop you back here on failure:
 
 ## Report back
 
-State the file written, the slide count, and confirm every slide carries narration. Keep it
-short.
+State the file written, the slide count (which must be ≤ 30), and confirm every slide carries
+narration. Keep it short.

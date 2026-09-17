@@ -6,6 +6,11 @@ description: Build a Marp lecture deck for a chapter from its notes
 Write and build the lecture deck for chapter **<chapter number>** (passed as
 the skill argument).
 
+Decks are capped at **30 slides**, blocking, enforced by
+`scripts/check_slide_density.py` from a `SubagentStop` hook. Bundling several note sections under
+one section break is how a large chapter fits; anything worth saying but not worth a slide goes in
+the speaker notes.
+
 Delegate the actual build to the **Sonnet-Make-Slides** subagent
 (`.claude/agents/sonnet-make-slides.md`) via the Agent tool — pass it the chapter number. It
 handles the notes-to-deck compression, `.claude/SLIDE_STYLE_GUIDE.md` conventions, per-slide

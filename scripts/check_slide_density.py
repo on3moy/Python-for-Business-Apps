@@ -9,14 +9,15 @@ Two kinds of rule live here, and the distinction matters:
 
   * Per-slide caps (code blocks, bold labels, bullets, body lines) push *toward*
     splitting a slide in two.
-  * The per-section cap pushes *back*. Without it every rule in this file pointed
-    the same direction, decks ratcheted upward with nothing to stop them, and the
-    old fixed 25-40 deck budget -- a warning that never affected the exit code --
-    was routinely waved off. The per-section cap is blocking precisely because it
-    is the only counterweight.
+  * The per-section cap and the flat 30-slide deck cap push *back*. Without them
+    every rule in this file pointed the same direction, decks ratcheted upward
+    with nothing to stop them, and the old fixed 25-40 deck budget -- a warning
+    that never affected the exit code -- was routinely waved off. Both caps are
+    blocking precisely because they are the only counterweight.
 
-The deck-level budget scales with the chapter's section count and stays a warning;
-the per-section cap is what actually enforces concision.
+MAX_SLIDES_PER_DECK is flat rather than scaled: a chapter does not get more class
+time for having more sections. The scaled range in deck_budget() remains a warning
+for decks that are bloated for their shape while still under the flat cap.
 """
 
 import os
@@ -30,6 +31,7 @@ MAX_BOLD_LABELS_PER_SLIDE = 1
 MAX_BULLET_ITEMS_PER_SLIDE = 5
 MAX_BODY_LINES_PER_SLIDE = 8
 MAX_CONTENT_SLIDES_PER_SECTION = 4
+MAX_SLIDES_PER_DECK = 30     # blocking; see deck_budget() for why it is a flat number
 MAX_TABLE_CAVEAT_LINES = 1   # one short footnote may share a table slide
 MAX_TABLE_CAVEAT_CHARS = 70  # ...as long as it is genuinely a footnote
 
@@ -166,13 +168,21 @@ def check_sections(slides):
 
 
 def deck_budget(section_count):
-    """Slide budget scaled to the chapter's shape, not a fixed 25-40.
+    """Slide budget scaled to the chapter's shape, under a flat blocking ceiling.
 
-    A 6-section chapter and an 18-section chapter cannot share one budget; the
-    fixed range left large chapters permanently non-compliant, so the warning
-    stopped carrying any information and was ignored.
+    Two bounds do different jobs here, and the distinction matters:
 
-    The upper bound targets an *average* of 3.5 content slides per section,
+    * MAX_SLIDES_PER_DECK is a flat, blocking 30 -- a lecture-length constraint,
+      not a content one. A chapter does not get more class time for having more
+      sections, so scaling the *ceiling* with section count was the loophole that
+      let a 17-section chapter justify 73 slides. The fix for a chapter that does
+      not fit is bundling sections under one break and pushing the rest into the
+      notes and the speaker notes, which is exactly what ch06 did going 57 -> 30.
+    * The scaled range below stays a warning and catches the opposite drift: a
+      6-section chapter at 28 slides is under the flat cap but still bloated for
+      its shape. Its upper bound is clamped so it can never contradict the cap.
+
+    The scaled upper bound targets an *average* of 3.5 content slides per section,
     deliberately tighter than the per-section hard cap of 4: some sections earn
     the fourth slide, but a deck where most of them do has drifted. The figure is
     calibrated against ch01, the deck written before the counts started climbing.
@@ -185,7 +195,7 @@ def deck_budget(section_count):
     """
     lo = section_count * 2
     hi = section_count * 9 // 2 + 2  # (3.5 content + 1 break)/section; +2: title, closing
-    return lo, hi
+    return lo, min(hi, MAX_SLIDES_PER_DECK)
 
 
 def check_deck(path):
@@ -203,15 +213,22 @@ def check_deck(path):
 
     section_failures, section_count = check_sections(slides)
 
+    deck_failure = None
+    if len(slides) > MAX_SLIDES_PER_DECK:
+        deck_failure = (
+            f"{len(slides)} slides (max {MAX_SLIDES_PER_DECK}) -- bundle sections under "
+            f"one break and move what you would say out loud into speaker notes"
+        )
+
     warning = None
     lo, hi = deck_budget(section_count)
-    if section_count and not (lo <= len(slides) <= hi):
+    if section_count and not deck_failure and not (lo <= len(slides) <= hi):
         warning = (
             f"{path}: {len(slides)} slides across {section_count} sections "
             f"(budget {lo}-{hi} at this section count)"
         )
 
-    return failures, section_failures, warning
+    return failures, section_failures, deck_failure, warning
 
 
 def main(argv):
@@ -229,9 +246,13 @@ def main(argv):
         # '---' slide splitter here.
         if os.path.basename(path).startswith("_"):
             continue
-        failures, section_failures, warning = check_deck(path)
+        failures, section_failures, deck_failure, warning = check_deck(path)
         if warning:
             warnings.append(warning)
+        if deck_failure:
+            any_failures = True
+            print(f"\n{path}: deck exceeds the slide cap")
+            print(f"    - {deck_failure}")
         if failures:
             any_failures = True
             print(f"\n{path}: {len(failures)} slide(s) violate density rules")

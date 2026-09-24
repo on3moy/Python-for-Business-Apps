@@ -166,6 +166,18 @@ nav:
       - 9.13 Dictionary Methods: 'notes/ch09/9.13-dictionary-methods.md'
       - 9.14 Iterating Over a Dictionary: 'notes/ch09/9.14-iterating-over-a-dictionary.md'
       - 9.15 Dictionary Nesting: 'notes/ch09/9.15-dictionary-nesting.md'
+    - Chapter 10:
+      - 'notes/ch10/index.md'
+      - 10.1 Classes - Introduction: 'notes/ch10/10.1-classes-introduction.md'
+      - 10.2 Classes - Grouping Data: 'notes/ch10/10.2-classes-grouping-data.md'
+      - 10.3 Instance Methods: 'notes/ch10/10.3-instance-methods.md'
+      - 10.4 Class and Instance Object Types: 'notes/ch10/10.4-class-and-instance-object-types.md'
+      - 10.5 Class Example - Putting It Together: 'notes/ch10/10.5-class-example-putting-it-together.md'
+      - 10.6 Class Constructors: 'notes/ch10/10.6-class-constructors.md'
+      - 10.7 Class Interfaces: 'notes/ch10/10.7-class-interfaces.md'
+      - 10.8 Class Customization: 'notes/ch10/10.8-class-customization.md'
+      - 10.9 Numeric Operator Overloading: 'notes/ch10/10.9-numeric-operator-overloading.md'
+      - 10.10 Memory Allocation and Garbage Collection: 'notes/ch10/10.10-memory-allocation-and-garbage-collection.md'
   - Slides: 'slides/index.md'
   - Notebooks:
     - Python Crash Course: 'notebooks/python-crash-course.ipynb'
@@ -175,6 +187,7 @@ nav:
     - Chapter 4 Notebook: 'notebooks/ch4.ipynb'
     - Chapter 5 Notebook: 'notebooks/ch5.ipynb'
     - Chapter 6 Notebook: 'notebooks/ch6.ipynb'
+    - Chapter 10 Notebook: 'notebooks/ch10.ipynb'
     - Class Use Case: 'notebooks/python-class-use-case.ipynb'
   - Course:
     - Install Python: 'course/installation.md'

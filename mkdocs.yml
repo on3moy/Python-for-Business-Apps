@@ -178,6 +178,14 @@ nav:
       - 10.8 Class Customization: 'notes/ch10/10.8-class-customization.md'
       - 10.9 Numeric Operator Overloading: 'notes/ch10/10.9-numeric-operator-overloading.md'
       - 10.10 Memory Allocation and Garbage Collection: 'notes/ch10/10.10-memory-allocation-and-garbage-collection.md'
+    - Chapter 11:
+      - 'notes/ch11/index.md'
+      - 11.1 Derived Classes: 'notes/ch11/11.1-derived-classes.md'
+      - 11.2 Accessing Base Class Attributes: 'notes/ch11/11.2-accessing-base-class-attributes.md'
+      - 11.3 Overriding Class Methods: 'notes/ch11/11.3-overriding-class-methods.md'
+      - 11.4 Is-a versus Has-a Relationships: 'notes/ch11/11.4-is-a-versus-has-a-relationships.md'
+      - 11.5 Mixin Classes and Multiple Inheritance: 'notes/ch11/11.5-mixin-classes-and-multiple-inheritance.md'
+      - 11.6 Testing Your Code - The unittest Module: 'notes/ch11/11.6-testing-your-code-the-unittest-module.md'
   - Slides: 'slides/index.md'
   - Notebooks:
     - Python Crash Course: 'notebooks/python-crash-course.ipynb'
@@ -188,6 +196,7 @@ nav:
     - Chapter 5 Notebook: 'notebooks/ch5.ipynb'
     - Chapter 6 Notebook: 'notebooks/ch6.ipynb'
     - Chapter 10 Notebook: 'notebooks/ch10.ipynb'
+    - Chapter 11 Notebook: 'notebooks/ch11.ipynb'
     - Class Use Case: 'notebooks/python-class-use-case.ipynb'
   - Course:
     - Install Python: 'course/installation.md'

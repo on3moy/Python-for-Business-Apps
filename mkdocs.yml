@@ -186,6 +186,14 @@ nav:
       - 11.4 Is-a versus Has-a Relationships: 'notes/ch11/11.4-is-a-versus-has-a-relationships.md'
       - 11.5 Mixin Classes and Multiple Inheritance: 'notes/ch11/11.5-mixin-classes-and-multiple-inheritance.md'
       - 11.6 Testing Your Code - The unittest Module: 'notes/ch11/11.6-testing-your-code-the-unittest-module.md'
+    - Chapter 12:
+      - 'notes/ch12/index.md'
+      - 12.1 Handling Exceptions Using try and except: 'notes/ch12/12.1-handling-exceptions-using-try-and-except.md'
+      - 12.2 Multiple Exception Handlers: 'notes/ch12/12.2-multiple-exception-handlers.md'
+      - 12.3 Raising Exceptions: 'notes/ch12/12.3-raising-exceptions.md'
+      - 12.4 Exceptions with Functions: 'notes/ch12/12.4-exceptions-with-functions.md'
+      - 12.5 Using finally to Clean Up: 'notes/ch12/12.5-using-finally-to-clean-up.md'
+      - 12.6 Custom Exception Types: 'notes/ch12/12.6-custom-exception-types.md'
   - Slides: 'slides/index.md'
   - Notebooks:
     - Python Crash Course: 'notebooks/python-crash-course.ipynb'
@@ -197,6 +205,7 @@ nav:
     - Chapter 6 Notebook: 'notebooks/ch6.ipynb'
     - Chapter 10 Notebook: 'notebooks/ch10.ipynb'
     - Chapter 11 Notebook: 'notebooks/ch11.ipynb'
+    - Chapter 12 Notebook: 'notebooks/ch12.ipynb'
     - Class Use Case: 'notebooks/python-class-use-case.ipynb'
   - Course:
     - Install Python: 'course/installation.md'

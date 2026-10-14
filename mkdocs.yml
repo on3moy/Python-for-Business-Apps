@@ -194,6 +194,15 @@ nav:
       - 12.4 Exceptions with Functions: 'notes/ch12/12.4-exceptions-with-functions.md'
       - 12.5 Using finally to Clean Up: 'notes/ch12/12.5-using-finally-to-clean-up.md'
       - 12.6 Custom Exception Types: 'notes/ch12/12.6-custom-exception-types.md'
+    - Chapter 13:
+      - 'notes/ch13/index.md'
+      - 13.1 Modules: 'notes/ch13/13.1-modules.md'
+      - 13.2 Finding Modules: 'notes/ch13/13.2-finding-modules.md'
+      - 13.3 Importing Specific Names: 'notes/ch13/13.3-importing-specific-names.md'
+      - 13.4 Executing Modules as Scripts: 'notes/ch13/13.4-executing-modules-as-scripts.md'
+      - 13.5 Reloading Modules: 'notes/ch13/13.5-reloading-modules.md'
+      - 13.6 Packages: 'notes/ch13/13.6-packages.md'
+      - 13.7 Standard Library: 'notes/ch13/13.7-standard-library.md'
   - Slides: 'slides/index.md'
   - Notebooks:
     - Python Crash Course: 'notebooks/python-crash-course.ipynb'
@@ -206,6 +215,7 @@ nav:
     - Chapter 10 Notebook: 'notebooks/ch10.ipynb'
     - Chapter 11 Notebook: 'notebooks/ch11.ipynb'
     - Chapter 12 Notebook: 'notebooks/ch12.ipynb'
+    - Chapter 13 Notebook: 'notebooks/ch13.ipynb'
     - Class Use Case: 'notebooks/python-class-use-case.ipynb'
   - Course:
     - Install Python: 'course/installation.md'

@@ -55,6 +55,10 @@ Every lecture deck, in one place.
 
 [Chapter 12 Slides](../assets/slides/ch12.html){ target="_blank" }
 
+## Chapter 13
+
+[Chapter 13 Slides](../assets/slides/ch13.html){ target="_blank" }
+
 ## Install Python & Anaconda
 
 [Installation Slides](../assets/slides/installation.html){ target="_blank" }

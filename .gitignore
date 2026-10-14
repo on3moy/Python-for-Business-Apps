@@ -170,3 +170,6 @@ cython_debug/
 
 # Claude Code scratch worktrees
 /.claude/worktrees
+
+# Ad hoc scratch notebooks and files; never committed.
+/sandbox

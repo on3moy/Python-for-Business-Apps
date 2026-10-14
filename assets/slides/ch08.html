@@ -43,8 +43,7 @@ phone = <span class="hljs-string">&#x27;619-555-0173&#x27;</span>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="4" data-paginate="true" data-theme="charcoal-lb" lang="en-US" data-marpit-pagination="4" style="--paginate:true;--theme:charcoal-lb;" data-marpit-pagination-total="19">
 <h2 id="negative-indices-count-from-the-end">Negative indices count from the end</h2>
-<p><code>-1</code> is the last character, <code>-2</code> is second-to-last, and so on — useful<br />
-exactly when you don't know a string's length in advance.</p>
+<p><code>-1</code> is the last character, <code>-2</code> the second-to-last, and so on.</p>
 <pre><code class="language-python"><span class="hljs-comment"># Lets strip a .csv extension off a report name, any length</span>
 report = <span class="hljs-string">&#x27;quarterly_sales_report.csv&#x27;</span>
 name = report[:-<span class="hljs-number">4</span>]
@@ -132,23 +131,22 @@ margin = <span class="hljs-number">22.0</span> / <span class="hljs-number">7.0</
 <tbody>
 <tr>
 <td><code>find(x)</code></td>
-<td>index of first match, or <code>-1</code></td>
+<td>first index, or <code>-1</code></td>
 </tr>
 <tr>
 <td><code>count(x)</code></td>
-<td>number of occurrences</td>
+<td>number of matches</td>
 </tr>
 <tr>
-<td><code>isdigit()</code> / <code>isalnum()</code></td>
-<td><code>True</code> if every character qualifies</td>
+<td><code>isdigit()</code>, <code>isalnum()</code></td>
+<td><code>True</code> if all qualify</td>
 </tr>
 <tr>
-<td><code>startswith(x)</code> / <code>endswith(x)</code></td>
+<td><code>startswith(x)</code>, <code>endswith(x)</code></td>
 <td><code>True</code> / <code>False</code></td>
 </tr>
 </tbody>
 </table>
-<p>Full list — <code>islower</code>, <code>isupper</code>, <code>isspace</code> — is in the notes.</p>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="13" data-paginate="true" data-theme="charcoal-lb" lang="en-US" data-marpit-pagination="13" style="--paginate:true;--theme:charcoal-lb;" data-marpit-pagination-total="19">
 <h2 id="cleaning-messy-input-the-moment-you-read-it">Cleaning messy input the moment you read it</h2>
@@ -259,7 +257,8 @@ a string's actual content.</p></div><div class="bespoke-marp-note" data-index="1
 walk every one of them individually — the notes carry the full list for
 reference — instead we'll look at the shape of what's available, then
 put a few of them to work on the kind of messy input you'll actually
-receive.</p></div><div class="bespoke-marp-note" data-index="11" tabindex="0"><p>find gives you a position; the is-prefixed methods and startswith and
+receive.</p></div><div class="bespoke-marp-note" data-index="11" tabindex="0"><p>The full list, including islower, isupper and isspace, is in the notes.
+find gives you a position; the is-prefixed methods and startswith and
 endswith give you a straight True or False, which makes them well suited
 to validating input before you trust it. If you only care whether
 something is present, not where, prefer the in operator over find — it

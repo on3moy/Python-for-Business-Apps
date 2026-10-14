@@ -31,7 +31,7 @@
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="3" data-paginate="true" data-theme="charcoal-lb" lang="en-US" data-marpit-pagination="3" style="--paginate:true;--theme:charcoal-lb;" data-marpit-pagination-total="19">
 <h2 id="a-function-that-calls-itself">A function that calls itself</h2>
 <p><strong>recursive function:</strong><br />
-A function that calls itself, either directly or by calling another function that eventually calls it back.</p>
+A function that calls itself, directly or indirectly.</p>
 <pre><code class="language-python"><span class="hljs-comment"># Lets count down to a launch</span>
 <span class="hljs-keyword">def</span> <span class="hljs-title function_">count_down</span>(<span class="hljs-params">count</span>):
     <span class="hljs-keyword">if</span> count == <span class="hljs-number">0</span>:
@@ -39,13 +39,12 @@ A function that calls itself, either directly or by calling another function tha
     <span class="hljs-keyword">else</span>:
         <span class="hljs-built_in">print</span>(count)
         count_down(count - <span class="hljs-number">1</span>)
-count_down(<span class="hljs-number">2</span>)
+count_down(<span class="hljs-number">2</span>)   <span class="hljs-comment"># 2, then 1, then Go!</span>
 </code></pre>
-<p>Output: <code>2</code> then <code>1</code> then <code>Go!</code></p>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="4" data-paginate="true" data-theme="charcoal-lb" lang="en-US" data-marpit-pagination="4" style="--paginate:true;--theme:charcoal-lb;" data-marpit-pagination-total="19">
 <h2 id="every-recursive-function-needs-a-way-out">Every recursive function needs a way out</h2>
-<p>Find the branch that stops the recursion — here, <code>count == 0</code>.</p>
+<p>Find the branch that stops the recursion: <code>count == 0</code>.</p>
 <p>Miss that branch, or write it so the count moves <em>away</em> from it instead of <em>toward</em> it, and the function calls itself until Python gives up.</p>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="5" data-paginate="true" data-class="lead" data-theme="charcoal-lb" lang="en-US" class="lead" data-marpit-pagination="5" style="--paginate:true;--class:lead;--theme:charcoal-lb;" data-marpit-pagination-total="19">
@@ -68,14 +67,14 @@ count_down(<span class="hljs-number">2</span>)
 </code></pre>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="8" data-paginate="true" data-theme="charcoal-lb" lang="en-US" data-marpit-pagination="8" style="--paginate:true;--theme:charcoal-lb;" data-marpit-pagination-total="19">
-<h2 id="watching-it-happen-indented-debug-output">Watching it happen: indented debug output</h2>
+<h2 id="debugging-with-indented-output">Debugging with indented output</h2>
 <pre><code class="language-python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">find</span>(<span class="hljs-params">lst, item, low, high, indent</span>):
     <span class="hljs-built_in">print</span>(<span class="hljs-string">f&#x27;<span class="hljs-subst">{indent}</span> range <span class="hljs-subst">{low}</span>-<span class="hljs-subst">{high}</span>&#x27;</span>)
     mid = (high + low) // <span class="hljs-number">2</span>
     <span class="hljs-comment"># ...same base/recursive cases, but every</span>
     <span class="hljs-comment"># recursive call passes indent + &#x27;   &#x27;</span>
 </code></pre>
-<p>Each call's <code>indent</code> is three spaces deeper than its caller's — the printed output staircases down with every level of recursion.</p>
+<p>Each call's <code>indent</code> is three spaces deeper — output staircases with depth.</p>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="9" data-paginate="true" data-class="lead" data-theme="charcoal-lb" lang="en-US" class="lead" data-marpit-pagination="9" style="--paginate:true;--class:lead;--theme:charcoal-lb;" data-marpit-pagination-total="19">
 <h1 id="74-creating-a-recursive-function">7.4 Creating a recursive function</h1>
@@ -106,7 +105,7 @@ count_down(<span class="hljs-number">2</span>)
 <p>No reachable base case → infinite recursion → <code>RecursionError</code>.</p>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="11" data-paginate="true" data-theme="charcoal-lb" lang="en-US" data-marpit-pagination="11" style="--paginate:true;--theme:charcoal-lb;" data-marpit-pagination-total="19">
-<h2 id="build-the-base-case-first-then-add-recursion">Build the base case first, then add recursion</h2>
+<h2 id="build-the-base-case-first">Build the base case first</h2>
 <pre><code class="language-python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">nfact</span>(<span class="hljs-params">n</span>):
     fact = <span class="hljs-number">0</span>
     <span class="hljs-keyword">if</span> n == <span class="hljs-number">0</span> <span class="hljs-keyword">or</span> n == <span class="hljs-number">1</span>:      <span class="hljs-comment"># Base case</span>
@@ -115,7 +114,7 @@ count_down(<span class="hljs-number">2</span>)
         fact = n * nfact(n - <span class="hljs-number">1</span>)
     <span class="hljs-keyword">return</span> fact
 </code></pre>
-<p>Get the base case working and tested <em>before</em> you write the branch that calls the function again.</p>
+<p>Test the base case <em>before</em> writing the recursive call.</p>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="12" data-paginate="true" data-theme="charcoal-lb" lang="en-US" data-marpit-pagination="12" style="--paginate:true;--theme:charcoal-lb;" data-marpit-pagination-total="19">
 <h2 id="splitting-into-an-outer-and-inner-function">Splitting into an outer and inner function</h2>
@@ -126,7 +125,7 @@ count_down(<span class="hljs-number">2</span>)
 <h1 id="75-recursive-math-functions">7.5 Recursive math functions</h1>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="14" data-paginate="true" data-theme="charcoal-lb" lang="en-US" data-marpit-pagination="14" style="--paginate:true;--theme:charcoal-lb;" data-marpit-pagination-total="19">
-<h2 id="fibonacci-each-term-from-the-two-before-it">Fibonacci: each term from the two before it</h2>
+<h2 id="fibonacci-sum-of-the-last-two">Fibonacci: sum of the last two</h2>
 <pre><code class="language-python"><span class="hljs-comment"># Lets generate the next five Fibonacci terms</span>
 <span class="hljs-keyword">def</span> <span class="hljs-title function_">fibonacci</span>(<span class="hljs-params">v1, v2, run_cnt</span>):
     <span class="hljs-built_in">print</span>(<span class="hljs-string">f&#x27;<span class="hljs-subst">{v1}</span> + <span class="hljs-subst">{v2}</span> = <span class="hljs-subst">{v1 + v2}</span>&#x27;</span>)
@@ -146,8 +145,9 @@ fibonacci(<span class="hljs-number">0</span>, <span class="hljs-number">1</span>
         <span class="hljs-keyword">return</span> gcd(n1, n2 - n1)   <span class="hljs-comment"># Recursive case</span>
     <span class="hljs-keyword">else</span>:
         <span class="hljs-keyword">return</span> gcd(n1 - n2, n2)   <span class="hljs-comment"># Recursive case</span>
+<span class="hljs-built_in">print</span>(gcd(<span class="hljs-number">12</span>, <span class="hljs-number">8</span>))                 <span class="hljs-comment"># 4</span>
 </code></pre>
-<p><code>gcd(12, 8)</code> → <code>4</code>. Push any recursion ~1000 calls deep and Python raises <code>RecursionError</code> — every pending call sits in memory until it returns.</p>
+<p>About 1000 calls deep: <code>RecursionError</code>.</p>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="16" data-paginate="true" data-class="lead" data-theme="charcoal-lb" lang="en-US" class="lead" data-marpit-pagination="16" style="--paginate:true;--class:lead;--theme:charcoal-lb;" data-marpit-pagination-total="19">
 <h1 id="76-recursive-exploration-of-all-possibilities">7.6 Recursive exploration of all possibilities</h1>
@@ -165,9 +165,9 @@ scramble(<span class="hljs-string">&#x27;cat&#x27;</span>, <span class="hljs-str
 <p>Output: <code>cat</code>, <code>cta</code>, <code>act</code>, <code>atc</code>, <code>tca</code>, <code>tac</code></p>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="18" data-paginate="true" data-theme="charcoal-lb" lang="en-US" data-marpit-pagination="18" style="--paginate:true;--theme:charcoal-lb;" data-marpit-pagination-total="19">
-<h2 id="backtracking-pick-recurse-then-undo-the-pick">Backtracking: pick, recurse, then undo the pick</h2>
+<h2 id="backtracking-pick-recurse-undo">Backtracking: pick, recurse, undo</h2>
 <p><strong>backtracking:</strong><br />
-Move an item into a partial solution, recurse on what's left, then undo the move before trying the next option.</p>
+Add an item, recurse on the rest, then undo the move.</p>
 <pre><code class="language-python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">shopping_bag</span>(<span class="hljs-params">bag, items</span>):
     <span class="hljs-keyword">if</span> <span class="hljs-built_in">len</span>(bag) == <span class="hljs-number">3</span>:                <span class="hljs-comment"># Base case: bag full</span>
         <span class="hljs-built_in">print</span>(bag)
@@ -177,7 +177,6 @@ Move an item into a partial solution, recurse on what's left, then undo the move
             shopping_bag(bag, items)
             items.insert(i, item); bag.pop()  <span class="hljs-comment"># Undo</span>
 </code></pre>
-<p>Same undo-then-try-the-next-branch shape powers route planning and discount-code search.</p>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="19" data-paginate="true" data-class="lead" data-theme="charcoal-lb" lang="en-US" class="lead" data-marpit-pagination="19" style="--paginate:true;--class:lead;--theme:charcoal-lb;" data-marpit-pagination-total="19">
 <h1 id="questions">Questions?</h1>
@@ -273,7 +272,8 @@ of something, which loops alone get awkward doing fast.</p></div><div class="bes
 recursive call moves one item across from one to the other, and the base
 case fires the instant nothing is left to move. This same shape generates
 every ordering of anything — meeting agendas, delivery routes, shift
-assignments — not just letters in a word.</p></div><div class="bespoke-marp-note" data-index="17" tabindex="0"><p>The undo step after the recursive call is what makes this work — putting
+assignments — not just letters in a word.</p></div><div class="bespoke-marp-note" data-index="17" tabindex="0"><p>The same undo-then-try-the-next-branch shape powers route planning and
+discount-code search. The undo step after the recursive call is what makes this work — putting
 the item back into items and popping it out of bag means the exact same
 lists get reused for every other branch of the exploration, instead of
 needing a fresh copy at every level. This is why recursion earns its keep

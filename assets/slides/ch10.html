@@ -89,7 +89,7 @@ Time(<span class="hljs-number">7</span>, <span class="hljs-number">15</span>).pr
 <span class="hljs-keyword">def</span> <span class="hljs-title function_">calculate_pay</span>():      <span class="hljs-comment"># forgot self -- breaks</span>
     <span class="hljs-keyword">return</span> <span class="hljs-variable language_">self</span>.wage * <span class="hljs-variable language_">self</span>.hours_worked
 </code></pre>
-<p><code>alice.calculate_pay()</code> on the broken version: <code>TypeError: takes 0 positional arguments but 1 was given</code></p>
+<p>The broken one raises <code>TypeError</code></p>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="10" data-paginate="true" data-class="lead" data-theme="charcoal-lb" lang="en-US" class="lead" data-marpit-pagination="10" style="--paginate:true;--class:lead;--theme:charcoal-lb;" data-marpit-pagination-total="27">
 <h1 id="104-class-and-instance-object-types">10.4 Class and instance object types</h1>
@@ -166,7 +166,7 @@ jason = RaceTime(<span class="hljs-string">&#x27;3:15&#x27;</span>, <span class=
 
 tricia = Employee(<span class="hljs-string">&#x27;Tricia&#x27;</span>, <span class="hljs-number">12.50</span>, <span class="hljs-number">40</span>)  <span class="hljs-comment"># manager, overrides both</span>
 </code></pre>
-<p><code>Employee('Todd')</code> alone gets the part-timer defaults</p>
+<p><code>Employee('Todd')</code> gets the defaults</p>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="19" data-paginate="true" data-class="lead" data-theme="charcoal-lb" lang="en-US" class="lead" data-marpit-pagination="19" style="--paginate:true;--class:lead;--theme:charcoal-lb;" data-marpit-pagination-total="27">
 <h1 id="107-class-interfaces">10.7 Class interfaces</h1>
@@ -179,8 +179,8 @@ tricia = Employee(<span class="hljs-string">&#x27;Tricia&#x27;</span>, <span cla
         <span class="hljs-built_in">print</span>(<span class="hljs-string">f&#x27;Avg pace: <span class="hljs-subst">{(h*<span class="hljs-number">60</span>+m)/self.distance:<span class="hljs-number">.2</span>f}</span>&#x27;</span>)
 
     <span class="hljs-keyword">def</span> <span class="hljs-title function_">_diff_time</span>(<span class="hljs-params">self</span>):
-        <span class="hljs-string">&quot;&quot;&quot;Internal helper -- not part of the interface&quot;&quot;&quot;</span>
-        <span class="hljs-keyword">return</span> (<span class="hljs-variable language_">self</span>.end_hrs - <span class="hljs-variable language_">self</span>.start_hrs, <span class="hljs-variable language_">self</span>.end_mins - <span class="hljs-variable language_">self</span>.start_mins)
+        <span class="hljs-keyword">return</span> (<span class="hljs-variable language_">self</span>.end_hrs - <span class="hljs-variable language_">self</span>.start_hrs,
+                <span class="hljs-variable language_">self</span>.end_mins - <span class="hljs-variable language_">self</span>.start_mins)
 </code></pre>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="21" data-paginate="true" data-class="lead" data-theme="charcoal-lb" lang="en-US" class="lead" data-marpit-pagination="21" style="--paginate:true;--class:lead;--theme:charcoal-lb;" data-marpit-pagination-total="27">
@@ -241,18 +241,19 @@ times = [Time(<span class="hljs-number">10</span>, <span class="hljs-number">40<
     <span class="hljs-keyword">if</span> <span class="hljs-built_in">isinstance</span>(other, <span class="hljs-built_in">int</span>):
         <span class="hljs-keyword">return</span> Time24(<span class="hljs-variable language_">self</span>.hours - other, <span class="hljs-variable language_">self</span>.minutes)
     <span class="hljs-keyword">if</span> <span class="hljs-built_in">isinstance</span>(other, Time24):
-        <span class="hljs-keyword">return</span> Time24(<span class="hljs-variable language_">self</span>.hours - other.hours, <span class="hljs-variable language_">self</span>.minutes - other.minutes)
+        <span class="hljs-keyword">return</span> Time24(<span class="hljs-variable language_">self</span>.hours - other.hours,
+                      <span class="hljs-variable language_">self</span>.minutes - other.minutes)
     <span class="hljs-keyword">raise</span> NotImplementedError
 </code></pre>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="26" data-paginate="true" data-class="lead" data-theme="charcoal-lb" lang="en-US" class="lead" data-marpit-pagination="26" style="--paginate:true;--class:lead;--theme:charcoal-lb;" data-marpit-pagination-total="27">
 <h1 id="recap">Recap</h1>
 <ul>
-<li>An object bundles data and behavior; a class is the blueprint</li>
+<li>An object bundles data and behavior; a class is the plan</li>
 <li><code>__init__</code> and <code>self</code> set up and refer to one instance</li>
-<li>Class attributes are shared; instance attributes belong to one object</li>
-<li>One class can manage a collection of another — <code>Invoice</code> and <code>LineItem</code></li>
-<li><code>__str__</code>, <code>__lt__</code>, <code>__sub__</code> teach your objects to print, compare, and add</li>
+<li>Class attributes are shared; instance ones are per object</li>
+<li>Classes compose: <code>Invoice</code> manages <code>LineItem</code>s</li>
+<li><code>__str__</code>, <code>__lt__</code>, <code>__sub__</code>: print, compare, add</li>
 </ul>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="27" data-paginate="true" data-class="lead" data-theme="charcoal-lb" lang="en-US" class="lead" data-marpit-pagination="27" style="--paginate:true;--class:lead;--theme:charcoal-lb;" data-marpit-pagination-total="27">

@@ -39,12 +39,12 @@ my_teams[<span class="hljs-number">0</span>] = <span class="hljs-string">&#x27;R
 <p>Output: <code>['Rams', 'Dodgers']</code></p>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="4" data-paginate="true" data-theme="charcoal-lb" lang="en-US" data-marpit-pagination="4" style="--paginate:true;--theme:charcoal-lb;" data-marpit-pagination-total="29">
-<h2 id="reassigning-a-name-vs-modifying-the-list">Reassigning a name vs. modifying the list</h2>
+<h2 id="reassigning-vs-modifying">Reassigning vs. modifying</h2>
 <ul>
-<li><code>fav_color = colors[2]</code> binds <code>fav_color</code> to whatever value lived there</li>
-<li>Reassigning <code>fav_color</code> afterward never touches <code>colors</code></li>
-<li>Only indexed assignment -- <code>colors[1] = 'yellow'</code> -- reaches the shared list</li>
-<li>Same is true of any list method called on <code>colors</code> itself</li>
+<li><code>fav_color = colors[2]</code> copies that one value</li>
+<li>Reassigning <code>fav_color</code> never touches <code>colors</code></li>
+<li>Only <code>colors[1] = 'yellow'</code> reaches the shared list</li>
+<li>So does any method called on <code>colors</code></li>
 </ul>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="5" data-paginate="true" data-theme="charcoal-lb" lang="en-US" data-marpit-pagination="5" style="--paginate:true;--theme:charcoal-lb;" data-marpit-pagination-total="29">
@@ -59,23 +59,23 @@ my_teams[<span class="hljs-number">0</span>] = <span class="hljs-string">&#x27;R
 <tbody>
 <tr>
 <td><code>extend(x)</code></td>
-<td>Add every item in <code>x</code> to the end</td>
+<td>Add each item of <code>x</code></td>
 </tr>
 <tr>
 <td><code>insert(i, x)</code></td>
-<td>Insert <code>x</code> before position <code>i</code></td>
+<td>Insert before position <code>i</code></td>
 </tr>
 <tr>
-<td><code>sort()</code> / <code>reverse()</code></td>
+<td><code>sort()</code>/<code>reverse()</code></td>
 <td>Rearrange in place</td>
 </tr>
 <tr>
-<td><code>index(x)</code> / <code>count(x)</code></td>
-<td>Locate or tally <code>x</code></td>
+<td><code>index()</code>/<code>count()</code></td>
+<td>Locate or tally</td>
 </tr>
 </tbody>
 </table>
-<p>All but <code>index()</code>/<code>count()</code> modify the list in place.</p>
+<p>Only <code>index()</code>/<code>count()</code> leave the list alone.</p>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="6" data-paginate="true" data-theme="charcoal-lb" lang="en-US" data-marpit-pagination="6" style="--paginate:true;--theme:charcoal-lb;" data-marpit-pagination-total="29">
 <h2 id="append-vs-extend--the-one-everyone-mixes-up"><code>append()</code> vs. <code>extend()</code> — the one everyone mixes up</h2>
@@ -192,22 +192,21 @@ high_earners = [s <span class="hljs-keyword">for</span> s <span class="hljs-keyw
 <h1 id="99%E2%80%93910-sorting-and-command-line-arguments">9.9–9.10 Sorting and command-line arguments</h1>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="18" data-paginate="true" data-theme="charcoal-lb" lang="en-US" data-marpit-pagination="18" style="--paginate:true;--theme:charcoal-lb;" data-marpit-pagination-total="29">
-<h2 id="sort-rearranges-sorted-leaves-the-original-alone"><code>sort()</code> rearranges; <code>sorted()</code> leaves the original alone</h2>
+<h2 id="sorted-leaves-the-original-alone"><code>sorted()</code> leaves the original alone</h2>
 <pre><code class="language-python"><span class="hljs-comment"># Lets rank sales without losing the original order</span>
 sales = [<span class="hljs-number">4200</span>, <span class="hljs-number">3100</span>, <span class="hljs-number">5600</span>, <span class="hljs-number">2800</span>]
 ranked = <span class="hljs-built_in">sorted</span>(sales, reverse=<span class="hljs-literal">True</span>)
-<span class="hljs-built_in">print</span>(sales)
-<span class="hljs-built_in">print</span>(ranked)
+<span class="hljs-built_in">print</span>(sales)    <span class="hljs-comment"># [4200, 3100, 5600, 2800]</span>
+<span class="hljs-built_in">print</span>(ranked)   <span class="hljs-comment"># [5600, 4200, 3100, 2800]</span>
 </code></pre>
-<p>Output: <code>[4200, 3100, 5600, 2800]</code> then <code>[5600, 4200, 3100, 2800]</code></p>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="19" data-paginate="true" data-theme="charcoal-lb" lang="en-US" data-marpit-pagination="19" style="--paginate:true;--theme:charcoal-lb;" data-marpit-pagination-total="29">
-<h2 id="key-changes-what-counts-as-smallest"><code>key=</code> changes what counts as smallest</h2>
+<h2 id="key-changes-the-sort-order"><code>key=</code> changes the sort order</h2>
 <pre><code class="language-python"><span class="hljs-comment"># Lets sort a roster ignoring case</span>
-reps = [<span class="hljs-string">&#x27;Serena Williams&#x27;</span>, <span class="hljs-string">&#x27;rafael Nadal&#x27;</span>, <span class="hljs-string">&#x27;john McEnroe&#x27;</span>]
+reps = [<span class="hljs-string">&#x27;Serena&#x27;</span>, <span class="hljs-string">&#x27;rafael&#x27;</span>, <span class="hljs-string">&#x27;john&#x27;</span>]
 <span class="hljs-built_in">print</span>(<span class="hljs-built_in">sorted</span>(reps, key=<span class="hljs-built_in">str</span>.lower))
 </code></pre>
-<p>Output: <code>['john McEnroe', 'rafael Nadal', 'Serena Williams']</code></p>
+<p>Output: <code>['john', 'rafael', 'Serena']</code></p>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="20" data-paginate="true" data-theme="charcoal-lb" lang="en-US" data-marpit-pagination="20" style="--paginate:true;--theme:charcoal-lb;" data-marpit-pagination-total="29">
 <h2 id="reading-values-off-the-command-line">Reading values off the command line</h2>
@@ -216,9 +215,9 @@ reps = [<span class="hljs-string">&#x27;Serena Williams&#x27;</span>, <span clas
 <span class="hljs-keyword">if</span> <span class="hljs-built_in">len</span>(sys.argv) != <span class="hljs-number">3</span>:
     sys.exit(<span class="hljs-string">&#x27;Usage: python myprog.py name age&#x27;</span>)
 name, age = sys.argv[<span class="hljs-number">1</span>], <span class="hljs-built_in">int</span>(sys.argv[<span class="hljs-number">2</span>])
-<span class="hljs-built_in">print</span>(<span class="hljs-string">f&#x27;Hello <span class="hljs-subst">{name}</span>, age <span class="hljs-subst">{age}</span>.&#x27;</span>)
+<span class="hljs-built_in">print</span>(<span class="hljs-string">f&#x27;Hello <span class="hljs-subst">{name}</span>, age <span class="hljs-subst">{age}</span>.&#x27;</span>)   <span class="hljs-comment"># Hello Tricia, age 12.</span>
 </code></pre>
-<p>Run as <code>python myprog.py Tricia 12</code> → <code>Hello Tricia, age 12.</code></p>
+<p>Run as <code>python myprog.py Tricia 12</code></p>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="21" data-paginate="true" data-class="lead" data-theme="charcoal-lb" lang="en-US" class="lead" data-marpit-pagination="21" style="--paginate:true;--class:lead;--theme:charcoal-lb;" data-marpit-pagination-total="29">
 <h1 id="912%E2%80%93913-dictionaries">9.12–9.13 Dictionaries</h1>
@@ -259,8 +258,10 @@ prices = <span class="hljs-built_in">dict</span>(bananas=<span class="hljs-numbe
 calories = <span class="hljs-built_in">dict</span>(Coke=<span class="hljs-number">90</span>, Coke_zero=<span class="hljs-number">0</span>, Pepsi=<span class="hljs-number">94</span>)
 <span class="hljs-keyword">for</span> soda, cal <span class="hljs-keyword">in</span> calories.items():
     <span class="hljs-built_in">print</span>(<span class="hljs-string">f&#x27;<span class="hljs-subst">{soda}</span>: <span class="hljs-subst">{cal}</span>&#x27;</span>)
+<span class="hljs-comment"># Coke: 90</span>
+<span class="hljs-comment"># Coke_zero: 0</span>
+<span class="hljs-comment"># Pepsi: 94</span>
 </code></pre>
-<p>Output: <code>Coke: 90</code>, <code>Coke_zero: 0</code>, <code>Pepsi: 94</code></p>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="27" data-paginate="true" data-theme="charcoal-lb" lang="en-US" data-marpit-pagination="27" style="--paginate:true;--theme:charcoal-lb;" data-marpit-pagination-total="29">
 <h2 id="a-dictionary-value-can-be-another-dictionary">A dictionary value can be another dictionary</h2>

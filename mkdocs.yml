@@ -203,6 +203,15 @@ nav:
       - 13.5 Reloading Modules: 'notes/ch13/13.5-reloading-modules.md'
       - 13.6 Packages: 'notes/ch13/13.6-packages.md'
       - 13.7 Standard Library: 'notes/ch13/13.7-standard-library.md'
+    - Chapter 14:
+      - 'notes/ch14/index.md'
+      - 14.1 Reading Files: 'notes/ch14/14.1-reading-files.md'
+      - 14.2 Writing Files: 'notes/ch14/14.2-writing-files.md'
+      - 14.3 Interacting with File Systems: 'notes/ch14/14.3-interacting-with-file-systems.md'
+      - 14.4 Binary Data: 'notes/ch14/14.4-binary-data.md'
+      - 14.5 Command-line Arguments and Files: 'notes/ch14/14.5-command-line-arguments-and-files.md'
+      - 14.6 The "with" Statement: 'notes/ch14/14.6-the-with-statement.md'
+      - 14.7 Comma-separated Values Files: 'notes/ch14/14.7-comma-separated-values-files.md'
   - Slides: 'slides/index.md'
   - Notebooks:
     - Python Crash Course: 'notebooks/python-crash-course.ipynb'
@@ -216,6 +225,7 @@ nav:
     - Chapter 11 Notebook: 'notebooks/ch11.ipynb'
     - Chapter 12 Notebook: 'notebooks/ch12.ipynb'
     - Chapter 13 Notebook: 'notebooks/ch13.ipynb'
+    - Chapter 14 Notebook: 'notebooks/ch14.ipynb'
     - Class Use Case: 'notebooks/python-class-use-case.ipynb'
   - Course:
     - Install Python: 'course/installation.md'

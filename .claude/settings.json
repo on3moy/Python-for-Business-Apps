@@ -2,7 +2,7 @@
   "hooks": {
     "SubagentStop": [
       {
-        "matcher": "Sonnet-Make-Slides|Sonnet-Write-Notes|Sonnet-Clean-Slides|Sonnet-Make-Notebook",
+        "matcher": "Sonnet-Make-Slides|Sonnet-Write-Notes|Sonnet-Clean-Slides|Sonnet-Make-Notebook|Sonnet-Fit-Slides",
         "hooks": [
           {
             "type": "command",
@@ -13,7 +13,7 @@
         ]
       },
       {
-        "matcher": "Sonnet-Make-Slides|Sonnet-Clean-Slides",
+        "matcher": "Sonnet-Make-Slides|Sonnet-Clean-Slides|Sonnet-Fit-Slides",
         "hooks": [
           {
             "type": "command",
@@ -48,6 +48,17 @@
             "command": "LOG=$(mktemp)\nuv run python scripts/build_solution_notebooks.py > \"$LOG\" 2>&1\ncode=$?\nif [ $code -ne 0 ]; then\n  tail -c 4000 \"$LOG\" | python3 -c \"\nimport json, sys\nout = sys.stdin.read()\nreason = 'Solution notebook failed to execute cleanly -- fix the erroring cell, then rebuild.\\n\\n' + out\nprint(json.dumps({'decision': 'block', 'reason': reason}))\n\"\nelse\n  echo '{}'\nfi\nrm -f \"$LOG\"\n",
             "timeout": 120,
             "statusMessage": "Executing solution notebook(s) to verify every cell runs..."
+          }
+        ]
+      },
+      {
+        "matcher": "Sonnet-Fit-Slides",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "uv run python scripts/check_renders_cleaned.py\n",
+            "timeout": 10,
+            "statusMessage": "Checking slide screenshots were cleaned up..."
           }
         ]
       }

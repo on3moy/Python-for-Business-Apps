@@ -173,3 +173,6 @@ cython_debug/
 
 # Ad hoc scratch notebooks and files; never committed.
 /sandbox
+
+# Scratch PNGs from scripts/render_slides.py; deleted after each review.
+/.slide-renders

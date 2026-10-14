@@ -62,3 +62,7 @@ Every lecture deck, in one place.
 ## Install Python & Anaconda
 
 [Installation Slides](../assets/slides/installation.html){ target="_blank" }
+
+## Medallion Architecture
+
+[Medallion Architecture Slides](../assets/slides/medallion.html){ target="_blank" }
